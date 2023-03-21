@@ -34,7 +34,9 @@
         <input type="password" name="password_confirmation" class="form-control" id="password_confirmation">
         </div>
         
-        <button type="submit" class="btn btn-primary">Registrati</button>
+        <a href="{{route('product.create')}}">
+            <button type="submit" class="btn btn-primary">Registrati</button>
+        </a>
     </form>
 
 </x-layout>

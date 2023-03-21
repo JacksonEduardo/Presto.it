@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
-                @livewire('product-create-form')
+                @livewire('product-create-form', ['category'=>$category])
 
             </div>
         </div>

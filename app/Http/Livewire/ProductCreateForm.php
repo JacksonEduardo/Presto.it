@@ -4,10 +4,14 @@ namespace App\Http\Livewire;
 
 use App\Models\Product;
 use Livewire\Component;
+use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 class ProductCreateForm extends Component
 {
     public $name, $brand, $description, $price, $usage;
+
+    public $category;
     
 
     protected $rules =[
@@ -47,7 +51,9 @@ class ProductCreateForm extends Component
             'description' => $this->description,
             'price' => $this->price,
             'usage' => $this->usage,
-
+            'user_id' => Auth::id(),
+            // user_id' => Auth::user()->id,
+            'category_id' => Category::id(),
         ]);
 
         
