@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,8 @@ use App\Http\Controllers\PublicController;
 */
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+
+
+// ROTTE PRODUCT
+
+Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
