@@ -9,7 +9,7 @@
         <div class="row justify-content-center mt-3">
 
             @forelse ($products as $product)
-                <div class="col-12 col-md-4 p-3">
+                <div class="col-12 col-md-4 p-4">
                     <x-cardProduct :Product="$product" />
 
                 </div>
