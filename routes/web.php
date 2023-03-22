@@ -16,8 +16,8 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->name('category.show');
 
 
 // ROTTE PRODUCT
-
 Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');

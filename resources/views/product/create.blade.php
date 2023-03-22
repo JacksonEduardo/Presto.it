@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
-        <h1>Inserisci articolo</h1>
+        <h1>Inserisci Annuncio</h1>
     </x-header>
 
 

@@ -37,6 +37,22 @@
               </ul>
             </li>
           @endauth
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorie
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  @foreach ($categories as $category)
+                  
+                  <li><a class="dropdown-item" href="{{route('category.show', compact('category'))}}">{{$category->type}}</a></li>
+                  
+                  @endforeach
+                </ul>
+              </li>
+            </ul>
+          </div>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
