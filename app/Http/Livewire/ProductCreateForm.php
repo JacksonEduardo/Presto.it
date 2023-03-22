@@ -20,6 +20,7 @@ class ProductCreateForm extends Component
         'description' => 'required',
         'price' => 'required|numeric',
         'usage' => 'required',
+        'category' => 'required',
     ];
 
     protected $messages = [
@@ -31,6 +32,7 @@ class ProductCreateForm extends Component
         'price.required' => 'Inserisci il prezzo del tuo prodotto',
         'price.numeric' => 'Il prezzo deve essere numerico',
         'usage.required' => 'Inserisci in che condizione è il tuo prodotto',
+        'category.required' => 'Inserisci la categoria',
     ];
 
 
@@ -44,19 +46,16 @@ class ProductCreateForm extends Component
     public function store(){
         $this->validate();
 
-
-        $product = Product::create([
+        $category = Category::find($this->category);
+        $category->products()->create([
             'name' => $this->name,
             'brand' => $this->brand,
             'description' => $this->description,
             'price' => $this->price,
             'usage' => $this->usage,
-            'user_id' => Auth::id(),
-            // user_id' => Auth::user()->id,
-            'category_id' => Category::id(),
+            'user_id' => Auth::user()->id,
         ]);
-
-        
+      
 
         session()->flash('productCreated', 'Il tuo prodotto è stato inserito correttamente');
         $this->reset();

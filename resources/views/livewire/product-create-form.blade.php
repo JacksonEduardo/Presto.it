@@ -66,10 +66,12 @@
         </div>
         
         <div class="mb-3">
-            <select wire:model="category" id="category" multiple class="form-control">
-                @foreach($categories as $category)
-                <option value="{{$category->id}}">{{$category->type}}</option>
-                @endforeach
+            <label for="category">Categoria</label>
+            <select wire:model.defer="category" id="category" class="form-control">
+                <option value="">Scegli la Categoria</option>
+                    @foreach($categories as $category)
+                        <option value="{{$category->id}}">{{$category->type}}</option>
+                    @endforeach
             </select>
         </div>
         
