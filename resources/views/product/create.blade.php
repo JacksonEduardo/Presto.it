@@ -4,10 +4,11 @@
     </x-header>
 
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                @livewire('product-create-form' /* ['category'=>$category] */)
+    <div class="container-fluid">
+        <div class="row justify-content-center my-5">
+            <div class="col-12 col-md-6 border shadow p-3"> 
+
+                @livewire('product-create-form')
 
             </div>
         </div>
