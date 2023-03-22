@@ -1,4 +1,4 @@
-
+{{-- 
 <x-layout>
 
     <x-header>
@@ -41,4 +41,4 @@
         </div>
     </div>        
 </x-layout>
-
+ --}}

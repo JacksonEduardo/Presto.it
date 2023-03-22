@@ -1,31 +1,65 @@
 <x-layout>
-
-
-    <div class="bg-light p-5 text-center">
-        <h1>Presto.it</h1>
+    
+    {{-- INIZIO CAROSELLO --}}
+    
+    <div class="container-fluid ">
+        <div class="row ">
+            <div class="swiper mySwiper3 p-0 vh-100">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide vh-100">
+                        <div class="parallax-bg1"></div>
+                        <div class="slideCustom d-flex flex-column align-items-start justify-content-center">
+                            <p>Nuovi arrivi</p>
+                            <h1>Scopri nuovi arrivi</h1>
+                            <button class="btn btn-dark">Prova</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide vh-100">
+                        <div class="parallax-bg2"></div>
+                        <div class="slideCustom d-flex flex-column align-items-start justify-content-center">
+                            <p>Nuovi arrivi</p>
+                            <h1>Scopri nuovi arrivi</h1>
+                            <button class="btn btn-dark">Prova</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide vh-100">
+                        <div class="parallax-bg3"></div>
+                        <div class="slideCustom d-flex flex-column align-items-start justify-content-center">
+                            <p>Nuovi arrivi</p>
+                            <h1>Scopri nuovi arrivi</h1>
+                            <button class="btn btn-dark">Prova</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        
     </div>
-
+    
+    {{-- FINE CAROSELLO --}}
+    
     <div class="container">
         <div class="row justify-content-center mt-3">
-
+            
             @forelse ($products as $product)
-                <div class="col-12 col-md-4 p-4">
-                    <x-cardProduct :Product="$product" />
-
-                </div>
-        
-         @empty
-
+            <div class="col-12 col-md-4 p-4">
+                <x-cardProduct :Product="$product" />
+                
+            </div>
+            
+            @empty
+            
             <div class="col-12">
                 <h1>Non sono ancora presenti annunci</h1>
-
+                
                 <p> Inserisci il tuo primo annuncio! </p>
                 <a href="{{ route('product.create') }}" class="btn btn-dark">Inserisci Annuncio</a>
-
+                
             </div>
             @endforelse
-
+            
         </div>
     </div>
-
+    
 </x-layout>

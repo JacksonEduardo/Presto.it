@@ -1,4 +1,4 @@
-<x-layout>
+{{-- <x-layout>
 
     <x-header>
         <h1>Registrati</h1>
@@ -47,4 +47,4 @@
     
     </form>
 
-</x-layout>
+</x-layout> --}}

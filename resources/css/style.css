@@ -1,62 +1,220 @@
+* {
+  
+  font-family: 'Montserrat', sans-serif;
+}
 
+h2, h3, h4, p {
+
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root {
+  --m-color: #000000 !important;
+  --s-color: #f3f3f3    !important;
+  --t-color: #868686 !important;
+  --a-color: #046380 !important;
+
+}
+
+.tx-m {
+  color: var(--m-color) !important;
+}
+
+.tx-s {
+  color: var(--s-color) !important;
+}
+
+.tx-t {
+  color: var(--t-color)!important;
+}
+
+.tx-a {
+  color: var(--a-color) !important;
+}
+
+.bg-m {
+  color: var(--m-color) !important;
+}
+
+.bg-s {
+  color: var(--s-color) !important;
+}
+
+.bg-t {
+  color: var(--t-color) !important;
+}
+
+.bg-a {
+  color: var(--a-color) !important;
+}
+
+/* NAVBAR */
+.bi-person{
+ color: #000000!important;
+ font-weight: bold!important;
+
+}
+.personToggle{
+  color: #000000!important;
+ font-weight: bold!important;
+}
+.bi-search{
+  color: #000000!important;
+ font-weight: bold!important;
+ cursor: pointer;
+}
+
+.bi:hover{
+  color: var(--a-color)!important;
+  transition:  0.3s ease-out;
+}
+
+.personToggle:hover{
+  color: var(--a-color)!important;
+  transition:  0.3s ease-out;
+}
+
+.home:hover{
+  color: var(--a-color)!important;
+  transition:  0.3s ease-out;
+
+}
+
+.categorie:hover{
+  color: var(--a-color)!important;
+  transition:  0.3s ease-out;
+  cursor: pointer;
+
+}
+
+.nav-active {
+  background-color: white!important;
+  
+  transition: 0.7s;
+  animation-direction: alternate-reverse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-reverse {
+  transition: 0.7s;
+  animation-direction: alternate-reverse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+/* PRIMO CAROSELLO */
 
 .swiper {
     width: 100%;
     height: 100%;
   }
 
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .swiper {
-    width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .swiper-slide {
-    background-size: cover;
-    background-position: center;
-  }
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
 
-  .mySwiper2 {
-    height: 80%;
-    width: 100%;
-  }
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
 
-  .mySwiper {
-    height: 20%;
-    box-sizing: border-box;
-    padding: 10px 0;
-  }
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
 
-  .mySwiper .swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-  }
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
 
-  .mySwiper .swiper-slide-thumb-active {
-    opacity: 1;
-  }
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CAROSELLO HOMEPAGE */
+
+.parallax-bg1 {
+  position: absolute;
+  background-image: url(/public/media/cuffie.jpg);
+  left: 0;
+  top: 0;
+  width: 120%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.parallax-bg2 {
+  position: absolute;
+  background-image: url(/public/media/car.jpg);
+  left: 0;
+  top: 0;
+  width: 120%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.parallax-bg3 {
+  position: absolute;
+  background-image: url(/public/media/phone.png);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: top center;
+  z-index: -1;
+}
+
+.slideCustom{
+  width: 50vw;
+  height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .slideCustom {
+      width: 100%;
+      height: 100%; 
   }
+}
+
+/* FINE CAROSELLO HOMEPAGE */
+
+  
+
