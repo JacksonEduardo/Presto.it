@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Presto.it</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -12,13 +13,13 @@
 
     <x-navbar /> 
 
-
-<div class="min-vh-100">
-    {{$slot}}    
-</div>
-
+    <div class="min-vh-100">
+        {{$slot}}    
+    </div>
 
     <x-footer /> 
+    
     @livewireScripts
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </body>
 </html>

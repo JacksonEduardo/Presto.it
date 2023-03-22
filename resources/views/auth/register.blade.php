@@ -3,7 +3,7 @@
     <x-header>
         <h1>Registrati</h1>
     </x-header>
-    
+
 
     <div class="container-fluid">
         <div class="row justify-content-center mt-5">

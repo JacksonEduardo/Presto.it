@@ -21,3 +21,4 @@ Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->
 
 // ROTTE PRODUCT
 Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
+Route::get('/product/show/{product}', [ProductController::class, 'show'])->name('product.show');
