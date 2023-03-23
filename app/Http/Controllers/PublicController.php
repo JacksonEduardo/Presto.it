@@ -10,13 +10,12 @@ class PublicController extends Controller
 {
     public function homepage(){
         
-        $products = Product::take(6)->orderBy('created_at', 'DESC')->get();
+        $products = Product::where('is_accepted', true)->take(6)->orderBy('created_at', 'DESC')->get();
         return view('welcome' , compact('products'));
         
     }
 
     public function categoryShow(Category $category) {
-
         return view('category.show', compact('category'));
         
     }

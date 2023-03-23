@@ -18,8 +18,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    
-   {{-- FIXED TOP DA RIVEDERE --}}
+
+
+{{-- INIZIO NAV SPECIAL --}}
 <nav class="navbar navbar-expand-lg p-2 shadow-sm bg-transparent fixed-top" id="navUno">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{route('homepage')}}"><img src="/media/logoPresto-transp.png" width="90px" alt="LOGO"></a>
@@ -50,6 +51,20 @@
             <li class="nav-item">
               <a class="nav-link tx-m fw-bold" href="{{route('product.create')}}">Inserisci Annuncio </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link tx-m fw-bold" href="{{route('become.revisor')}}">Lavora con noi</a>
+            </li>
+            @if (Auth::user()->is_revisor)
+              <li class="nav-item">
+                <a href="{{route('revisor.index')}}" class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page">
+                  Zona revisore
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {{App\Models\Product::toBeRevisionedCount()}}
+                    <span class="visually-hidden">Messaggi non letti</span>
+                  </span>
+                </a>
+              </li>
+            @endif
             @endauth
           </div>
         </ul>
@@ -57,12 +72,11 @@
         <div>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-md-2 ">
             @auth
-            {{-- <li class="nav-item">
-              <a class="nav-link tx-m" href="{{route('product.create')}}">Inserisci Annuncio </a>
-            </li> --}}
+           
+         
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle personToggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                <i class="bi bi-person fs-4 fw-bold">  </i> {{-- {{Auth::user()->name}}   --}}
+                <i class="bi bi-person fs-4 fw-bold">  </i> {{Auth::user()->name}}
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="#">Profilo</a></li>
@@ -144,7 +158,7 @@
                             <label class="form-check-label" for="remember">Ricordami</label>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn btn-dark ">Accedi</button>
+                            <button type="" class="btn btn-dark ">Accedi</button>
                         </div>
                         
                     </form>

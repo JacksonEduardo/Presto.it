@@ -24,9 +24,27 @@
                 @endforeach
               </ul>
               @auth
+              {{-- LO VOGLIAMO DAVVRERO QUA? --}}
               <li class="nav-item">
                 <a class="nav-link tx-m fw-bold" href="{{route('product.create')}}">Inserisci Annuncio </a>
               </li>
+              
+              <li class="nav-item">
+                <a class="nav-link tx-m fw-bold" href="{{route('become.revisor')}}">Lavora con noi</a>
+              </li>
+
+              
+              @if (Auth::user()->is_revisor)
+              <li class="nav-item">
+                <a href="{{route('revisor.index')}}" class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page">
+                  Zona revisore
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {{App\Models\Product::toBeRevisionedCount()}}
+                    <span class="visually-hidden">Messaggi non letti</span>
+                  </span>
+                </a>
+              </li>
+              @endif
               @endauth
             </li>
           </ul>
@@ -38,7 +56,7 @@
           @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle personToggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-              <i class="bi bi-person fs-4 fw-bold">  </i> {{-- {{Auth::user()->name}}   --}}
+              <i class="bi bi-person fs-4 fw-bold">  </i> {{Auth::user()->name}}  
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="#">Profilo</a></li>
@@ -69,10 +87,10 @@
       </form> --}}
     </div>
   </div>
-
-
-
-
-
-
+  
+  
+  
+  
+  
+  
 </nav>

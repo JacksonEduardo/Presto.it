@@ -1,4 +1,25 @@
 <x-layoutWelcome>
+
+    {{-- MIDDLEWARE REVISORE --}}
+    @if (session('accessDenied'))
+    <div class="alert alert-danger marginAlert">
+        {{ session('accessDenied') }}
+    </div>
+    @endif
+
+    {{-- ALERT PER DIVENTARE REVISORE --}}
+    @if (session('messageBecome'))
+    <div class="alert alert-warning marginAlert">
+        {{ session('messageBecome') }}
+    </div>
+    @endif
+        {{-- ALERT DOPO AVER RESO REVISORE --}}
+
+    @if (session('messageMake'))
+    <div class="alert alert-success marginAlert">
+        {{ session('messageMake') }}
+    </div>
+    @endif
     
     
     {{-- INIZIO CAROSELLO --}}
