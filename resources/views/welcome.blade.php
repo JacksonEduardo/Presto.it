@@ -9,7 +9,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg1"></div>
-                        <div class="slideCustom d-flex flex-column align-items-start justify-content-center">
+                        <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center">
                             <p>Nuovi arrivi</p>
                             <h1>Scopri nuovi arrivi</h1>
                             <button class="btn btn-dark">Prova</button>
@@ -17,7 +17,7 @@
                     </div>
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg2"></div>
-                        <div class="slideCustom d-flex flex-column align-items-start justify-content-center">
+                        <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center">
                             <p>Nuovi arrivi</p>
                             <h1>Scopri nuovi arrivi</h1>
                             <button class="btn btn-dark">Prova</button>
@@ -25,7 +25,7 @@
                     </div>
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg3"></div>
-                        <div class="slideCustom d-flex flex-column align-items-start justify-content-center">
+                        <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center">
                             <p>Nuovi arrivi</p>
                             <h1>Scopri nuovi arrivi</h1>
                             <button class="btn btn-dark">Prova</button>

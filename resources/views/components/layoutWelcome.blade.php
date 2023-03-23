@@ -20,7 +20,7 @@
 <body>
     
    {{-- FIXED TOP DA RIVEDERE --}}
-<nav class="navbar navbar-expand-lg bg-body-tertiary p-2 shadow-sm bg-transparent fixed-top" id="nav">
+<nav class="navbar navbar-expand-lg p-2 shadow-sm bg-transparent fixed-top" id="navUno">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{route('homepage')}}"><img src="/media/logoPresto-transp.png" width="90px" alt="LOGO"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,6 +46,11 @@
                 </ul>
               </li>
             </ul>
+            @auth
+            <li class="nav-item">
+              <a class="nav-link tx-m fw-bold" href="{{route('product.create')}}">Inserisci Annuncio </a>
+            </li>
+            @endauth
           </div>
         </ul>
         <i class="bi bi-search fs-5 fw-bold my-md-auto px-md-2"></i>

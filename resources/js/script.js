@@ -33,50 +33,10 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-let addFavourite = document.querySelector('#addFavourite')
-
-  addFavourite.addEventListener('click', (el)=>{
-    addFavourite.classList.remove("bi-heart")
-    addFavourite.classList.add("bi-heart-fill")
-  })
-
-  addFavourite.addEventListener('click', (el)=>{
-    addFavourite.classList.remove("bi-heart-fill")
-    addFavourite.classList.add("bi-heart")
-  })
-
-  let isFavourite = false;
-
-addFavourite.addEventListener('click', (el)=>{
-  isFavourite = !isFavourite;
-  if (isFavourite) {
-    addFavourite.classList.remove("bi-heart")
-    addFavourite.classList.add("bi-heart-fill")
-  } else {
-    addFavourite.classList.remove("bi-heart-fill")
-    addFavourite.classList.add("bi-heart")
-  }
-})
-
-
-  // FINE CAROSELLO HOMEPAGE
-
-  // SCROLL NAVBAR
-
-  // const navbar = document.querySelector('#nav')
-
-  // window.addEventListener('scroll', function(e) {
-  // const lastPosition = window.scrollY
-  // if (lastPosition > 620 ) {
-  //   navbar.classList.add('nav-active')
-  // } else if (navbar.classList.contains('active')) {
-  //   navbar.classList.remove('nav-active')
-  // } else {
-  //   navbar.classList.remove('nav-active')
-  // }
-  // })
-
-  const navbar = document.querySelector('#nav')
+ 
+  // INIZIO SCROLL NAVBAR
+  
+  const navbar = document.querySelector('#navUno')
 
 window.addEventListener('scroll', function(e) {
   const lastPosition = window.scrollY
@@ -92,3 +52,34 @@ window.addEventListener('scroll', function(e) {
     navbar.classList.remove('nav-reverse')
   }
 })
+
+// FINE SCROLL NAVBAR
+
+
+// INIZIO ICONA CUORI
+// let addFavourite = document.querySelector('#addFavourite')
+
+//   addFavourite.addEventListener('click', (el)=>{
+//     addFavourite.classList.remove("bi-heart")
+//     addFavourite.classList.add("bi-heart-fill")
+//   })
+
+//   addFavourite.addEventListener('click', (el)=>{
+//     addFavourite.classList.remove("bi-heart-fill")
+//     addFavourite.classList.add("bi-heart")
+//   })
+
+//   let isFavourite = false;
+
+// addFavourite.addEventListener('click', (el)=>{
+//   isFavourite = !isFavourite;
+//   if (isFavourite) {
+//     addFavourite.classList.remove("bi-heart")
+//     addFavourite.classList.add("bi-heart-fill")
+//   } else {
+//     addFavourite.classList.remove("bi-heart-fill")
+//     addFavourite.classList.add("bi-heart")
+//   }
+// })
+
+// FINE ICONA CUORI

@@ -23,6 +23,11 @@
                 
                 @endforeach
               </ul>
+              @auth
+              <li class="nav-item">
+                <a class="nav-link tx-m fw-bold" href="{{route('product.create')}}">Inserisci Annuncio </a>
+              </li>
+              @endauth
             </li>
           </ul>
         </div>
@@ -31,9 +36,6 @@
       <div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-md-2 ">
           @auth
-          {{-- <li class="nav-item">
-            <a class="nav-link tx-m" href="{{route('product.create')}}">Inserisci Annuncio </a>
-          </li> --}}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle personToggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
               <i class="bi bi-person fs-4 fw-bold">  </i> {{-- {{Auth::user()->name}}   --}}
