@@ -33,30 +33,30 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-// let addFavourite = document.querySelector('#addFavourite')
+let addFavourite = document.querySelector('#addFavourite')
 
-//   addFavourite.addEventListener('click', (el)=>{
-//     addFavourite.classList.remove("bi-heart")
-//     addFavourite.classList.add("bi-heart-fill")
-//   })
+  addFavourite.addEventListener('click', (el)=>{
+    addFavourite.classList.remove("bi-heart")
+    addFavourite.classList.add("bi-heart-fill")
+  })
 
-//   addFavourite.addEventListener('click', (el)=>{
-//     addFavourite.classList.remove("bi-heart-fill")
-//     addFavourite.classList.add("bi-heart")
-//   })
+  addFavourite.addEventListener('click', (el)=>{
+    addFavourite.classList.remove("bi-heart-fill")
+    addFavourite.classList.add("bi-heart")
+  })
 
-//   let isFavourite = false;
+  let isFavourite = false;
 
-// addFavourite.addEventListener('click', (el)=>{
-//   isFavourite = !isFavourite;
-//   if (isFavourite) {
-//     addFavourite.classList.remove("bi-heart")
-//     addFavourite.classList.add("bi-heart-fill")
-//   } else {
-//     addFavourite.classList.remove("bi-heart-fill")
-//     addFavourite.classList.add("bi-heart")
-//   }
-// })
+addFavourite.addEventListener('click', (el)=>{
+  isFavourite = !isFavourite;
+  if (isFavourite) {
+    addFavourite.classList.remove("bi-heart")
+    addFavourite.classList.add("bi-heart-fill")
+  } else {
+    addFavourite.classList.remove("bi-heart-fill")
+    addFavourite.classList.add("bi-heart")
+  }
+})
 
 
   // FINE CAROSELLO HOMEPAGE

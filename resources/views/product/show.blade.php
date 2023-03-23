@@ -52,7 +52,12 @@
                     </div>
                     
                 </div>
-                <h2 class="fw-bold text-muted ">{{$product->brand}}</h2>
+                <h2 class="fw-bold text-muted tx-a">{{$product->brand}}</h2>
+                <div class="d-flex align-intems-center my-3">
+                    <p class="display-5">Price:</p>
+                    <p class="display-5 fw-bold ms-3">€ {{$product->price}}</p>
+
+                </div>
                 
                     
                     <hr>

@@ -32,14 +32,14 @@
         </div>
         
         <div class="card__img" style="background-image: url('https://picsum.photos/200')"></div>
-        <a href="#" class="card_link">
+        <a href="{{route('product.show', compact('product'))}}" class="card_link">
             <div class="card__img--hover" style="background-image: url('https://picsum.photos/200')"></div>
         </a>
         <div class="card__info">
             <span class="">{{$product->category->type}}</span>
             <h3 class="">{{$product->name}}</h3>
             <h2 class="">€{{$product->price}}</h2>
-            <span class="">by <a href="{{-- --}}" class="card__author" title="author">{{Auth::user()->name}}</a></span>
+            <span class="">by <a href="{{-- --}}" class="card__author" title="author">{{$product->user->name}}</a></span>
         </div>
     </article>
 </div>
