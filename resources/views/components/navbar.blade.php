@@ -10,6 +10,9 @@
         <li class="nav-item">
           <a class="nav-link active fw-bold p-2 mx-3 home" aria-current="page" href="{{route('homepage')}}">Home</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active fw-bold p-2 mx-3 home" aria-current="page" href="{{route('product.index')}}">Annunci</a>
+        </li>
         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
           <ul class="navbar-nav categorie ">
             <li class="nav-item dropdown ">
@@ -80,7 +83,10 @@
         </ul>
         
       </div>
-      
+      <form action="{{route('products.search')}}" method="GET" class="d-flex">
+        <input name="searched" class="form-control me-2" type="search" placeholder="search" aria-label="search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
       {{-- <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>

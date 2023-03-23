@@ -4,13 +4,14 @@ namespace App\Models;
 
 use App\Models\User;
 use App\Models\Category;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Product extends Model
 {
-    use HasFactory;
-    
+    use HasFactory, Searchable;
+
     protected $fillable = [
         'name',
         'brand',
@@ -20,6 +21,32 @@ class Product extends Model
         'user_id',
         'category_id',
     ];
+
+
+
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array<string, mixed>
+     */
+
+
+    public function toSearchableArray(){
+        $category = $this->category;
+        $array = [
+            'id' => $this->id, // da cancellare in evenienza
+            'name' => $this->name,
+            'brand' => $this->brand,
+            'price' => $this->price,
+            'usage' => $this->usage,
+            'user_id' => $this->user_id,
+            'category_id' => $this->category_id,
+            'description' => $this->description,
+            'category' => $category,
+            
+        ];
+        return $array;
+        }
 
     
     public function user(){

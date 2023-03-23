@@ -71,6 +71,7 @@
         <div class="row justify-content-center ">
             
             @forelse ($products as $product)
+            
             <div class="col-12 col-md-4 px-0">
                 <x-cardProduct :Product="$product" />
             </div>

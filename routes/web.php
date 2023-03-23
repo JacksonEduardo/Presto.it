@@ -19,11 +19,13 @@ use App\Http\Controllers\RevisorController;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->name('category.show');
 
-
+// RICERCA ANNUNCIO
+Route::get('/ricerca/prodotto', [PublicController::class, 'searchProducts'])->name('products.search');
 
 // ROTTE PRODUCT
 Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
 Route::get('/product/show/{product}', [ProductController::class, 'show'])->name('product.show');
+Route::get('/product/index', [ProductController::class, 'index'])->name('product.index');
 
 // ROTTE REVISOR PROTETTE DA MIDDLEWARE
 Route::get('/revisor/home',[RevisorController::class,'index'])->middleware('isRevisor')->name('revisor.index');
@@ -39,3 +41,5 @@ Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->
 
 // CONFERMA RUOLO REVISORE
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+
