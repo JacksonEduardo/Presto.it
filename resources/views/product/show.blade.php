@@ -1,6 +1,6 @@
 <x-layout>
-    <div class="container">
-        <div class="row">
+    <div class="container mt-5">
+        <div class="row justify-content-between">
             <div class="col-12 col-md-6">
                 
                 {{-- INIZIO CAROSELLO --}}
@@ -43,22 +43,39 @@
                 {{-- FINE CAROSELLO --}}
             </div>
             
-            <div class="col-12 col-md-6">
-                <div class="card-body">
-                    <h5 class="card-title">Nome Prodotto : {{$product->name}}</h5>
-                    <p class="card-text">Descrizione : {{$product->description}}</p>
-                    <small class="card-text">Prezzo: {{$product->price}}</small>           
-                </div>
-                <div class="card-footer">
-                    <p> Categoria</p>
-                    <p> {{$product->category->type}}</p>
+            <div class="col-12 col-md-5 px-4">
+                <div class="d-flex align-items-center">
+                    <h1 class="fw-bold mt-4 me-5">{{$product->name}}</h1>
+                    <div class="d-flex align-items-center mt-1">
+                        <i class="bi bi-heart fs-2 text-danger mt-3" id="addFavourite"></i>
+                        <i class="bi bi-cart4 fs-2 mt-2 ms-3"></i>
+                    </div>
                     
                 </div>
+                <h2 class="fw-bold text-muted ">{{$product->brand}}</h2>
                 
-                <div class="card-footer">
-                    <small class="text-muted">{{$product->created_at->format('d/m/Y')}}</small>
+                    
+                    <hr>
+                    <h4 class="fw-bold">Informazione aggiuntive sul prodotto:</h4>
+                    <p class="showDescription">{{$product->description}}</p>
+                    
+                    
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="ms-5">
+                            <h4> Categoria: </h4>
+                            <p> {{$product->category->type}}</p>
+                        </div>
+                        <div class="me-5">
+                            <h4>Condizione:</h4>
+                            <p>{{$product->usage}}</p>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    <div class="">
+                        <p class="">Created by: {{$product->user->name}}, il {{$product->created_at->format('d/m/Y')}}</p>
+                    </div>
                 </div>
-            </div>
             
         </div>
     </div>

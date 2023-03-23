@@ -1,7 +1,7 @@
 <x-layout>
     
     <x-header>
-        <h1>{{$category->type}}</h1>
+        <h1 class="mt-5">{{$category->type}}</h1>
     </x-header>
 
     <div class="container">

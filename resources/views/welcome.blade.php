@@ -1,4 +1,5 @@
-<x-layout>
+<x-layoutWelcome>
+    
     
     {{-- INIZIO CAROSELLO --}}
     
@@ -38,15 +39,21 @@
     </div>
     
     {{-- FINE CAROSELLO --}}
+
+    <div class="container py-5 my-3">
+        <div class="row shadow text-center ">
+            <h1 class="py-3">GLI ULTIMI ANNUNCI</h1>
+        </div>
+    </div>
     
-    <div class="container">
-        <div class="row justify-content-center mt-3">
+    <div class="container-fluid">
+        <div class="row justify-content-center ">
             
             @forelse ($products as $product)
-            <div class="col-12 col-md-4 p-4">
+            <div class="col-12 col-md-4 px-0">
                 <x-cardProduct :Product="$product" />
-                
             </div>
+                
             
             @empty
             
@@ -58,8 +65,11 @@
                 
             </div>
             @endforelse
+
+            
+           
             
         </div>
     </div>
     
-</x-layout>
+</x-layoutWelcome>

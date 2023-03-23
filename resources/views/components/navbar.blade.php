@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary p-2 shadow-sm fixed-top bg-transparent nav-active" id="nav">
+{{-- FIXED TOP DA RIVEDERE --}}
+<nav class="navbar navbar-expand-lg bg-body-tertiary p-2 shadow-sm bg-transparent " id="nav">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{route('homepage')}}"><img src="/media/logoPresto-transp.png" width="90px" alt="LOGO"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
