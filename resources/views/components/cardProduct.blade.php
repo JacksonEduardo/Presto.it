@@ -39,7 +39,7 @@
             <span class="">{{$product->category->type}}</span>
             <h3 class="">{{$product->name}}</h3>
             <h2 class="">€{{$product->price}}</h2>
-            <span class="">by <a href="{{-- --}}" class="card__author" title="author">{{$product->user->name}}</a></span>
+            <span class="">by <a href="{{route('user.index')}}" class="card__author" title="author">{{$product->user->name}}</a></span>
         </div>
     </article>
 </div>

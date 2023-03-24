@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ProductController;
@@ -44,5 +45,10 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 
 // ROTTE ADMIN
 Route::get('/admin/index', [AdminController::class, 'index'])->name('admin.index');
+
+// ROTTE USER
+Route::get('/user/index/', [UserController::class, 'index'])->name('user.index');
+
+
 
 

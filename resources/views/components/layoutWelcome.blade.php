@@ -85,7 +85,7 @@
                 <i class="bi bi-person fs-4 fw-bold">  </i> {{Auth::user()->name}}
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Profilo</a></li>
+                <li><a class="dropdown-item" href="{{route('user.index')}}">Profilo</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
                 <form id="form-logout" method="POST" action="{{route('logout')}}" class="d-none">@csrf</form>
