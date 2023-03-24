@@ -21,7 +21,8 @@ class PublicController extends Controller
     }
 
     public function searchProducts(Request $request){
-         $products = Product::search($request->searched)->where('is_accepted', true)->paginate(2);
+        // APRI UN TICKET PER CAPIRE LA DIFFERENZA TRA PAGINATE E GET 
+         $products = Product::search($request->searched)->where('is_accepted', true)->paginate(500);
 
          return view ('product.index' , compact('products'));
     }

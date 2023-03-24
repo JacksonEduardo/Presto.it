@@ -27,21 +27,18 @@ class Product extends Model
     /**
      * Get the indexable data array for the model.
      *
+     * RICORDATI CHE ANCHE SE è COLORATO NON FUNZIONA
      * @return array<string, mixed>
      */
 
-
+// 
     public function toSearchableArray(){
         $category = $this->category;
         $array = [
-            'id' => $this->id, // da cancellare in evenienza
+            'id' => $this->id, 
             'name' => $this->name,
             'brand' => $this->brand,
-            'price' => $this->price,
             'usage' => $this->usage,
-            'user_id' => $this->user_id,
-            'category_id' => $this->category_id,
-            'description' => $this->description,
             'category' => $category,
             
         ];

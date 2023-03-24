@@ -60,6 +60,9 @@
     </div>
     
     {{-- FINE CAROSELLO --}}
+    <a href="{{route('admin.index')}}"><button class="btn btn-dark">Admin index</button></a>
+    {{-- PROVA ADMIN --}}
+
 
     <div class="container py-5 my-3">
         <div class="row shadow text-center ">

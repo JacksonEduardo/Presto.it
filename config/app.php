@@ -186,6 +186,9 @@ return [
         /*
          * Package Service Providers...
          */
+         //MESSI DA NOI PERCHè NON CAPIAMO A CHE SERVE LA FUNZIONE NEL PRODUCT.PHP
+        // Laravel\Scout\ScoutServiceProvider::class,
+        // TeamTNT\Scout\TNTSearchScoutServiceProvider::class,
         FortifyServiceProvider::class,
         /*
          * Application Service Providers...
