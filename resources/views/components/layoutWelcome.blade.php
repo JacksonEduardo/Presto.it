@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,300&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -54,9 +55,6 @@
             <li class="nav-item">
               <a class="nav-link tx-m fw-bold" href="{{route('product.create')}}">Inserisci Annuncio </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link tx-m fw-bold" href="{{route('become.revisor')}}">Lavora con noi</a>
-            </li>
             @if (Auth::user()->is_revisor)
               <li class="nav-item">
                 <a href="{{route('revisor.index')}}" class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page">
@@ -71,9 +69,14 @@
             @endauth
           </div>
         </ul>
-        <i class="bi bi-search fs-5 fw-bold my-md-auto px-md-2"></i>
         <div>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-md-2 ">
+            <li>
+              <form class="formSearcher" action="{{route('products.search')}}" method="GET">
+                <input name="searched" class="inputSearcher form-control me-2 inputCustom" type="search" placeholder="chat gbt" aria-label="search">
+                <button type="submit" class="fa fa-search border-0"></button>
+            </form>
+            </li>
             @auth
            
          
@@ -103,10 +106,10 @@
           </ul>
           
         </div>
-        <form action="{{route('products.search')}}" method="GET" class="d-flex">
+        {{-- <form action="{{route('products.search')}}" method="GET" class="d-flex">
           <input name="searched" class="form-control me-2" type="search" placeholder="search" aria-label="search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      </form> --}}
         {{-- <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>

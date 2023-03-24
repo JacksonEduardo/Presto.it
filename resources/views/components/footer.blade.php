@@ -1,182 +1,67 @@
-<!-- Footer -->
 <footer class="bg-light text-center ">
-    <!-- Grid container -->
-    <div class="container p-4">
-  
-      <!-- Section: Social media -->
+
+  <div class="container p-4">
+      
+
       <section class="mb-4">
-        <!-- Facebook -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-  
-        <!-- Twitter -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-  
-        <!-- Google -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
-  
-        <!-- Instagram -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-  
-        <!-- Linkedin -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-        <!-- Github -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/antoniogiannino-webdeveloper/"><i class="bi bi-linkedin fs-3 m-2"></i>Antonio Giannino</a>
+  <a href="https://www.linkedin.com/in/roberto-acerbo-dev/"><i class="bi bi-linkedin fs-3 m-2"></i>Roberto Acerbo</a>
+          <a href="https://www.linkedin.com/in/cristian-filograno-dev/"><i class="bi bi-linkedin fs-3 m-2"></i>Cristian Filograno</a>
+  <a href="https://www.linkedin.com/in/flaviolaterzafullstackdeveloperjunior/"><i class="bi bi-linkedin fs-3 m-2"></i>Flavio Laterza</a>
+          <a href="https://www.linkedin.com/in/jackson-zabala-web-developer/"><i class="bi bi-linkedin fs-3 m-2"></i>Jackson Zabala</a>
       </section>
-      <!-- Section: Social media -->
-  
-  
-      <!-- Section: Form -->
+
       <section class="">
-        <form action="">
-          <!--Grid row-->
-          <div class="row d-flex justify-content-center">
-            <!--Grid column-->
-            <div class="col-auto">
-              <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
-              </p>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-md-5 col-12">
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="email" id="form5Example2" class="form-control" />
-                <label class="form-label" for="form5Example2">Email address</label>
+          <form action="">
+              <div class="row d-flex justify-content-center">
+                  <div class="col-auto">
+                      <p class="lead pt-2">
+                          Contattaci
+                      </p>
+                  </div>
+
+                  <div class="col-md-5 col-12">
+                      <div class="form-outline mb-4">
+                          <input type="email" id="form5Example2" class="form-control" />
+                      </div>
+                  </div>
+
+                  <div class="col-auto">
+                      
+                      <button type="submit" class="btn btn-primary mb-4 me-md-5">
+                          <i class="bi bi-envelope-paper"></i>
+                      </button>
+                  </div>
               </div>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-auto">
-  
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-primary mb-4">
-                Subscribe
-              </button>
-            </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </form>
+          </form>
       </section>
-      <!-- Section: Form -->
-  
-  
-      <!-- Section: Text -->
-      <section class="mb-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          distinctio earum repellat quaerat voluptatibus placeat nam,
-          commodi optio pariatur est quia magnam eum harum corrupti dicta,
-          aliquam sequi voluptate quas.
-        </p>
-      </section>
-      <!-- Section: Text -->
-  
-  
-      <!-- Section: Links -->
+
       <section class="">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-dark">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 4</a>
-              </li>
-            </ul>
+          <div class="row d-flex justify-content-center">
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <a href="">
+                      <h5 class="fw-light pt-2">Tutti i prodotti</h5>
+                  </a>
+              </div>
+              @auth
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <a class="fw-light" href="{{route('become.revisor')}}">
+                        <button class="btn btn-outline-primary fw-bold">Diventa Revisore</button>
+                    </a>
+              </div>
+              @endauth
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                  <a href="">
+                      <h5 class="fw-light pt-2">Chi Siamo?</h5>
+                  </a>
+              </div>
           </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-dark">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-dark">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-dark">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
       </section>
-      <!-- Section: Links -->
+      
+  </div>
   
-    </div>
-    <!-- Grid container -->
+  <div class="text-center pb-1">
+      <p class="lead">©2023 Ctrl-Alt-Shit, Presto.it</p>
+  </div>
   
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2020 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  
-  </footer>
-  <!-- Footer -->
+</footer>

@@ -8,59 +8,61 @@
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
         <li class="nav-item">
-          <a class="nav-link active fw-bold p-2 mx-3 home" aria-current="page" href="{{route('homepage')}}">Home</a>
+          <a class="nav-link active fw-bold p-2 mx-3 home text-center" aria-current="page" href="{{route('homepage')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active fw-bold p-2 mx-3 home" aria-current="page" href="{{route('product.index')}}">Annunci</a>
+          <a class="nav-link active fw-bold p-2 mx-3 home text-center" aria-current="page" href="{{route('product.index')}}">Annunci</a>
         </li>
-        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-          <ul class="navbar-nav categorie ">
-            <li class="nav-item dropdown ">
-              <ul class="dropdown-toggle fw-bold p-2 mx-3 " data-bs-toggle="dropdown" aria-expanded="false">
-                Categorie
-              </ul>
-              <ul class="dropdown-menu dropdown-menu-transparent">
-                @foreach ($categories as $category)
-                
-                <li><a class="dropdown-item" href="{{route('category.show', compact('category'))}}">{{$category->type}}</a></li>
-                
-                @endforeach
-              </ul>
-              @auth
-              {{-- LO VOGLIAMO DAVVRERO QUA? --}}
-              <li class="nav-item">
-                <a class="nav-link tx-m fw-bold" href="{{route('product.create')}}">Inserisci Annuncio </a>
-              </li>
+        <ul class="navbar-nav categorie ">
+          <li class="nav-item dropdown pb-2">
+            <ul class="dropdown-toggle fw-bold p-2 mx-3 text-center" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorie
+            </ul>
+            <ul class="dropdown-menu dropdown-menu-transparent">
+              @foreach ($categories as $category)
               
-              <li class="nav-item">
-                <a class="nav-link tx-m fw-bold" href="{{route('become.revisor')}}">Lavora con noi</a>
-              </li>
-
+              <li><a class="dropdown-item" href="{{route('category.show', compact('category'))}}">{{$category->type}}</a></li>
               
-              @if (Auth::user()->is_revisor)
-              <li class="nav-item">
-                <a href="{{route('revisor.index')}}" class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page">
-                  Zona revisore
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    {{App\Models\Product::toBeRevisionedCount()}}
-                    <span class="visually-hidden">Messaggi non letti</span>
-                  </span>
-                </a>
-              </li>
-              @endif
-              @endauth
+              @endforeach
+            </ul>
+            @auth
+            
+            <li class="nav-item text-center">
+              <a class="nav-link tx-m fw-bold" href="{{route('product.create')}}">Inserisci Annuncio </a>
             </li>
-          </ul>
-        </div>
+            @endauth
+          </li>
+        </ul>
+        
       </ul>
-      <i class="bi bi-search fs-5 fw-bold my-md-auto px-md-2"></i>
       <div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-md-2 ">
           @auth
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle personToggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-              <i class="bi bi-person fs-4 fw-bold">  </i> {{Auth::user()->name}}  
+          @if (Auth::user()->is_revisor)
+          <li class="nav-item">
+            <a href="{{route('revisor.index')}}" class="nav-link btn-sm position-relative d-flex justify-content-center" aria-current="page">
+              <i class="bi bi-bell fs-3 me-3 text-dark ps-3"></i>
+              <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger ">
+                {{App\Models\Product::toBeRevisionedCount()}}
+                <span class="visually-hidden">Messaggi non letti</span>
+              </span>
             </a>
+          </li>
+          @endif
+          @endauth
+          <li class="">
+            <form class="formSearcher mt-3 mt-md-0 me-md-3" action="{{route('products.search')}}" method="GET">
+              <input name="searched" class="form-control me-2 inputCustom" type="search" placeholder="chat gbt" aria-label="search">
+              <button type="submit" class="fa fa-search border-0"></button>
+            </form>
+          </li>
+          @auth
+          <li class="nav-item dropdown">
+            <div class="d-flex justify-content-center">
+              <a class="nav-link dropdown-toggle personToggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                <i class="bi bi-person fs-3 me-3 fw-bold">  </i> {{Auth::user()->name}}  
+              </a>
+            </div>
             <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="#">Profilo</a></li>
               <li><hr class="dropdown-divider"></li>
@@ -83,10 +85,12 @@
         </ul>
         
       </div>
-      <form action="{{route('products.search')}}" method="GET" class="d-flex">
+      {{-- <form action="{{route('products.search')}}" method="GET" class="d-flex">
         <input name="searched" class="form-control me-2" type="search" placeholder="search" aria-label="search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+      </form> --}}
+      
+      
       {{-- <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>

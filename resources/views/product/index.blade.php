@@ -7,7 +7,7 @@
             <div class="col-12 col-md-4">
                 
                 @forelse ($products->where('is_accepted', true) as $product)
-                @dd($product)
+                
                     <div class="card">
                         <img src="https://picsum.photos/200" class="img-fluid" alt="{{$product->name}}">
                         <div class="card-body">
@@ -29,7 +29,6 @@
                 @empty
                     <h1>Non ci sono  prodotti per la ricerca effettuata!</h1>
                 @endforelse
-                
             
             </div>
         </div>
