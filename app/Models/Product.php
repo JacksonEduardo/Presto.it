@@ -32,18 +32,18 @@ class Product extends Model
      */
 
 // 
-    public function toSearchableArray(){
-        $category = $this->category;
-        $array = [
-            'id' => $this->id, 
-            'name' => $this->name,
-            'brand' => $this->brand,
-            'usage' => $this->usage,
-            'category' => $category,
+    // public function toSearchableArray(){
+    //     $category = $this->category;
+    //     $array = [
+    //         'id' => $this->id, 
+    //         'name' => $this->name,
+    //         'brand' => $this->brand,
+    //         'usage' => $this->usage,
+    //         'category' => $category,
             
-        ];
-        return $array;
-        }
+    //     ];
+    //     return $array;
+    //     }
 
     
     public function user(){

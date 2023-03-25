@@ -1,4 +1,4 @@
-<x-layoutWelcome>
+<x-layout>
 {{-- ERRORE ACCESSO UTENTE --}}
     @if (session('nope'))
     <div class="alert alert-danger marginAlert">
@@ -30,7 +30,7 @@
     
     {{-- INIZIO CAROSELLO --}}
     
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <div class="row ">
             <div class="swiper mySwiper3 p-0 vh-100">
                 <div class="swiper-wrapper">
@@ -66,9 +66,6 @@
     </div>
     
     {{-- FINE CAROSELLO --}}
-    <a href="{{route('admin.index')}}"><button class="btn btn-dark">Admin index</button></a>
-    {{-- PROVA ADMIN --}}
-
 
     <div class="container py-5 my-3">
         <div class="row shadow text-center ">
@@ -126,4 +123,4 @@
         </div>
     </div>
     
-</x-layoutWelcome>
+</x-layout>

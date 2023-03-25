@@ -1,7 +1,7 @@
 <x-layout>
     
     <x-header>
-        <h1 class="p-5 bg-light text-dark">
+        <h1 class="p-5 bg-light text-dark mt-5">
             {{$product_to_check ? 'ANNUNCI DA REVSIONARE' : 'Non ci sono Annunci da Revisionare'}}
         </h1>
     </x-header>

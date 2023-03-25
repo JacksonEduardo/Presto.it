@@ -1,9 +1,34 @@
 <x-layout>
     <x-header>
-        <h1 class="p-5 bg-light text-dark">
+        <h1 class="p-5 bg-light text-dark mt-5">
             BENVENUTO {{Auth::user()->name}}
         </h1>
     </x-header>
+
+    @if (session('avatarUpdated'))
+    <div class="alert alert-success marginAlert">
+        {{ session('avatarUpdated') }}
+    </div>
+    @endif
+
+    <div class="container">
+        <div class="row">
+            <h2>inserisci avatar</h2>
+            {{-- CARO DIMI DEL FUTURO VEDI MEGLIO COME FARE L'ANTEPRIMA IMMAGINE --}}
+            {{-- @if (Auth::user()->$profilePicture)
+            <div class="mt-3 text-center">
+                Anteprima Immagine
+                <img width="200px" src="{{ $profilePicture->temporaryUrl() }}">
+            </div> --}}
+            {{-- @endif --}}
+            <form action="{{route('user.avatar',['user' => Auth::user()] )}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                @method('put')
+                <input type="file" name="profilePicture" class="form-control">
+                <button type="submit" class="btn btn-primary">Inserisci Avatar</button>
+            </form>
+        </div>
+    </div>
     
     <div class="container">
         <div class="row">

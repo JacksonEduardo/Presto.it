@@ -52,42 +52,32 @@ h2, h3, h4, p {
   background-color: var(--a-color) !important;
 }
 
-/* NAVBAR */
-.bi-person{
- color: #000000!important;
- font-weight: bold!important;
+/* NAV OFFICIAL */
+.notificationCustom{
+  position: absolute;
+  top: 0px;
+  left: 200px;
 }
 
- .bi-person:hover{
-  color: var(--a-color)!important;
-  transition:  0.3s ease-out;
+.btnSideBarCustom{
+  position: absolute;
+  top: 15px;
+  left: 350px;
 }
 
-
-.personToggle{
-  color: #000000!important;
- font-weight: bold!important;
-}
-.bi-search{
-  color: #000000!important;
- font-weight: bold!important;
- cursor: pointer;
+.NavbarCustom{
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
 }
 
-.bi-search:hover{
-  color: var(--a-color)!important;
-  transition:  0.3s ease-out;
+.RadiusCustom{
+  border-radius: 17px;
 }
 
-.personToggle:hover{
-  color: var(--a-color)!important;
-  transition:  0.3s ease-out;
-}
-
-.home:hover{
-  color: var(--a-color)!important;
-  transition:  0.3s ease-out;
-
+@media screen and (max-width:600px){
+  .navResponsive{
+    display: none;
+  }
 }
 
 .categorie:hover{
@@ -97,21 +87,6 @@ h2, h3, h4, p {
 
 }
 
-
-.nav-active {
-  background-color: white!important;
-  
-  transition: 0.7s;
-  animation-direction: alternate-reverse;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.nav-reverse {
-  transition: 0.7s;
-  animation-direction: alternate-reverse;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
-}
 /* PRIMO CAROSELLO */
 
 .swiper {
@@ -183,7 +158,7 @@ h2, h3, h4, p {
   left: 0;
   top: 0;
   width: 120%;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -191,11 +166,11 @@ h2, h3, h4, p {
 
 .parallax-bg2 {
   position: absolute;
-  background-image: url(/public/media/car.jpg);
+  background-image: url(/public/media/computer.jpg);
   left: 0;
   top: 0;
-  width: 120%;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -203,11 +178,11 @@ h2, h3, h4, p {
 
 .parallax-bg3 {
   position: absolute;
-  background-image: url(/public/media/phone.png);
+  background-image: url(/public/media/maggiolino.jpg);
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-position: top center;
   z-index: -1;

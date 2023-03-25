@@ -1,8 +1,8 @@
 <x-layout>
     
     <x-header>
-        <h1 class="p-5 bg-light text-dark">
-            BENVENUTO ADMIN
+        <h1 class="p-5 bg-light text-dark mt-5">
+            Benventuo {{Auth::user()->name}}
         </h1>
     </x-header>
     

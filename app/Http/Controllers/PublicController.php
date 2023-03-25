@@ -12,7 +12,6 @@ class PublicController extends Controller
         
         $products = Product::where('is_accepted', true)->take(6)->orderBy('created_at', 'DESC')->get();
         return view('welcome' , compact('products'));
-        
     }
 
     public function categoryShow(Category $category) {
@@ -26,5 +25,7 @@ class PublicController extends Controller
 
          return view ('product.index' , compact('products'));
     }
+
+    
 
 }

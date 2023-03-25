@@ -47,7 +47,8 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 Route::get('/admin/index', [AdminController::class, 'index'])->name('admin.index');
 
 // ROTTE USER
-Route::get('/user/index/', [UserController::class, 'index'])->name('user.index');
+Route::get('/user/profile/', [UserController::class, 'index'])->name('user.index')->middleware('auth');
+Route::put('/user/avatar/{user}', [UserController::class, 'changeAvatar'])->name('user.avatar');
 
 
 

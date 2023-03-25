@@ -36,20 +36,18 @@ var swiper = new Swiper(".mySwiper", {
  
   // INIZIO SCROLL NAVBAR
   
-  const navbar = document.querySelector('#navUno')
+  const navbar = document.querySelector('#nav')
 
 window.addEventListener('scroll', function(e) {
   const lastPosition = window.scrollY
-  if (lastPosition > 590 ) {
-    navbar.classList.add('nav-active')
+  if (lastPosition > 5 ) {
+    navbar.classList.add('bg-light')
+    navbar.classList.remove('bg-transparent')
   } else {
-    navbar.classList.remove('nav-active')
-  }
+    navbar.classList.remove('bg-light')
+    navbar.classList.add('bg-transparent')
+    // aggiungere la transition
 
-  if (!navbar.classList.contains('nav-active')) {
-    navbar.classList.add('nav-reverse')
-  } else {
-    navbar.classList.remove('nav-reverse')
   }
 })
 
