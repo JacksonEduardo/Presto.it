@@ -1,34 +1,56 @@
 <x-layout>
-    <x-header>
-        <h1 class="p-5 bg-light text-dark mt-5">
-            BENVENUTO {{Auth::user()->name}}
-        </h1>
-    </x-header>
+    {{-- SE SONO AUTENTICATO: --}}
+    @if(Auth::user())
+        <x-header>
+            <h1 class="p-5 bg-light text-dark mt-5">
+                Ciao {{Auth::user()->name}}, benvenuto sul profilo di {{$user->name}}
+            </h1>
+        </x-header>
 
-    @if (session('avatarUpdated'))
-    <div class="alert alert-success marginAlert">
-        {{ session('avatarUpdated') }}
-    </div>
-    @endif
-
-    <div class="container">
-        <div class="row">
-            <h2>inserisci avatar</h2>
-            {{-- CARO DIMI DEL FUTURO VEDI MEGLIO COME FARE L'ANTEPRIMA IMMAGINE --}}
-            {{-- @if (Auth::user()->$profilePicture)
-            <div class="mt-3 text-center">
-                Anteprima Immagine
-                <img width="200px" src="{{ $profilePicture->temporaryUrl() }}">
-            </div> --}}
-            {{-- @endif --}}
-            <form action="{{route('user.avatar',['user' => Auth::user()] )}}" method="POST" enctype="multipart/form-data">
-                @csrf
-                @method('put')
-                <input type="file" name="profilePicture" class="form-control">
-                <button type="submit" class="btn btn-primary">Inserisci Avatar</button>
-            </form>
+        @if (session('avatarUpdated'))
+        <div class="alert alert-success marginAlert">
+            {{ session('avatarUpdated') }}
         </div>
-    </div>
+        @endif
+
+        @if(Auth::user()->id == $user->id)
+        <div class="container">
+            <div class="row">
+                <h2>inserisci avatar</h2>
+                {{-- CARO DIMI DEL FUTURO VEDI MEGLIO COME FARE L'ANTEPRIMA IMMAGINE --}}
+                {{-- @if (Auth::user()->$profilePicture)
+                <div class="mt-3 text-center">
+                    Anteprima Immagine
+                    <img width="200px" src="{{ $profilePicture->temporaryUrl() }}">
+                </div> --}}
+                {{-- @endif --}}
+                <form action="{{route('user.avatar',['user' => Auth::user()] )}}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method('put')
+                    <input type="file" name="profilePicture" class="form-control">
+                    <button type="submit" class="btn btn-primary">Inserisci Avatar</button>
+                </form>
+            </div>
+        </div>
+        @else
+        {{-- ELSE NON VISUALIZZARE NIENTE --}}
+        @endif
+        {{-- SE SONO ADMIN E L'UTENTE è REVISORE LO LICENZIO --}}
+        @if (Auth::user()->is_admin && $user->is_revisor == 1)
+        <a class="lead fs-5 d-flex" href="{{route('delete.revisor', compact('user'))}}">
+            <h5 class="my-auto ms-3">Licenzia Revisore</h5>
+        </a>
+        @endif
+
+    @else {{-- SE NON SONO AUTENTICATO: --}} 
+        
+        <x-header>
+            <h1 class="p-5 bg-light text-dark mt-5">
+                Ciao Guest, benvenuto sul profilo di {{$user->name}}
+            </h1>
+        </x-header>
+            
+    @endif
     
     <div class="container">
         <div class="row">
@@ -70,20 +92,6 @@
                 
             </div>
             @endforelse
-            
-                {{-- VA INSERITO QUI E NON NELL'INDEX PERCHè STIAMO USANDO IL flash NEL COMPONENTE LIVEWIRE(ArticleList)--}}
-                
-                
-            
-        
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
     
 </x-layout>

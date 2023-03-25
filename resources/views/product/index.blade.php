@@ -18,12 +18,12 @@
                         </div>
                         <div class="card-footer">
                             <p> Categoria</p>
-                            {{-- <p> {{$product->category->type}}</p> --}}
+                            <p> {{$product->category->type}}</p>
                 
                         </div>
                 
                         <div class="card-footer">
-                            {{-- <small class="text-muted">{{$product->created_at->format('d/m/Y')}}</small> --}}
+                            <small class="text-muted">{{$product->created_at->format('d/m/Y')}}</small>
                         </div>
                     </div>  
                 @empty

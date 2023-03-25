@@ -9,18 +9,38 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    // PARAMETRO OPZIONALE
-    public function index(User $user = NULL)
-    {
-        if(!$user){
-            $myId = Auth::user()->id; //Forse si puo sostituire direttamente con Auth::id() nel "where"
-            $products = Product::where('user_id', $myId)->orderBy('created_at', 'DESC')->get();
-        }else{
-            $products = Product::where('user_id', $user->id)->orderBy('created_at', 'DESC')->get();
-        }
+    public function __construct()
+{
+    $this->middleware('auth')->except('showProfile');
+}
+    // // PARAMETRO OPZIONALE
+    // public function index(User $user = NULL)
+    // {
+        // if(!$user){
+        //     $products = Product::where('user_id', Auth::id())->orderBy('created_at', 'DESC')->get();
+        // }else{
+        //     $products = Product::where('user_id', $user->id)->orderBy('created_at', 'DESC')->get();
+        // }
 
-        return view('user.index', compact('products'));
+
+        // return view('user.index', compact('products'));
+    // }
+
+    // IN QUALCHE MODO HA FUNZIONATO, solo per utenti loggati
+    public function showProfile($userId = null)
+{
+    if ($userId) {
+        $user = User::findOrFail($userId);
+        $products = Product::where('user_id', $user->id)->get();
+
+    } else {
+        $user = auth()->user();
+        $products = Product::where('user_id', $user->id)->get();
+
     }
+
+    return view('user.index', ['user' => $user, 'products' => $products]);
+}
     
      // GESTISCI IL REQUIRED DEL CAMPO UPDATE NEL FORMA DENTRO L'index.blade
      public function changeAvatar(User $user, Request $request){

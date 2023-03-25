@@ -26,6 +26,12 @@
         {{ session('messageMake') }}
     </div>
     @endif
+
+    @if (session('messageDelete'))
+    <div class="alert alert-success marginAlert">
+        {{ session('messageDelete') }}
+    </div>
+    @endif
     
     
     {{-- INIZIO CAROSELLO --}}
@@ -99,7 +105,8 @@
                             <span class="">{{$product->category->type}}</span>
                             <h3 class="">{{$product->name}}</h3>
                             <h2 class="">€{{$product->price}}</h2>
-                            <span class="">by <a href="{{--route('user.index'), compact('user')--}}" class="card__author" title="author">{{$product->user->name}}</a></span>
+                            {{-- IN QUALCHE MODO HA FUNZIONATO --}}
+                            <span class="">by <a href="{{route('user.index', ['userId' => $product->user_id])}}" class="card__author" title="author">{{$product->user->name}}</a></span>
                         </div>
                     </article>
                 </div>

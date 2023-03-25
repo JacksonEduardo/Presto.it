@@ -22,13 +22,21 @@ class RevisorController extends Controller
     public function acceptProduct(Product $product){
         $product->setAccepted(true);
         return redirect()->back()->with('message', 'Complimenti,hai accettato l\'annuncio');
-    
     }
     
     public function rejectProduct(Product $product){
         $product->setAccepted(false);
         return redirect()->back()->with('message', 'Complimenti,hai rifiutato l\'annuncio');
     }
+
+    // GESTISCI LA PARAMETRICA CON 'ULTIMO ARTICOLO DIVERS DA NULL = NULL
+    public function undoProduct(Product $product){
+        $product->setAccepted(null);
+        return redirect()->back()->with('message', 'Complimenti, sei tornato indietro');
+    }
+
+    
+
 
     public function becomeRevisor(){
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
@@ -39,5 +47,9 @@ class RevisorController extends Controller
         Artisan::call('app:make-user-revisor', ["email"=>$user->email]);
         return redirect('/')->with('messageMake', 'Complimenti, l\'utente è diventato un revisore');
     }
+
+    public function deleteRevisor(User $user){
+        Artisan::call('app:delete-revisor-role', ["email"=>$user->email]);
+        return redirect('/')->with('messageDelete', 'Complimenti, l\'utente non è più un revisore');
+    }
 }
-// PROVARE LA MAILABLE PERHCè FORSE POTREBBE FUNZIONARE
