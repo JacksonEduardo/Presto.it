@@ -36,9 +36,8 @@ Route::get('/product/index', [ProductController::class, 'index'])->name('product
 Route::get('/revisor/index',[RevisorController::class,'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accetta/product/{product}', [RevisorController::class, 'acceptProduct'])->middleware('isRevisor')->name('revisor.accept_product');
 Route::patch('/rifiuta/product/{product}', [RevisorController::class, 'rejectProduct'])->middleware('isRevisor')->name('revisor.reject_product');
-// Route::patch('/revisiona/product/{product}', [RevisorController::class, 'undoProduct'])->middleware('isRevisor')->name('revisor.undo_product');
+Route::patch('/revisiona/product/', [RevisorController::class, 'undoProduct'])->middleware('isRevisor')->name('revisor.undo_product');
 
-// ROTTA ANDO DSJKJDSKDJSKDJSKDJSKDJSK
     // Richiesta Revisore
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
     // Conferma ruolo Revisore
@@ -47,10 +46,9 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 Route::get('/licenzia/revisore/{user}', [RevisorController::class, 'deleteRevisor'])->middleware('auth')->name('delete.revisor');
 
 
-// 
-
 // ROTTE ADMIN
 Route::get('/admin/index', [AdminController::class, 'index'])->name('admin.index');
+
 
 // ROTTE USER
 Route::get('/user/profile/{userId?}', [UserController::class, 'showProfile'])->name('user.index');
