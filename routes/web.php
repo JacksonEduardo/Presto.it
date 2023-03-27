@@ -53,6 +53,7 @@ Route::get('/admin/index', [AdminController::class, 'index'])->name('admin.index
 // ROTTE USER
 Route::get('/user/profile/{userId?}', [UserController::class, 'showProfile'])->name('user.index');
 Route::put('/user/avatar/{user}', [UserController::class, 'changeAvatar'])->name('user.avatar');
+Route::get('user/diventaRevisore', [UserController::class, 'requestRevisor'])->name('user.diventaRevisore');
 
 
 

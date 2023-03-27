@@ -13,6 +13,10 @@ class UserController extends Controller
 {
     $this->middleware('auth')->except('showProfile');
 }
+
+public function requestRevisor(){
+    return view('user.diventaRevisore');
+}
     // // PARAMETRO OPZIONALE
     // public function index(User $user = NULL)
     // {

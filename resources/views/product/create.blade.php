@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
-        <h1>Inserisci Annuncio</h1>       
+      <h1 class="mt-5 tx-a fw-bold">Inserisci Annuncio</h1>
     </x-header>
 
 

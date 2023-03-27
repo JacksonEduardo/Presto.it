@@ -142,6 +142,3 @@ signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
 // FINE MODALE
-
-// ANIMAZIONI
-AOS.init();

@@ -9,9 +9,9 @@
         Categorie
       </a>
       <div class="container d-flex justify-content-center">
-        <ul id="dropdownShow" class="dropdown-menu submenu text-center align-items-center m-0 border-0 bg-light">
+        <ul id="dropdownShow" class="dropdown-menu submenu m-0 border-0 bg-light">
           @foreach ($categories as $category)
-          <li class="dropItem"><a class="dropdown-item px-2 tx-m" href="{{route('category.show', compact('category'))}}">{{$category->type}}</a></li>
+          <li class="dropItem"><a class="dropdown-item tx-m m-0" href="{{route('category.show', compact('category'))}}">{{$category->type}}</a></li>
           @endforeach
         </ul>
       </div>
@@ -67,7 +67,7 @@
         </span>
       </a>  
       @else
-      <a class="navbar-brand lead fs-5 d-flex" href="{{route('become.revisor')}}"><i class="bi bi-gear fs-3"></i>
+      <a class="navbar-brand lead fs-5 d-flex" href="{{route('user.diventaRevisore')}}"><i class="bi bi-gear fs-3"></i>
         <h5 class="my-auto ms-3">Diventa Revisore</h5>
       </a>
       @endif
@@ -114,12 +114,12 @@
 </div>
 <div>
   <div class="offcanvas-body categorie">
-    <a class="navbar-brand lead fs-5 d-flex" href="{{route('login')}}" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-person fs-3"></i>
+    <a class="navbar-brand lead fs-5 d-flex" href="{{route('login')}}"><i class="bi bi-person fs-3"></i>
       <h5 class="my-auto ms-3">Login</h5>
     </a>
   </div>
   <div class="offcanvas-body categorie">
-    <a class="navbar-brand lead fs-5 d-flex" href="{{route('register')}}" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="bi bi-box-arrow-in-right fs-3"></i>
+    <a class="navbar-brand lead fs-5 d-flex" href="{{route('register')}}"><i class="bi bi-box-arrow-in-right fs-3"></i>
       <h5 class="my-auto ms-3">Registrati</h5>
     </a>
   </div>
