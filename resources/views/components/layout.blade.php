@@ -121,19 +121,20 @@
                         </div>
                         <div class="d-flex justify-content-end">
                             <a href="{{route('product.create')}}">
-                            <button type="submit" class="btn btn-dark">Registrati</button>
+                                <button type="submit" class="btn btn-dark">Registrati</button>
                             </a>
                         </div>
                         
                     </div>
                 </div>
             </div>
-             {{-- <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+            {{-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
             </div> --}}
         </form>
-       
+        
     </div>
+    
     
 </div>
 </div>

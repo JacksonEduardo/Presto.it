@@ -45,7 +45,7 @@ class RevisorController extends Controller
     public function undoProduct(Product $product){
         
 
-        $product_checked = Product::latest('updated_at')->first();
+        $product_checked = Product::latest('updated_at')->where('is_accepted', !null)->first();
 
         $product_checked->setAccepted(null);
 

@@ -77,9 +77,15 @@
                     </div>
                     
                     <hr>
-                    <div class="">
-                        <p class="">Created by: {{$product->user->name}}, il {{$product->created_at->format('d/m/Y')}}</p>
-                    </div>
+                    @if ($product->user_id == null)
+                        <div class="">
+                            <p class="">by Utente Cancellato</p>
+                        </div>
+                    @else 
+                        <div class="">
+                            <p class="">Created by: {{$product->user->name}}, il {{$product->created_at->format('d/m/Y')}}</p>
+                        </div>
+                    @endif
                 </div>
             
         </div>

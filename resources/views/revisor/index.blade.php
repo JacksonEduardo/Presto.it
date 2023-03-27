@@ -65,7 +65,7 @@
                                         <span class="">{{$item->category->type}}</span>
                                         <h3 class="">{{$item->name}}</h3>
                                         <h2 class="">€{{$item->price}}</h2>
-                                        <span class="">by <a href="{{-- --}}" class="card__author" title="author">{{$item->user->name}}</a></span>
+                                        {{-- <span class="">by <a href="#" class="card__author" title="author">{{$item->user->name}}</a></span> --}}
                                         <div>
                                             <form action="{{route('revisor.accept_product' , ['product'=>$item])}}" method="POST">
                                             @csrf

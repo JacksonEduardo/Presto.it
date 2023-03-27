@@ -106,7 +106,15 @@
                             <h3 class="">{{$product->name}}</h3>
                             <h2 class="">€{{$product->price}}</h2>
                             {{-- IN QUALCHE MODO HA FUNZIONATO --}}
-                            <span class="">by <a href="{{route('user.index', ['userId' => $product->user_id])}}" class="card__author" title="author">{{$product->user->name}}</a></span>
+
+                            {{-- COSI DOVREBBE FUNZIONARE, INSERITA CONDIZIONE --}}
+                            {{-- SE L'USER ID DI CHI HA CREATO IL PRODOTTO E' NULL MI INSERISCI "UTENTE CANCELLATO" --}}
+                            @if ($product->user_id == null)
+                                <span class="">by Utente Cancellato</span>
+                            {{-- ALTRIMENTI MI INSERISCI CREATO DA NOME UTENTE E LINK AL SUO PROFILO --}}
+                            @else
+                                <span class="">by <a href="{{route('user.index', ['userId' => $product->user_id])}}" class="card__author" title="author">{{$product->user->name}}</a></span>
+                            @endif
                         </div>
                     </article>
                 </div>
