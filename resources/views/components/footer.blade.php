@@ -1,6 +1,6 @@
 <footer>
     <div id="footer" class="container-fluid ">
-        <img class="mt-5 ms-5" id="logoBianco" src="./media/prestowhite.png" alt="LOGO"> 
+        <img class="mt-5 ms-5" id="logoBianco" src="/media/prestowhite.png" alt="Logo"> 
             <div class="row justify-content-center">        
                 <div class="col-6 col-md-3 leftFooter mt-4">
                           <div class="mt-3">

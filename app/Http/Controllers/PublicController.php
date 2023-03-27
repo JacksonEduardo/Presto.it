@@ -10,7 +10,7 @@ class PublicController extends Controller
 {
     public function homepage(){
         
-        $products = Product::where('is_accepted', true)->take(6)->orderBy('created_at', 'DESC')->get();
+        $products = Product::where('is_accepted', true)->take(10)->orderBy('created_at', 'DESC')->get();
         return view('welcome' , compact('products'));
     }
 

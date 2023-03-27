@@ -15,11 +15,10 @@ class RevisorController extends Controller
 {
     
     public function index(){
-        // PRENDE TUTTI GLI ANNUNCI 'DOVE' IS_ACCEPTED è NULL
+      
         $product_to_check = Product::where('is_accepted', null)->get();
-        $product_checked = Product::latest('updated_at')->first();
-
-        return view('revisor.index', compact('product_to_check', 'product_checked'));
+   
+        return view('revisor.index', compact('product_to_check'));
     }
     
     public function acceptProduct(Product $product){
@@ -32,28 +31,17 @@ class RevisorController extends Controller
         return redirect()->back()->with('productRejected', 'Complimenti,hai rifiutato l\'annuncio');
     }
 
-    // GESTISCI LA PARAMETRICA CON 'ULTIMO ARTICOLO DIVERS DA NULL = NULL
-    // public function undoProduct(Product $product){
-    //     $last_product = Product::sortByDesc('updated_at')->first();
-    //     $last_product->setAccepted(null);
-    //     return view('revisor.index', compact('product'));
+    public function undoProduct(){
 
-    //     // $product->setAccepted(null);
-    //     // return redirect()->back()->with('message', 'Complimenti, sei tornato indietro');
-    // }
-
-    public function undoProduct(Product $product){
-        
-
-        $product_checked = Product::latest('updated_at')->where('is_accepted', !null)->first();
-
-        $product_checked->setAccepted(null);
-
-        return redirect()->back()->with('productUndo', 'Attenzione, hai annullato l\'ultima operazione');
-
+        // $product_checked = Product::latest('updated_at')->where('is_accepted', "!=", null)->first();
+        $product_checked = Product::where('is_accepted', "!=", null)->orderBy('updated_at', 'DESC')->first();
+        if($product_checked){
+            $product_checked->setAccepted(null);
+            return redirect()->back()->with('productUndo', 'Attenzione, hai annullato l\'ultima operazione');
+        } else{
+            return redirect()->back()->with('productUndo2', 'Attenzione, non ci sono operazione da annullare');
+        }
     }
-    
-
 
     public function becomeRevisor(){
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));

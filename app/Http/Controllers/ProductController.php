@@ -16,7 +16,7 @@ class ProductController extends Controller
      */
     public function index()
     {     
-        $products = Product::all()->where('is_accepted', true);
+        $products = Product::where('is_accepted', true)->paginate(6);
         return view('product.index' , compact('products'));
     }
 

@@ -8,11 +8,13 @@
       <a class="navbar-brand navResponsive dropdown-toggle categorie lead ms-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Categorie
       </a>
-      <ul class="dropdown-menu">
-        @foreach ($categories as $category)
-        <li><a class="dropdown-item" href="{{route('category.show', compact('category'))}}">{{$category->type}}</a></li>
-        @endforeach
-      </ul>
+      <div class="container d-flex justify-content-center">
+        <ul id="dropdownShow" class="dropdown-menu submenu text-center align-items-center m-0 border-0 bg-light">
+          @foreach ($categories as $category)
+          <li class="dropItem"><a class="dropdown-item px-2 tx-m" href="{{route('category.show', compact('category'))}}">{{$category->type}}</a></li>
+          @endforeach
+        </ul>
+      </div>
     </div>
     <div class="d-flex">
       <form class="d-flex ms-2" role="search" action="{{route('products.search')}}" method="GET">
@@ -111,22 +113,22 @@
   <button type="button" class="btn-close btnSideBarCustom" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 </div>
 <div>
-  <div class="offcanvas-body mb-3 categorie">
+  <div class="offcanvas-body categorie">
     <a class="navbar-brand lead fs-5 d-flex" href="{{route('login')}}" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-person fs-3"></i>
       <h5 class="my-auto ms-3">Login</h5>
     </a>
   </div>
-  <div class="offcanvas-body mb-3 categorie">
+  <div class="offcanvas-body categorie">
     <a class="navbar-brand lead fs-5 d-flex" href="{{route('register')}}" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="bi bi-box-arrow-in-right fs-3"></i>
       <h5 class="my-auto ms-3">Registrati</h5>
     </a>
   </div>
-  <div class="offcanvas-body mb-3 categorie">
+  <div class="offcanvas-body categorie">
     <a class="navbar-brand lead fs-5 d-flex" href="#"><i class="bi bi-envelope fs-3"></i>
       <h5 class="my-auto ms-3">Contattaci</h5>
     </a>
   </div>
-  <div class="offcanvas-body mb-3 categorie">
+  <div class="offcanvas-body categorie">
     <a class="navbar-brand lead fs-5 d-flex" href="#"><i class="bi bi-question-lg fs-3"></i>
       <h5 class="my-auto ms-3">Chi Siamo</h5>
     </a>
