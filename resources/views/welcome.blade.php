@@ -44,30 +44,30 @@
                         <div class="parallax-bg1"></div>
                         <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center marginWelcome">
                             <h1 class="tx-a fw-bold display-2">Presto.it</h1>
-                            <p class="fs-4 ">Compra e Vendi in un Click!</p>
-                            <h1>Inserisci subito il tuo annuncio</h1>
+                            <p class="fs-4 ">{{__('ui.titolo1')}}</p>
+                            <h1>{{__('ui.sottotitolo1')}}</h1>
                             <div class="align-items-center">
-                                <a href="{{route('product.create')}}"><button class="btnIntro">Vai!</button></a>
+                                <a href="{{route('product.create')}}"><button class="btnIntro">{{__('ui.tasto1')}}</button></a>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg2"></div>
                         <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center marginWelcome">
-                            <p class="fs-4 text-light">Cerchi un articolo nuovo?</p>
-                            <h1 class="text-light">Trovalo tra i nostri annunci certificati</h1>
+                            <p class="fs-4 text-light">{{__('ui.titolo2')}}</p>
+                            <h1 class="text-light">{{__('ui.sottotitolo2')}}</h1>
                             <div class="align-items-center">
-                                <a href="{{route('product.index')}}"><button class="btnIntro">Trova</button></a>
+                                <a href="{{route('product.index')}}"><button class="btnIntro">{{__('ui.tasto2')}}</button></a>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg3"></div>
                         <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center marginWelcome">
-                            <p class="fs-4 text-light">Ti serve un articolo usato?</p>
-                            <h1 class="text-light">Scopri tra le nostre categorie</h1>
+                            <p class="fs-4 text-light">{{__('ui.titolo3')}}</p>
+                            <h1 class="text-light">{{__('ui.sottotitolo3')}}</h1>
                             <div class="align-items-center">
-                                <a href="{{route('product.index')}}"><button class="btnIntro">Cerca</button></a>
+                                <a href="{{route('product.index')}}"><button class="btnIntro">{{__('ui.tasto3')}}</button></a>
                             </div>
                         </div>
                     </div>

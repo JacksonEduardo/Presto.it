@@ -26,6 +26,9 @@ class PublicController extends Controller
          return view ('product.index' , compact('products'));
     }
 
-    
+    public function setLanguage($lang){
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 
 }

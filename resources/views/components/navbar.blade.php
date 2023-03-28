@@ -15,6 +15,18 @@
           @endforeach
         </ul>
       </div>
+      <li class="nav-item d-flex">
+        <x-_locale lang='it'/>
+        <p>It</p>
+      </li>
+      <li class="nav-item d-flex">
+        <x-_locale lang='en'/>
+        <p>En</p>
+      </li>
+      <li class="nav-item d-flex">
+        <x-_locale lang='es'/>
+        <p>Es</p>
+      </li>
     </div>
     <div class="d-flex">
       <form class="d-flex ms-2" role="search" action="{{route('products.search')}}" method="GET">
