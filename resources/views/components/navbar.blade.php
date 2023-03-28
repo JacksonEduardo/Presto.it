@@ -15,18 +15,6 @@
           @endforeach
         </ul>
       </div>
-      <li class="nav-item d-flex">
-        <x-_locale lang='it'/>
-        <p>It</p>
-      </li>
-      <li class="nav-item d-flex">
-        <x-_locale lang='en'/>
-        <p>En</p>
-      </li>
-      <li class="nav-item d-flex">
-        <x-_locale lang='es'/>
-        <p>Es</p>
-      </li>
     </div>
     <div class="d-flex">
       <form class="d-flex ms-2" role="search" action="{{route('products.search')}}" method="GET">
@@ -35,6 +23,29 @@
           <i class="bi bi-search fs-3"></i>
         </button>
       </form>
+      
+      <div class="dropdown-start">
+        <button class="btn btn-transparent dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-globe-europe-africa fs-3"></i>
+        </button>
+        <ul class="dropdown-menu bg-light border-0 m-0">
+          <li class="dropLanguage">
+            <span class="d-flex categorie">
+              <x-_locale lang='it'/>
+              <p class="mt-1 lead">Ita</p>
+            </span>
+            <span class="d-flex categorie">
+              <x-_locale lang='en'/>
+              <p class="mt-1 lead">Eng</p>
+            </span>
+            <span class="d-flex categorie">
+              <x-_locale lang='es'/>
+              <p class="mt-1 lead">Esp</p>
+            </span>
+          </li>
+        </ul>
+      </div>
+      
       <button class="navbar-toggler border-0 ms-3 categorie" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
         <i class="bi bi-list fs-3"></i>  
       </button>
