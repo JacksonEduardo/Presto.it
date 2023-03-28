@@ -1,52 +1,51 @@
-<nav class="navbar bg-transparent fixed-top NavbarCustom" id="nav">
+<nav class="navbar bg-light fixed-top NavbarCustom">
   <div class="container-fluid">
     <div class="d-flex mx-auto mx-md-0 ps-4">
       <a class="navbar-brand" href="{{route('homepage')}}">
         <img src="/media/presto.png" width="150px" alt="Logo">
       </a>
       <a class="navbar-brand navResponsive categorie lead ms-4" href="{{route('product.index')}}">Annunci</a>
-      <a class="navbar-brand navResponsive dropdown-toggle categorie lead ms-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <a class="navbar-brand navResponsive dropdown-toggle-no-caret categorie lead ms-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Categorie
       </a>
       <div class="container d-flex justify-content-center p-0">
         <ul id="dropdownShow" class="dropdown-menu submenu m-0 border-0 bg-light">
           @foreach ($categories as $category)
-          <li class="dropItem"><a class="dropdown-item tx-m m-0" href="{{route('category.show', compact('category'))}}">{{$category->type}}</a></li>
+          <li class="dropItem"><a class="dropdown-item bg-transparent tx-m m-0 lead" href="{{route('category.show', compact('category'))}}">{{$category->type}}</a></li>
           @endforeach
         </ul>
       </div>
     </div>
     <div class="d-flex">
-      <form class="d-flex ms-2" role="search" action="{{route('products.search')}}" method="GET">
+      <form class="d-flex ms-3" role="search" action="{{route('products.search')}}" method="GET">
         <input class="form-control me-2 RadiusCustom" type="search" placeholder="Cerca" aria-label="Search" name="searched">
         <button class="btn categorie RadiusCustom border-0" type="submit">
           <i class="bi bi-search fs-3"></i>
         </button>
       </form>
-      
-      <div class="dropdown-start">
-        <button class="btn btn-transparent dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <div class="dropdown-start ms-3">
+        <button class="btn btn-transparent dropdown-toggle-no-caret border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="bi bi-globe-europe-africa fs-3"></i>
         </button>
         <ul class="dropdown-menu bg-light border-0 m-0">
           <li class="dropLanguage">
             <span class="d-flex categorie">
               <x-_locale lang='it'/>
-              <p class="mt-1 lead">Ita</p>
+              <p class="mt-1 lead">Italiano</p>
             </span>
             <span class="d-flex categorie">
               <x-_locale lang='en'/>
-              <p class="mt-1 lead">Eng</p>
+              <p class="mt-1 lead">English</p>
             </span>
             <span class="d-flex categorie">
               <x-_locale lang='es'/>
-              <p class="mt-1 lead">Esp</p>
+              <p class="mt-1 lead">Español</p>
             </span>
           </li>
         </ul>
       </div>
       
-      <button class="navbar-toggler border-0 ms-3 categorie" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0 ms-2 categorie" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
         <i class="bi bi-list fs-3"></i>  
       </button>
     </div>
