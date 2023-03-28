@@ -1,6 +1,6 @@
 <nav class="navbar bg-transparent fixed-top NavbarCustom" id="nav">
   <div class="container-fluid">
-    <div>
+    <div class="d-flex mx-auto mx-md-0 ps-4">
       <a class="navbar-brand" href="{{route('homepage')}}">
         <img src="/media/presto.png" width="150px" alt="Logo">
       </a>
@@ -8,7 +8,7 @@
       <a class="navbar-brand navResponsive dropdown-toggle categorie lead ms-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Categorie
       </a>
-      <div class="container d-flex justify-content-center">
+      <div class="container d-flex justify-content-center p-0">
         <ul id="dropdownShow" class="dropdown-menu submenu m-0 border-0 bg-light">
           @foreach ($categories as $category)
           <li class="dropItem"><a class="dropdown-item tx-m m-0" href="{{route('category.show', compact('category'))}}">{{$category->type}}</a></li>
@@ -33,7 +33,7 @@
 {{-- SIDERBAR --}}
 <div class="offcanvas offcanvas-end RadiusCustom" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   @auth
-  <div class="offcanvas-header d-flex position-relative mb-3">
+  <div class="offcanvas-header d-flex position-relative">
     <div class="mx-auto">
       <a href="{{route('user.index')}}">
         <img class="img-fluid rounded-pill" src="{{Storage::url(Auth::user()->profilePicture)}}" width="100" alt="">   
@@ -45,18 +45,23 @@
     <button type="button" class="btn-close btnSideBarCustom" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div>
-    <div class="offcanvas-body  categorie">
+    <div class="offcanvas-body categorie py-3">
       <a class="navbar-brand lead fs-5 d-flex" href="{{route('product.create')}}"><i class="bi bi-plus-circle fs-3"></i>
         <h5 class="my-auto ms-3">Inserisci Annuncio</h5>
       </a>
     </div>
-    <div class="offcanvas-body  categorie">
+    <div class="offcanvas-body categorie py-3">
+      <a class="navbar-brand lead fs-5 d-flex" href="{{route('product.index')}}"><i class="bi bi-collection fs-3"></i>
+        <h5 class="my-auto ms-3">Annunci</h5>
+      </a>
+    </div>
+    <div class="offcanvas-body categorie py-3">
       <a class="navbar-brand lead fs-5 d-flex" href="{{route('user.index')}}"><i class="bi bi-person fs-3"></i></i>
         <h5 class="my-auto ms-3">Profilo</h5>
       </a>
     </div>
     
-    <div class="offcanvas-body  categorie">
+    <div class="offcanvas-body categorie py-3">
       @if (Auth::user()->is_revisor)
       <a href="{{route('revisor.index')}}" class="navbar-brand lead fs-5 position-relative d-flex" aria-current="page">
         <i class="bi bi-bell fs-3"></i>
@@ -73,7 +78,7 @@
       @endif
     </div>
     @if (Auth::user()->is_admin)
-    <div class="offcanvas-body  categorie">
+    <div class="offcanvas-body  categorie py-3">
       <a href="{{route('admin.index')}}" class="navbar-brand lead fs-5 position-relative d-flex" aria-current="page">
         <i class="bi bi-gear fs-3"></i>
         <h5 class="ms-3 my-auto">Zona ADMIN</h5>
@@ -81,17 +86,17 @@
     </div>
       @else 
     @endif
-    <div class="offcanvas-body  categorie">
+    <div class="offcanvas-body categorie py-3">
       <a class="navbar-brand lead fs-5 d-flex" href="#"><i class="bi bi-envelope fs-3"></i>
         <h5 class="my-auto ms-3">Contattaci</h5>
       </a>
     </div>
-    <div class="offcanvas-body  categorie">
+    <div class="offcanvas-body categorie py-3">
       <a class="navbar-brand lead fs-5 d-flex" href="#"><i class="bi bi-question-lg fs-3"></i>
         <h5 class="my-auto ms-3">Chi Siamo</h5>
       </a>
     </div>
-    <div class="offcanvas-body  categorie">
+    <div class="offcanvas-body categorie py-3">
       <a class="navbar-brand lead fs-5 d-flex" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">
         <i class="bi bi-box-arrow-left fs-3"></i>
         <h5 class="my-auto ms-3">Esci</h5>
@@ -121,6 +126,11 @@
   <div class="offcanvas-body categorie">
     <a class="navbar-brand lead fs-5 d-flex" href="{{route('register')}}"><i class="bi bi-box-arrow-in-right fs-3"></i>
       <h5 class="my-auto ms-3">Registrati</h5>
+    </a>
+  </div>
+  <div class="offcanvas-body categorie">
+    <a class="navbar-brand lead fs-5 d-flex" href="{{route('product.index')}}"><i class="bi bi-collection fs-3"></i>
+      <h5 class="my-auto ms-3">Annunci</h5>
     </a>
   </div>
   <div class="offcanvas-body categorie">

@@ -1,5 +1,5 @@
 <x-layout>
-
+    
     <div class="container vh-100 d-flex align-items-center">
         <div class="containerModal h-75 w-100" id="containerModal">
             <div class="form-container sign-up-container">
@@ -72,13 +72,6 @@
             </div>
         </div>  
         
-    </div>
+    </div>          
     
-    
-</div>
-</div>
-</div>
-
-</div>           
-
 </x-layout>

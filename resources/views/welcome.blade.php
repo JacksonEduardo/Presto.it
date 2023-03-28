@@ -43,8 +43,9 @@
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg1"></div>
                         <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center marginWelcome">
-                            <p class="fs-4">Non lo usi più?</p>
-                            <h1>Inserisci qui il tuo annuncio</h1>
+                            <h1 class="tx-a fw-bold display-2">Presto.it</h1>
+                            <p class="fs-4 ">Compra e Vendi in un Click!</p>
+                            <h1>Inserisci subito il tuo annuncio</h1>
                             <div class="align-items-center">
                                 <a href="{{route('product.create')}}"><button class="btnIntro">Vai!</button></a>
                             </div>
@@ -53,8 +54,8 @@
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg2"></div>
                         <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center marginWelcome">
-                            <p class="fs-4">Cerchi un articolo nuovo?</p>
-                            <h1>Trovalo tra i nostri annunci certificati</h1>
+                            <p class="fs-4 text-light">Cerchi un articolo nuovo?</p>
+                            <h1 class="text-light">Trovalo tra i nostri annunci certificati</h1>
                             <div class="align-items-center">
                                 <a href="{{route('product.index')}}"><button class="btnIntro">Trova</button></a>
                             </div>
@@ -63,8 +64,8 @@
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg3"></div>
                         <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center marginWelcome">
-                            <p class="fs-4">Ti serve un articolo usato?</p>
-                            <h1>Scopri tra le nostre 10  categorie</h1>
+                            <p class="fs-4 text-light">Ti serve un articolo usato?</p>
+                            <h1 class="text-light">Scopri tra le nostre categorie</h1>
                             <div class="align-items-center">
                                 <a href="{{route('product.index')}}"><button class="btnIntro">Cerca</button></a>
                             </div>
@@ -102,22 +103,30 @@
     
     <div class="flex-container mt-5">
         <div class="flex-slide home">
-            <div class="flex-title lead">Informatica</div>
-            <div class="btn btnIntro"><i class="bi bi-arrow-right fs-5"></i></div>
+            <div class="flex-title fw-bold fs-5">Informatica</div>
+            <button class="ms-4 btn-category">
+                <i class="fw-bold bi bi-chevron-right text-white"></i>
+            </button>
         </div>
         <div class="flex-slide about">
-            <div class="flex-title lead">Console e Videogiochi</div>
-            <div class="btn btnIntro"><i class="bi bi-arrow-right fs-5"></i></div>
+            <div class="flex-title fw-bold fs-5">Console e Videogiochi</div>
+            <button class="ms-4 btn-category">
+                <i class="fw-bold bi bi-chevron-right text-white"></i>
+            </button>
         </div>
         <div class="flex-slide work">
-            <div class="flex-title lead">Fotografia</div>
-            <div class="btn btnIntro"><i class="bi bi-arrow-right fs-5"></i></div>
+            <div class="flex-title fw-bold fs-5">Fotografia</div>
+            <button class="ms-4 btn-category">
+                <i class="fw-bold bi bi-chevron-right text-white"></i>
+            </button>
         </div>
         <div class="flex-slide bamba">
-            <div class="flex-title lead">Sports</div>
-            <div class="btn btnIntro mt-auto"><i class="bi bi-arrow-right fs-5"></i></div>
+            <div class="flex-title fw-bold fs-5">Sports</div>
+            <button class="ms-4 btn-category">
+                <i class="fw-bold bi bi-chevron-right text-white"></i>
+            </button>
         </div>
-    </div>
+    </div>    
     
     <div class="vh-25 pb-5 position-relative">
         <video class="videoCustom" autoplay muted loop>

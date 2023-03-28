@@ -129,16 +129,16 @@ $(document).ready(function(){
 // })
 // FINE ICONA CUORI
 
-// MODALE ANIMATION
+// LOGIN E REGISTER ANIMATION
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('containerModal');
 
 signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
+    container.classList.add("right-panel-active");
 });
 
 signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
+    container.classList.remove("right-panel-active");
 });
 // FINE MODALE

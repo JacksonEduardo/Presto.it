@@ -1,22 +1,22 @@
 <footer>
     <div id="footer" class="container-fluid ">
         <img class="mt-5 ms-5" id="logoBianco" src="/media/prestowhite.png" alt="Logo"> 
-            <div class="row justify-content-center">        
+            <div class="row justify-content-center bg-a">        
                 <div class="col-6 col-md-3 leftFooter mt-4">
                           <div class="mt-3">
                         <div class="d-flex mb-4 ">
                             <a class="text-decoration-none" href="">
-                                <p class="animation text-white">Tutti i prodotti</p>  
+                                <p class="animation text-white fs-5">Tutti i prodotti</p>  
                             </a>                         
                         </div>
                         <div class="d-flex mb-4 ">
                             <a class="text-decoration-none" href="">
-                                <p class="animation text-white">Lavora con noi</p>
+                                <p class="animation text-white fs-5">Lavora con noi</p>
                             </a>                               
                         </div>
                         <div class="d-flex mb-4 ">
                             <a class="text-decoration-none" href="">
-                                <p class="animation text-white">Diventa revisore</p>
+                                <p class="animation text-white fs-5">Diventa revisore</p>
                             </a>                          
                         </div>              
                     </div>         
@@ -26,25 +26,25 @@
                     <div class="mt-3">
                         <div class="d-flex mb-4 ">
                             <a class="text-decoration-none" href="">
-                                <p class="animation text-white">Su di noi</p>
+                                <p class="animation text-white fs-5">Su di noi</p>
                             </a>                           
                         </div>  
                         <div class="d-flex mb-4 ">
                             <a class="text-decoration-none" href="">
-                                <p class="animation text-white">Contattaci</p>
+                                <p class="animation text-white fs-5">Contattaci</p>
                             </a>                           
                         </div> 
                         <div class="d-flex mb-4 ">     
-                            <p class="text-white">©2023 Presto.it Spa</p>                          
+                            <p class="text-white ps-2 fs-5 pt-2">©2023, Presto.it</p>                          
                         </div>         
                     </div>
                 </div>
     
                 <div id="rightFooter" class="col-12 col-md-5 mb-lg-4">
-                        <p class="team text-center text-white mt-2">Il Team Presto.it</p>
+                        <p class="team text-center text-white mt-2 fs-5">Il Team Presto.it</p>
                         <div class="row">  
                             <div class="col-6 d-flex  justify-content-center align-items-center mb-3">
-                                <p class="m-0 text-white">Antonio Giannino</p>
+                                <p class="m-0 text-white fs-5">Antonio Giannino</p>
                                 <a class="text-decoration-none" target="_black" href="https://www.linkedin.com/in/antoniogiannino-webdeveloper/">
                                     <i class="bi bi-linkedin text-white mx-1 fs-3"></i>   
                                 </a>
@@ -53,7 +53,7 @@
                                 </a>
                             </div>
                             <div class="col-6 d-flex  justify-content-center align-items-center mb-3">
-                                <p class="m-0 text-white">Cristian Filograno</p>
+                                <p class="m-0 text-white fs-5">Cristian Filograno</p>
                                 <a class="text-decoration-none" target="_black" href="https://www.linkedin.com/in/cristian-filograno-dev/">
                                     <i class="bi bi-linkedin text-white mx-1 fs-3"></i>    
                                 </a>
@@ -64,7 +64,7 @@
                         </div>
                         <div class="row">                       
                             <div class="d-flex justify-content-center align-items-center mb-3">
-                                <p class="m-0 text-white">Jackson Zabala</p>
+                                <p class="m-0 text-white fs-5">Jackson Zabala</p>
                                 <a class="text-decoration-none" target="_black"  href="https://www.linkedin.com/in/jackson-zabala-web-developer/">
                                     <i class="bi bi-linkedin text-white mx-1 fs-3"></i>
                                 </a>
@@ -75,7 +75,7 @@
                         </div>
                         <div class="row">
                             <div class="col-6 d-flex justify-content-center align-items-center mb-3">
-                                <p class="m-0 text-white">Roberto Acerbo</p>
+                                <p class="m-0 text-white fs-5">Roberto Acerbo</p>
                                 <a class="text-decoration-none" target="_black" href="https://www.linkedin.com/in/roberto-acerbo-dev/">
                                     <i class="bi bi-linkedin text-white mx-1 fs-3"></i> 
                                 </a>
@@ -84,7 +84,7 @@
                                 </a>  
                             </div>
                             <div class="col-6 d-flex justify-content-center align-items-center mb-3">
-                                <p class="m-0 text-white">Flavio Laterza</p>
+                                <p class="m-0 text-white fs-5">Flavio Laterza</p>
                                 <a class="text-decoration-none" target="_black"  href="https://www.linkedin.com/in/flaviolaterzafullstackdeveloperjunior/">
                                     <i class="bi bi-linkedin text-white mx-1 fs-3"></i>
                                 </a>

@@ -372,8 +372,8 @@ width: 40px;
 }
 
 .marginWelcome{
-  margin-bottom: 220px;
-  margin-right: 350px;
+  margin-bottom: 50px;
+  margin-right: 600px;
 }
 
 @media screen and (max-width: 600px) {
@@ -402,10 +402,10 @@ width: 40px;
 
 .parallax-bg2 {
   position: absolute;
-  background-image: url(/public/media/computer.jpg);
+  background-image: url(/public/media/sneaker.jpg);
   left: 0;
   top: 0;
-  width: 100%;
+  width: 120%;
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -414,10 +414,10 @@ width: 40px;
 
 .parallax-bg3 {
   position: absolute;
-  background-image: url(/public/media/maggiolino.jpg);
+  background-image: url(/public/media/fotocamera.jpg);
   left: 0;
   top: 0;
-  width: 100%;
+  width: 120%;
   height: 100%;
   background-size: cover;
   background-position: top center;
@@ -435,7 +435,6 @@ width: 40px;
     height: 100%; 
   }
 }
-
 /* FINE CAROSELLO HOMEPAGE */
 
 /* PAGINA SHOW */
@@ -473,11 +472,10 @@ hr{
 .card__clock {
   width: 15px;
   vertical-align: middle;
-  fill: #AD7D52;
 }
+
 .card__time {
   font-size: 12px;
-  color: #AD7D52;
   vertical-align: middle;
   margin-left: 5px;
 }
@@ -647,7 +645,7 @@ hr{
 /*  INIZIO FOOTER */
 
 #logoBianco{
-  width: 150px;
+  width: 170px;
 }
 
 #footer{
@@ -845,8 +843,8 @@ hr{
 .flex-container {
   height: 70vh;
   width: 100%;
-  display: -webkit-flex;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .flex-title {
@@ -867,9 +865,11 @@ hr{
   -ms-transition: all 2000ms ease;
   -o-transition: all 2000ms ease;
   transition: all 1000ms ease;
-  @media screen and (max-width: 768px) {
-    overflow: auto;
-    overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-slide{
+    flex-basis: 100%;
   }
 }
 
@@ -904,11 +904,6 @@ hr{
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-}
-
-.videoCustom{
-  object-fit: cover;
-  width: 100%;
 }
 
 .dropdown-menu {
@@ -992,6 +987,11 @@ hr{
   visibility: hidden;
 }
 
+.videoCustom{
+  object-fit: cover;
+  width: 100%;
+}
+
 .titleVideo{
   position: absolute;
   top: 150px;
@@ -1012,4 +1012,51 @@ hr{
   top: 370px;
   left: 150px;
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .videoCustom{
+    width: 100%;
+    height: 600px;
+  }
+
+  .titleVideo{
+    position: absolute;
+    top: 100px;
+    left: 79px;
+    color: white;
+  }
+
+  .pVideo{
+    position: absolute;
+    width: 60%;
+    top: 150px;
+    left: 79px;
+    color: white;
+  }
+
+  .btnVideo{
+    position: absolute;
+    top: 450px;
+    left: 79px;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .textCategory{
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.btn-category {
+  width: 36px;
+  height: 36px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 100%;
+  border-color: aliceblue;
+  background-color: hsla(0,0%,100%,0);
 }
