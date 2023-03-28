@@ -6,14 +6,17 @@ use App\Models\Product;
 use Livewire\Component;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
+use Livewire\WithFileUploads;
 
 class ProductCreateForm extends Component
 {
-    public $name, $brand, $description, $price, $usage;
-
+    use WithFileUploads;
+    
+    public $name, $brand, $description, $price, $usage, $images = [], $temporary_images, $product;
+    
     public $category;
     
-
+    
     protected $rules =[
         'name' => 'required|min:2',
         'brand' => 'required|min:2',
@@ -21,8 +24,11 @@ class ProductCreateForm extends Component
         'price' => 'required|numeric',
         'usage' => 'required',
         'category' => 'required',
+        'images.*' => 'image|max:1024',
+        'temporary_images.*' => 'image|max:1024',
+        'temporary_images' => 'required',
     ];
-
+    
     protected $messages = [
         'name.required' => 'Il campo nome non puo essere vuoto.',
         'name.min' => 'Il tuo nome deve essere almeno di due caratteri.',
@@ -33,38 +39,80 @@ class ProductCreateForm extends Component
         'price.numeric' => 'Il prezzo deve essere numerico',
         'usage.required' => 'Inserisci in che condizione è il tuo prodotto',
         'category.required' => 'Inserisci la categoria',
+        'images.*.required' => 'Inserisci un\'immagine',
+        'images.*.image' => 'L\'immagine deve essere un immagine',
+        'images.*.max' => 'L\'immagine deve essere massimo un 1MB',
+        'temporary_images.*.image' => 'L\'immagine deve essere un immagine',
+        'temporary_images.*.max' => 'L\'immagine deve essere massimo un 1MB',
+        'temporary_images.required' => 'Inserisci un\'immagine',
+       
     ];
-
-
-    public function updated($propertyName)
-    {
-        $this->validateOnly($propertyName);
-    }
-
-   
-
-    public function store(){
-        $this->validate();
-
-        $category = Category::find($this->category);
-        $category->products()->create([
-            'name' => $this->name,
-            'brand' => $this->brand,
-            'description' => $this->description,
-            'price' => $this->price,
-            'usage' => $this->usage,
-            'user_id' => Auth::user()->id,
-        ]);
-      
-
-        session()->flash('productCreated', 'Il tuo prodotto è stato inserito correttamente');
-        $this->reset();
-
-
-    }
     
-    public function render()
-    {
-        return view('livewire.product-create-form');
-    }
-}
+    public function updatedTemporaryImages(){
+        if ($this->validate([
+            'temporary_images.*'=>'required|image|max:1024',
+            'temporary_images' => 'required',
+            ])) {
+                foreach ($this->temporary_images as $image) {
+                    $this->images[] = $image;
+                }
+            }
+        }
+        
+        public function removeImage($key){
+            if (in_array($key, array_keys($this->images))) {
+                unset($this->images[$key]);
+            }
+        }
+        
+        // public function store();{
+            //     $this->validate();
+            
+            //     $this->product = Category::find($this->category)->products()->create($this->validate());
+            //     if(count($this->images)){
+                //         foreach ($this->images as $image){
+                    //             $this->product->images()->create(['path'=>$image->store('images','public')]);
+                    //         }
+                    //     }
+                    
+                    
+                    public function updated($propertyName)
+                    {
+                        $this->validateOnly($propertyName);
+                    }
+                    
+                    
+                    
+                    public function store(){
+                        
+                        $this->validate();
+                        
+                        $this->product = Category::find($this->category)->products()->create($this->validate());
+                        if(count($this->images)){
+                            foreach ($this->images as $image){
+                                $this->product->images()->create(['path'=>$image->store('images','public')]);
+                            }
+                            $this->product->user()->associate(Auth::user());
+                            $this->product->save();
+                        }     
+                        
+                        // $category = Category::find($this->category);
+                        // $category->products()->create([
+                            //     'name' => $this->name,
+                            //     'brand' => $this->brand,
+                            //     'description' => $this->description,
+                            //     'price' => $this->price,
+                            //     'usage' => $this->usage,
+                            //     'user_id' => Auth::user()->id,
+                            // ]);
+                            
+                            session()->flash('productCreated', 'Il tuo prodotto è stato inserito correttamente');
+                            $this->reset();
+                            
+                        }
+                        
+                        public function render()
+                        {
+                            return view('livewire.product-create-form');
+                        }
+                    }

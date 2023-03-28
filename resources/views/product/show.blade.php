@@ -8,37 +8,26 @@
                 
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                     <div class="swiper-wrapper">
+                        @if ($product->images)
+                        @foreach ($product->images as $image)
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            <img src="{{!$product->images()->get()->isEmpty() ? Storage::url($image->path) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
                         </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                        </div>
+                        @endforeach
+                        @endif
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
                 <div thumbsSlider="" class="swiper mySwiper">
                     <div class="swiper-wrapper">
+                        @if ($product->images)
+                        @foreach ($product->images as $image)
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            <img src="{{!$product->images()->get()->isEmpty() ? Storage::url($image->path) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
                         </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                        </div>
-                        
+                        @endforeach
+                        @endif
                     </div>
                 </div>
                 {{-- FINE CAROSELLO --}}
