@@ -13,9 +13,9 @@
                         class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
                         
                         @else
-                        <img src="/media/guest.jpg" alt="Generic placeholder image"
+                        <img src="public/media/guest.png" alt="Generic placeholder image"
                         class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
-                        
+
                         @endif
                         
                         

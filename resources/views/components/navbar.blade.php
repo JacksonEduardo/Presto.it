@@ -73,7 +73,7 @@
       </a>  
       @else
       <a class="navbar-brand lead fs-5 d-flex" href="{{route('user.diventaRevisore')}}"><i class="bi bi-gear fs-3"></i>
-        <h5 class="my-auto ms-3">Diventa Revisore</h5>
+        <h5 class="my-auto ms-3">Lavora con noi</h5>
       </a>
       @endif
     </div>
