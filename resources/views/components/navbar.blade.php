@@ -5,7 +5,7 @@
         <img src="/media/presto.png" width="150px" alt="Logo">
       </a>
       <a class="navbar-brand navResponsive categorie lead ms-4" href="{{route('product.index')}}">Annunci</a>
-      <a class="navbar-brand navResponsive dropdown-toggle-no-caret categorie lead ms-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <a class="navbar-brand navResponsive dropdown-toggle categorie lead ms-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Categorie
       </a>
       <div class="container d-flex justify-content-center p-0">
@@ -24,7 +24,7 @@
         </button>
       </form>
       <div class="dropdown-start ms-3">
-        <button class="btn btn-transparent dropdown-toggle-no-caret border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-transparent dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="bi bi-globe-europe-africa fs-3"></i>
         </button>
         <ul class="dropdown-menu bg-light border-0 m-0">

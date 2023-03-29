@@ -5,8 +5,10 @@ namespace App\Http\Livewire;
 use App\Models\Product;
 use Livewire\Component;
 use App\Models\Category;
-use Illuminate\Support\Facades\Auth;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class ProductCreateForm extends Component
 {
@@ -65,16 +67,6 @@ class ProductCreateForm extends Component
             }
         }
         
-        // public function store();{
-            //     $this->validate();
-            
-            //     $this->product = Category::find($this->category)->products()->create($this->validate());
-            //     if(count($this->images)){
-                //         foreach ($this->images as $image){
-                    //             $this->product->images()->create(['path'=>$image->store('images','public')]);
-                    //         }
-                    //     }
-                    
                     
                     public function updated($propertyName)
                     {
@@ -90,8 +82,14 @@ class ProductCreateForm extends Component
                         $this->product = Category::find($this->category)->products()->create($this->validate());
                         if(count($this->images)){
                             foreach ($this->images as $image){
-                                $this->product->images()->create(['path'=>$image->store('images','public')]);
+                                // $this->product->images()->create(['path'=>$image->store('images','public')]);
+                                $newFileName = "products/{$this->product->id}";
+                                $newImage = $this->product->images()->create(['path'=>$image->store($newFileName,'public')]);
+
+                                dispatch(new ResizeImage($newImage->path, 400, 400));
+
                             }
+                            File::deleteDirectory(storage_path('/app/livewire-tmp'));
                             $this->product->user()->associate(Auth::user());
                             $this->product->save();
                         }     

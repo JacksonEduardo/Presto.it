@@ -11,7 +11,7 @@
                         @if ($product->images)
                         @foreach ($product->images as $image)
                         <div class="swiper-slide">
-                            <img src="{{!$product->images()->get()->isEmpty() ? Storage::url($image->path) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
+                            <img src="{{!$product->images()->get()->isEmpty() ? $image->getUrl(400,400) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
                         </div>
                         @endforeach
                         @endif
@@ -24,7 +24,7 @@
                         @if ($product->images)
                         @foreach ($product->images as $image)
                         <div class="swiper-slide">
-                            <img src="{{!$product->images()->get()->isEmpty() ? Storage::url($image->path) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
+                            <img src="{{!$product->images()->get()->isEmpty() ? $image->getUrl(400,400) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
                         </div>
                         @endforeach
                         @endif
