@@ -123,6 +123,41 @@ return [
     'suDiNoi'=>'Su di noi',
     'contattaci'=>'Contattaci',
     'ilTeam'=>'Il Team Presto.it',
+
+    //DIVENTAREVISORE
+    'Diventa Revisore' => 'Diventa Revisore',
+     'titolocard' => 'Entra a far parte della nostra famiglia!Ecco i nostri Principi:',
+     'camponome' => 'Nome e cognome',
+     'errorenome' => 'Devi inserire un nome',
+     'campoemail' => 'Email',
+     'erroreemail' => 'Inserisci un email valida',
+     'parlacidite' => 'Parlaci di te',
+     'erroreparlaci' => 'Hai dimenticato di inserire il messaggio.',
+     'inviarichiesta' => 'Invia richiesta',
     
+
+     // PAGINA PROFILO
+     'areaPersonale' => 'Area personale',
+     'campoFoto' => 'Inserisci la tua foto profilo',
+     'modificaFoto' => 'Modifica Foto',
+     'info' => 'Informazioni',
+     'imieiannunci' => 'I miei Annunci inseriti',
+     'annuncidi' => 'Annunci di',
+     'noAnn' => 'Non sono ancora presenti annunci',
+     'inserisciprimoAnn' => 'Inserisci il tuo primo annuncio!',
+     'inserisciAnn' => 'Inserisci Annuncio',
+
+     // PAGINA REVISORE
+     'zonaRev'=> 'Zona Revisore',
+     'Operazioni'=> 'Operazioni',
+     'Annulla'=> 'Annulla operazione',
+     'confermati'=> 'Annunci confermati',
+     'sospeso'=> 'Annunci in sospeso',
+     'annullati'=> 'Annunci annullati',
+     'annuncio'=> 'Annuncio',
+     'precedente'=> 'Precedente',
+     'successivo'=> 'Successivo',
+     
+     
 
 ];

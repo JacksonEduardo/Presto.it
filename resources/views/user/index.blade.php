@@ -38,13 +38,13 @@
                     @endif
 
                 <div class="card-body p-4 text-black ">
-                    <h3 class="fw-normal mt-2 ms-2 mb-0"> Area personale </h3>
+                    <h3 class="fw-normal mt-2 ms-2 mb-0"> {{__('ui.areaPersonale')}}</h3>
                     <div class="mb-2 d-flex justify-content-between bg-light">
                         <div class="container p-4 text-black align-items-center">
                             <div class="row align-items-center">
                                 <div class="col-12 col-md-6 py-2">
                                     <p class="lead fw-normal mt-2 mb-0">
-                                        Inserisci la tua foto profilo
+                                        {{__('ui.campoFoto')}}
                                     </p>
                                     <form action="{{ route('user.avatar', ['user' => Auth::user()]) }}" method="POST"
                                     enctype="multipart/form-data">
@@ -54,7 +54,7 @@
                                         <input type="file" name="profilePicture" class="my-2 d-block">
                                         <button type="submit" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
                                         style="z-index: 1;">
-                                        Modifica Foto
+                                        {{__('ui.modificaFoto')}}
                                         </button>
                                     </form>
                             
@@ -85,7 +85,7 @@
 
                 <div class="card-body p-4 text-black ">
                     <div class="mb-5 ">
-                        <h3 class="fw-normal mt-2 ms-2 mb-0"> Informazioni </h3>
+                        <h3 class="fw-normal mt-2 ms-2 mb-0"> {{__('ui.info')}} </h3>
                         <div class="container py-3 tx-m bg-light rounded">
                             <div class="row p-0 w-100 mx-0">
                                 <div class="col-6 col-md-3 p-0 h-50 my-auto mx-auto">
@@ -115,12 +115,12 @@
                         {{-- SE SONO SUL MIO PROFILO --}}
                         @if(Auth::user() && Auth::user()->id == $user->id)
                             <div class="d-flex justify-content-between align-items-center my-5 bg-a rounded">
-                                <p class="lead fw-normal my-3 tx-s px-3">I miei Annunci inseriti</p>
+                                <p class="lead fw-normal my-3 tx-s px-3">{{__('ui.imieiannunci')}}</p>
                             </div>
                         {{-- SE NON SONO SUL MIO PROFILO --}}
                         @else
                             <div class="d-flex justify-content-between align-items-center my-5 bg-a rounded">
-                                <p class="lead fw-normal my-3 tx-s px-3">Annunci di {{$user->name}}</p>
+                                <p class="lead fw-normal my-3 tx-s px-3">{{__('ui.annuncidi')}} {{$user->name}}</p>
                             </div>
                         @endif
                         
@@ -158,13 +158,13 @@
                                 @empty
                                 
                                     <div class="col-12">
-                                        <h1>Non sono ancora presenti annunci</h1>
+                                        <h1>{{__('ui.noAnn')}}</h1>
                                         
                                         {{-- SE SONO SUL MIO PROFILO, ma controlla --}} 
                                         @if (Auth::user()->id == $user->id)
                                         
-                                            <p> Inserisci il tuo primo annuncio! </p>
-                                            <a href="{{ route('product.create') }}" class="btn btn-dark">Inserisci Annuncio</a>
+                                            <p> {{__('ui.inserisciprimoAnn')}} </p>
+                                            <a href="{{ route('product.create') }}" class="btn btn-dark">{{__('ui.inserisciAnn')}}</a>
                                         @endif
                                     </div>
                                 @endforelse

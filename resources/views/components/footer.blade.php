@@ -15,7 +15,7 @@
                             </a>                               
                         </div>
                         <div class="d-flex mb-4 ">
-                            <a class="text-decoration-none" href="">
+                            <a class="text-decoration-none" href="{{route('user.diventaRevisore')}}">
                                 <p class="animation text-white fs-5">{{__('ui.diventa')}}</p>
                             </a>                          
                         </div>              

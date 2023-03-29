@@ -72,6 +72,51 @@ return [
      //h1 Cristian
 
 
+     // DIVENTA REVISORE
+
+     'Diventa Revisore' => 'Become an auditor',
+     'titolocard' => 'Become part of our family, here are our principles:',
+     'camponome' => 'Name and Surname',
+     'errorenome' => 'Name is required',
+     'campoemail' => 'Email',
+     'erroreemail' => 'Email is required, enter a valid email',
+     'parlacidite' => 'Talk about you',
+     'erroreparlaci' => 'You forgot to enter your message.',
+     'inviarichiesta' => 'Send request',
+
+     // PAGINA PROFILO
+     'areaPersonale' => 'Personal area',
+
+     'campoFoto' => 'Enter your profile picture',
+
+     'modificaFoto' => 'Edit Photos',
+
+     'info' => 'Information',
+
+     'imieiannunci' => 'My announcements posted',
+
+     'annuncidi' => 'Announcement of',
+
+     'noAnn' => 'There are no announcements yet',
+
+     'inserisciprimoAnn' => 'Place your first annuncement!',
+
+     'inserisciAnn' => 'Place your first annuncement!',
+
+
+
+     // PAGINA REVISORE
+     'zonaRev'=> 'Reviewer area',
+     'Operazioni'=> 'Operations',
+     'Annulla'=> 'Cancel operation',
+     'confermati'=> 'Announcements confirmed',
+     'sospeso'=> 'Announcements pending ',
+     'annullati'=> 'Announcements cancelled',
+     'annuncio'=> 'Announcement',
+     'precedente'=> 'Previous',
+     'successivo'=> 'Next',
+
+
 
 
 

@@ -124,6 +124,39 @@ return [
 // 'contattaci'=>'Contactanos', c'è già in navbar
 'ilTeam'=>'El Team Presto.it',
 
+// DIVENTAREVISORE
+'Diventa Revisore' =>'Conviértete en auditor',
+'titolocard' =>'Forma parte de nuestra familia, estos son nuestros principios:',
+'camponome' =>'Nombre y apellido',
+'errorenome' =>'Se requiere el nombre',
+'campoemail' =>'Email',
+'erroreemail' =>'Se requiere correo electrónico, ingrese un correo electrónico válido',
+'parlacidite' =>'Hablar de ti',
+'erroreparlaci' => 'Olvidaste ingresar tu mensaje.',
+'inviarichiesta' => 'Enviar petición',
+
+// PAGINA PROFILO
+'areaPersonale' => 'Área personal',
+'campoFoto' => 'Introduce tu foto de perfil',
+'modificaFoto' => 'Editar fotos',
+'info' => 'Información',
+'imieiannunci' => 'Mis anuncios publicados',
+'annuncidi' => 'Mis anuncios publicados',
+'noAnn' => 'Todavía no hay anuncios',
+'inserisciprimoAnn' => '¡Pon tu primer anuncio!',
+'inserisciAnn' => 'Ingresar Anuncio',
+
+// PAGINA REVISORE
+'zonaRev'=> 'Área de revisores
+',
+'Operazioni'=> 'Operaciones',
+'Annulla'=> 'Cancelar operación',
+'confermati'=> 'Anuncios confirmados',
+'sospeso'=> 'Anuncios pendientes',
+'annullati'=> 'Anuncios cancelados',
+'annuncio'=> 'Anuncio',
+'precedente'=> 'Anterior',
+'successivo'=> 'Próximo',
 
 
 ];

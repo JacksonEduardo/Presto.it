@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row justify-content-center mt-5">
                 <div class="col-12 col-md-8 mt-5">
-                    <h1 class="prestoBackgroundAnimate RadiusCustom fw-bold display-4 text-white">Zona Revisore</h1>
+                    <h1 class="prestoBackgroundAnimate RadiusCustom fw-bold display-4 text-white">{{__('ui.zonaRev')}}</h1>
                 </div>
             </div>
         </div>
@@ -35,17 +35,17 @@
         <div class="row justify-content-center">
             <div class="col-10 mb-5">
                 <div class="mb-4 mx-auto">
-                    <h2 class="text-center ps-3">Operazioni</h2>
+                    <h2 class="text-center ps-3">{{__('ui.Operazioni')}}</h2>
                     <form class="ps-4 text-center" action="{{route('revisor.undo_product')}}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn bg-a text-white">Annulla operazione</button>
+                        <button type="submit" class="btn bg-a text-white">{{__('ui.Annulla')}}</button>
                     </form>
                 </div>
                 <div class="d-flex justify-content-between">
-                    <p class="lead fs-4">Annunci confermati: 0</p>
-                    <p class="lead fs-4">Annunci in sospeso: 0</p>
-                    <p class="lead fs-4">Annunci annullati: 0</p>
+                    <p class="lead fs-4">{{__('ui.confermati')}}: 0</p>
+                    <p class="lead fs-4">{{__('ui.sospeso')}}: 0</p>
+                    <p class="lead fs-4">{{__('ui.annullati')}}: 0</p>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
                                 </button>
                             </form>
                             <button class="accordion-button lead fs-5 text-black" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne_{{$loop->iteration}}" aria-expanded="true" aria-controls="collapseOne">
-                                <h2 class="fw-light">Annuncio | {{$item->name}}</h2>
+                                <h2 class="fw-light">{{__('ui.annuncio')}} | {{$item->name}}</h2>
                             </button>
                         </div>
                         <div id="collapseOne_{{$loop->iteration}}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -88,11 +88,11 @@
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
+                                        <span class="visually-hidden">{{__('ui.precedente')}}</span>
                                     </button>
                                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
+                                        <span class="visually-hidden">{{__('ui.successivo')}}</span>
                                     </button>
                                 </div>
                                 <div class="d-block">
