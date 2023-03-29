@@ -80,6 +80,8 @@ class ProductCreateForm extends Component
                         $this->validate();
                         
                         $this->product = Category::find($this->category)->products()->create($this->validate());
+                        $this->product->user()->associate(Auth::user());
+                        $this->product->save();
                         if(count($this->images)){
                             foreach ($this->images as $image){
                                 // $this->product->images()->create(['path'=>$image->store('images','public')]);
@@ -91,8 +93,7 @@ class ProductCreateForm extends Component
 
                             }
                             File::deleteDirectory(storage_path('/app/livewire-tmp'));
-                            $this->product->user()->associate(Auth::user());
-                            $this->product->save();
+                            
                         }     
                         
                         // $category = Category::find($this->category);

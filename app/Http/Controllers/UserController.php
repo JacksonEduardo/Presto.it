@@ -31,17 +31,22 @@ public function requestRevisor(){
     // }
 
     // IN QUALCHE MODO HA FUNZIONATO, solo per utenti loggati
-    public function showProfile($userId = null)
+    public function showProfile($userId)
 {
-    if ($userId) {
-        $user = User::findOrFail($userId);
-        $products = Product::where('user_id', $user->id)->get();
 
-    } else {
-        $user = auth()->user();
-        $products = Product::where('user_id', $user->id)->get();
+    $user = User::findOrFail($userId);
+    $products = Product::where('user_id', $user->id)->get();
 
-    }
+    // if(Auth::user()){
+    //     if (Auth::user()->id && $userId) {
+    //         $user = User::findOrFail($userId);
+    //         $products = Product::where('user_id', $user->id)->get();
+    //     } else {
+    //         $user = Auth::user();
+    //         $products = Product::where('user_id', $user->id)->get();
+    //     }
+    // }
+    
 
     return view('user.index', ['user' => $user, 'products' => $products]);
 }

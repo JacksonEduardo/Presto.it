@@ -64,20 +64,35 @@
 </nav>
 
 {{-- SIDERBAR --}}
-<div class="offcanvas offcanvas-end RadiusCustom" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<div class="offcanvas offcanvas-end RadiusCustom overflow-auto" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   @auth
   <div class="offcanvas-header d-flex position-relative">
     <div class="mx-auto">
-      <a href="{{route('user.index')}}">
-        <img class="img-fluid rounded-pill" src="{{Storage::url(Auth::user()->profilePicture)}}" width="100" alt="">   
+      <a href="{{route('user.index', ['userId'=>Auth::user()->id])}}">
+        @if(Auth::user()->profilePicture)
+                        <img src="{{ Storage::url(Auth::user()->profilePicture) }}" alt="Generic placeholder image"
+                        class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
+                        
+                        @else
+                        <img src="/media/guest.png" alt="Generic placeholder image"
+                        class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
+
+                        @endif
+
+        {{-- <img class="img-fluid rounded-pill" src="{{Storage::url(Auth::user()->profilePicture)}}" width="100" alt="">    --}}
       </a>
-      <a class="text-decoration-none" href="{{route('user.index')}}">
+      <a class="text-decoration-none" href="{{route('user.index', ['userId'=>Auth::user()->id])}}">
       <h5 class="lead pt-2 fw-bold text-center">{{Auth::user()->name}}</h5>
       </a>
     </div>
     <button type="button" class="btn-close btnSideBarCustom" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div>
+    <div class="offcanvas-body categorie py-3">
+      <a class="navbar-brand lead fs-5 d-flex" href="{{route('user.index', ['userId'=>Auth::user()->id])}}"><i class="bi bi-person fs-3"></i></i>
+        <h5 class="my-auto ms-3">Profilo</h5>
+      </a>
+    </div>
     <div class="offcanvas-body categorie py-3">
       <a class="navbar-brand lead fs-5 d-flex" href="{{route('product.create')}}"><i class="bi bi-plus-circle fs-3"></i>
         <h5 class="my-auto ms-3">Inserisci Annuncio</h5>
@@ -86,11 +101,6 @@
     <div class="offcanvas-body categorie py-3">
       <a class="navbar-brand lead fs-5 d-flex" href="{{route('product.index')}}"><i class="bi bi-collection fs-3"></i>
         <h5 class="my-auto ms-3">Annunci</h5>
-      </a>
-    </div>
-    <div class="offcanvas-body categorie py-3">
-      <a class="navbar-brand lead fs-5 d-flex" href="{{route('user.index')}}"><i class="bi bi-person fs-3"></i></i>
-        <h5 class="my-auto ms-3">Profilo</h5>
       </a>
     </div>
     
@@ -105,7 +115,7 @@
         </span>
       </a>  
       @else
-      <a class="navbar-brand lead fs-5 d-flex" href="{{route('user.diventaRevisore')}}"><i class="bi bi-gear fs-3"></i>
+      <a class="navbar-brand lead fs-5 d-flex" href="{{route('user.diventaRevisore')}}"><i class="bi bi-briefcase fs-3"></i>
         <h5 class="my-auto ms-3">Lavora con noi</h5>
       </a>
       @endif
@@ -144,7 +154,7 @@
 <div class="offcanvas-header d-flex position-relative mb-3">
   <div class="mx-auto">
     <a href="{{route('login')}}" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-      <img class="img-fluid rounded-pill" src="https://picsum.photos/200" width="100" alt="">
+      <img class="img-fluid rounded-pill" src="/media/guest.png" width="100" alt="">
     </a>
     <h5 class="lead pt-2 fw-bold text-center">Guest</h5>
   </div>
