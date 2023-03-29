@@ -1,8 +1,14 @@
 <x-layout>
     <x-header>
-        <h1 class="mt-5 tx-a fw-bold">Annunci</h1>
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-12 col-md-8 mt-5">
+                    <h1 class="prestoBackgroundAnimate RadiusCustom fw-bold display-4 text-white">Annunci</h1>
+                </div>
+            </div>
+        </div>
         <div class="container-fluid">
-            <h3 class="py-4">Categorie</h3>
+            <h3 class="py-4 display-5">Categorie</h3>
         </div>
         <section class="customer-logos slider">
             <div class="slide fs-5">

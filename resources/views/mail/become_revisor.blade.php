@@ -15,6 +15,7 @@
         <h2>Questi sono i suoi dati</h2>
         <p>Nome: {{$user->name}}</p>
         <p>Email: {{$user->email}}</p>
+        
         <p>VUOI RENDERE REVISORE?</p>
         <a href="{{route('make.revisor', compact('user'))}}"><button>RENDI REVISORE</button></a>
     </div>

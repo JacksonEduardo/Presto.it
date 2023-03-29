@@ -9,7 +9,7 @@
         Categorie
       </a>
       <div class="container d-flex justify-content-center p-0">
-        <ul id="dropdownShow" class="dropdown-menu submenu m-0 border-0 bg-light">
+        <ul id="dropdownShow" class="dropdown-menu dropdown-menu-category submenu m-0 border-0 bg-light">
           @foreach ($categories as $category)
           <li class="dropItem"><a class="dropdown-item bg-transparent tx-m m-0 lead" href="{{route('category.show', compact('category'))}}">{{$category->type}}</a></li>
           @endforeach
@@ -23,11 +23,22 @@
           <i class="bi bi-search fs-3"></i>
         </button>
       </form>
-      <div class="dropdown-start ms-3">
-        <button class="btn btn-transparent dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-globe-europe-africa fs-3"></i>
+      <div class="dropLang ms-3">
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-globe-europe-africa fs-3"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lang submenuLang ">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Action two</a></li>
+            <li><a class="dropdown-item" href="#">Action three</a></li>
+          </ul>
+        </div>
+        {{-- ICONE LANGUAGE DA INSERIRE SOPRA --}}
+        {{-- <button class="btn btn-transparent dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          
         </button>
-        <ul class="dropdown-menu bg-light border-0 m-0">
+        <ul class="dropdown-menu dropLang bg-light border-0 m-0">
           <li class="dropLanguage">
             <span class="d-flex categorie">
               <x-_locale lang='it'/>
@@ -42,7 +53,7 @@
               <p class="mt-1 lead">Español</p>
             </span>
           </li>
-        </ul>
+        </ul> --}}
       </div>
       
       <button class="navbar-toggler border-0 ms-2 categorie" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">

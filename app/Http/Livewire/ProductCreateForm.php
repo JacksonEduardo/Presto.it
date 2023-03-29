@@ -87,6 +87,7 @@ class ProductCreateForm extends Component
                                 $newImage = $this->product->images()->create(['path'=>$image->store($newFileName,'public')]);
 
                                 dispatch(new ResizeImage($newImage->path, 400, 400));
+                                dispatch(new ResizeImage($newImage->path, 600, 400));
 
                             }
                             File::deleteDirectory(storage_path('/app/livewire-tmp'));

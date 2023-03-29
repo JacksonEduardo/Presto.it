@@ -1,7 +1,13 @@
 <x-layout>
 
     <x-header>
-        <h1 class="mt-5 tx-a fw-bold">{{$category->type}}</h1>
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-12 col-md-8 mt-5">
+                    <h1 class="prestoBackgroundAnimate RadiusCustom fw-bold display-4 text-white">{{$category->type}}</h1>
+                </div>
+            </div>
+        </div>
     </x-header>
    
     <div class="container-fluid">
