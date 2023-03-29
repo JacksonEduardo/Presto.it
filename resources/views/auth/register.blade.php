@@ -21,12 +21,12 @@
                         <a href="#" class="social"><i class="bi bi-facebook fs-5"></i></a>
                         <a href="#" class="social"><i class="bi bi-twitter fs-5"></i></a>
                     </div>
-                    <p class="text-center lead m-0">o usa la tua email</p>
+                    <p class="text-center lead m-0">{{__('ui.latuamail')}}</p>
                     <input class="inputModal" type="text" name="name" placeholder="Nome" id="name" />
                     <input class="inputModal" type="email" name="email" placeholder="Email" id="email" />
                     <input class="inputModal" type="password" placeholder="Password" id="password" name="password" />
                     <input class="inputModal" class="mb-3" type="password" placeholder="Conferma Password" id="password_confirmation" name="password_confirmation"/>
-                    <button class="mb-3 buttonModal d-flex ">Crea</button>
+                    <button class="mb-3 buttonModal d-flex ">{{__('ui.crea')}}</button>
                 </form>
             </div>
             <div class="form-container sign-in-container">
@@ -47,25 +47,25 @@
                         <a href="#" class="social"><i class="bi bi-facebook fs-5"></i></a>
                         <a href="#" class="social"><i class="bi bi-twitter fs-5"></i></a>
                     </div>
-                    <p class="text-center lead">o usa la tua email</p>
+                    <p class="text-center lead">{{__('ui.latuamail')}}</p>
                     <input class="inputModal" type="email" name="email" placeholder="Email" id="email"/>
                     <input class="inputModal" type="password" placeholder="Password" id="password" name="password" />
                     <input class="inputModal" type="checkbox" class="form-check-input" id="remember" checked>
-                    <label class="form-check-label" for="remember">Ricordami</label>
-                    <a href="#">Password dimenticata?</a>
-                    <button class="mt-2 buttonModal ">Accedi</button>
+                    <label class="form-check-label" for="remember">{{__('ui.ricordami')}}</label>
+                    <a href="#">{{__('ui.pswdimenticata')}}</a>
+                    <button class="mt-2 buttonModal ">{{__('ui.accedi')}}</button>
                 </form>
             </div>
             <div class="overlay-container">
                 <div class="overlay">
                     <div class="overlay-panel overlay-left">
-                        <h1>Accedi presto, se hai già un account</h1>
-                        <p>Inserisci qui i tuoi dati</p>
+                        <h1>{{__('ui.accediconaccount')}}</h1>
+                        <p>{{__('ui.inseriscidati')}}</p>
                         <button class="ghost btnIntro border" id="signIn">Login</button>
                     </div>
                     <div class="overlay-panel overlay-right">
-                        <h1>Iscriviti ora se non sei ancora registrato</h1>
-                        <p>Registrati in pochi secondi</p>
+                        <h1>{{__('ui.iscrivitiora')}}</h1>
+                        <p>{{__('ui.registratipochi')}}</p>
                         <button class="ghost btnIntro border" id="signUp">Registrati</button>
                     </div>
                 </div>

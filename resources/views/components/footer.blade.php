@@ -6,17 +6,17 @@
                           <div class="mt-3">
                         <div class="d-flex mb-4 ">
                             <a class="text-decoration-none" href="">
-                                <p class="animation text-white fs-5">Tutti i prodotti</p>  
+                                <p class="animation text-white fs-5">{{__('ui.tuttiProdotti')}}</p>  
                             </a>                         
                         </div>
                         <div class="d-flex mb-4 ">
                             <a class="text-decoration-none" href="">
-                                <p class="animation text-white fs-5">Lavora con noi</p>
+                                <p class="animation text-white fs-5">{{__('ui.lavoraConNoi')}}</p>
                             </a>                               
                         </div>
                         <div class="d-flex mb-4 ">
                             <a class="text-decoration-none" href="">
-                                <p class="animation text-white fs-5">Diventa revisore</p>
+                                <p class="animation text-white fs-5">{{__('ui.diventa')}}</p>
                             </a>                          
                         </div>              
                     </div>         
@@ -26,12 +26,12 @@
                     <div class="mt-3">
                         <div class="d-flex mb-4 ">
                             <a class="text-decoration-none" href="">
-                                <p class="animation text-white fs-5">Su di noi</p>
+                                <p class="animation text-white fs-5">{{__('ui.suDiNoi')}}</p>
                             </a>                           
                         </div>  
                         <div class="d-flex mb-4 ">
                             <a class="text-decoration-none" href="">
-                                <p class="animation text-white fs-5">Contattaci</p>
+                                <p class="animation text-white fs-5">{{__('ui.contattaci')}}</p>
                             </a>                           
                         </div> 
                         <div class="d-flex mb-4 ">     
@@ -41,7 +41,7 @@
                 </div>
     
                 <div id="rightFooter" class="col-12 col-md-5 mb-lg-4">
-                        <p class="team text-center text-white mt-2 fs-5">Il Team Presto.it</p>
+                        <p class="team text-center text-white mt-2 fs-5">{{__('ui.ilTeam')}}</p>
                         <div class="row">  
                             <div class="col-6 d-flex  justify-content-center align-items-center mb-3">
                                 <p class="m-0 text-white fs-5">Antonio Giannino</p>

@@ -79,7 +79,7 @@
     {{-- FINE CAROSELLO --}}
     
     <div class="container d-flex justify-content-center">
-        <h3 class="my-5 display-5">Ultimi Annunci</h3>
+        <h3 class="my-5 display-5">{{__('ui.ultimi')}}</h3>
     </div>
     
     <div class="container-fluid">
@@ -95,7 +95,7 @@
         
         <div class="row">
             <div class="d-flex justify-content-center my-5">
-                <div class="btn btnIntro">Annunci</div>
+                <div class="btn btnIntro">{{__('ui.annunci')}}</div>
             </div>
         </div>   
         
@@ -103,25 +103,25 @@
     
     <div class="flex-container mt-5">
         <div class="flex-slide home">
-            <div class="flex-title fw-bold fs-5">Informatica</div>
+            <div class="flex-title fw-bold fs-5">{{__('ui.informatica')}}</div>
             <button class="ms-4 btn-category">
                 <i class="fw-bold bi bi-chevron-right text-white"></i>
             </button>
         </div>
         <div class="flex-slide about">
-            <div class="flex-title fw-bold fs-5">Console e Videogiochi</div>
+            <div class="flex-title fw-bold fs-5">{{__('ui.console')}}</div>
             <button class="ms-4 btn-category">
                 <i class="fw-bold bi bi-chevron-right text-white"></i>
             </button>
         </div>
         <div class="flex-slide work">
-            <div class="flex-title fw-bold fs-5">Fotografia</div>
+            <div class="flex-title fw-bold fs-5">{{__('ui.fotografia')}}</div>
             <button class="ms-4 btn-category">
                 <i class="fw-bold bi bi-chevron-right text-white"></i>
             </button>
         </div>
         <div class="flex-slide bamba">
-            <div class="flex-title fw-bold fs-5">Sports</div>
+            <div class="flex-title fw-bold fs-5">{{__('ui.sport')}}</div>
             <button class="ms-4 btn-category">
                 <i class="fw-bold bi bi-chevron-right text-white"></i>
             </button>
@@ -132,8 +132,9 @@
         <video class="videoCustom" autoplay muted loop>
             <source src="{{('/media/giradischi.mp4') }}" type="video/mp4">
             </video>
-        <h4 class="titleVideo display-1">Musica e Film</h4>
-        <p class="pVideo lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, culpa dicta. Ducimus rerum quaerat, adipisci laborum tempore qui placeat delectus iste, animi eveniet dolor vero quo commodi odio earum cumque.</p>
+        <h4 class="titleVideo display-1">{{__('ui.musica')}}</h4>
+        <p class="pVideo lead">{{__('ui.textWelcome')}}<br>{{__('ui.textWelcome2')}}</p>
+        
         <div class="btnVideo btn btnIntro"><i class="bi bi-arrow-right fs-5"></i></div>
     </div>
         

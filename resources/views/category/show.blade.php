@@ -18,7 +18,7 @@
             </div>
             
             @empty
-            <h1 class="py-5">Non ci sono  prodotti per la ricerca effettuata!</h1>
+            <h1 class="py-5">{{__('ui.prodottinontrovati')}}</h1>
             @endforelse
         </div>
     </div>

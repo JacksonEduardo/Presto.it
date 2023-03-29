@@ -18,30 +18,30 @@
         @endif --}}
         
         <div>
-            <label for="name" class="form-label lead my-1">Nome del prodotto</label>
+            <label for="name" class="form-label lead my-1">{{__('ui.nomeProdotto')}}</label>
             <input wire:model="name" type="text" class="form-control @error('name') is-invalid @enderror" id="name" >
             @error('name') <span class="error">{{ $message }}</span> @enderror
         </div>
         <div>
-            <label for="brand" class="form-label lead my-1">Marchio</label>
+            <label for="brand" class="form-label lead my-1">{{__('ui.marchio')}}</label>
             <input wire:model="brand" type="text" class="form-control @error('brand') is-invalid @enderror" id="brand">
             @error('brand') <span class="error">{{ $message }}</span> @enderror
         </div>
         <div>
-            <label for="description" class="form-label lead my-1">Descrizione</label>
+            <label for="description" class="form-label lead my-1">{{__('ui.descrizione')}}</label>
             <textarea wire:model="description" id="description" cols="30" rows="7" class="form-control @error('description') is-invalid @enderror"></textarea>
             @error('description') <span class="error">{{ $message }}</span> @enderror
         </div>
         
         <div>
-            <label for="price" class="form-label lead my-1">Prezzo</label>
+            <label for="price" class="form-label lead my-1">{{__('ui.prezzo')}}</label>
             <input wire:model="price" type="double" class="form-control @error('price') is-invalid @enderror" id="price">
             @error('price') <span class="error">{{ $message }}</span> @enderror
         </div>
         
         <div>
-            <label for="temporary_images" class="form-label lead my-1">Inserisce Immagine</label>
-            <input name="images" wire:model="temporary_images" type="file" multiple class="form-control @error('temporary_images') is-invalid @enderror" id="temporary_images">
+            <label for="temporary_images" class="form-label lead my-1">{{__('ui.inserisciImmagine')}}</label>
+            <input name="images"  wire:model="temporary_images" type="file" multiple class="form-control @error('temporary_images') is-invalid @enderror" id="temporary_images">
             @error('temporary_images') <span class="error">{{ $message }}</span> @enderror
         </div>
         
@@ -49,7 +49,7 @@
         <div class="row">
             
             <div class="col-12">
-                <p class="lead pt-5 fs-3">Foto Preview</p>
+                <p class="lead pt-5 fs-3">{{__('ui.anteprima')}}</p>
                 <div class="row">
                     @foreach($images as $key => $image)
                     <div class="col my-3">
@@ -77,19 +77,19 @@
             <input class="form-check-input @error('usage') is-invalid @enderror" type="radio" wire:model="usage" value="usato">
             
             <label class="form-check-label lead" for="usato" >
-                Usato
+                {{__('ui.usato')}}
             </label>
         </div>
         <div class="form-check">
             <input class="form-check-input @error('usage') is-invalid @enderror" type="radio" wire:model="usage" value="nuovo">
             <label class="form-check-label lead" for="nuovo">
-                Nuovo
+                {{__('ui.nuovo')}}
             </label>
         </div>
         
         <div>
             <select wire:model.defer="category" id="category" class="form-control @error('category') is-invalid @enderror">
-                <option class="lead my-1">Scegli la Categoria</option>
+                <option class="lead my-1">{{__('ui.scegliCategoria')}}</option>
                 @error('category') <span class="error">{{ $message }}</span> @enderror
                 @foreach($categories as $category)
                 <option value="{{$category->id}}">{{$category->type}}</option>
@@ -99,7 +99,7 @@
         
         
         <a href="{{route('product.create')}}">
-            <button type="submit" class="btn bg-a mt-3 text-white lead">Crea Annuncio</button>
+            <button type="submit" class="btn bg-a mt-3 text-white lead">{{__('ui.conferma')}}</button>
         </a>
         
     </form>

@@ -44,24 +44,24 @@
                 </div>
                 <h2 class="fw-bold text-muted tx-a">{{$product->brand}}</h2>
                 <div class="d-flex align-intems-center my-3">
-                    <p class="display-5">Price:</p>
+                    <p class="display-5">{{__('ui.prezzo')}}</p>
                     <p class="display-5 fw-bold ms-3">€ {{$product->price}}</p>
 
                 </div>
                 
                     
                     <hr>
-                    <h4 class="fw-bold">Informazione aggiuntive sul prodotto:</h4>
+                    <h4 class="fw-bold">{{__('ui.infoprod')}}</h4>
                     <p class="showDescription">{{$product->description}}</p>
                     
                     
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="ms-5">
-                            <h4> Categoria: </h4>
+                            <h4> {{__('ui.categoriaprod')}} </h4>
                             <p> {{$product->category->type}}</p>
                         </div>
                         <div class="me-5">
-                            <h4>Condizione:</h4>
+                            <h4>{{__('ui.condizioneprod')}}</h4>
                             <p>{{$product->usage}}</p>
                         </div>
                     </div>
@@ -69,11 +69,11 @@
                     <hr>
                     @if ($product->user_id == null)
                         <div class="">
-                            <p class="">by Utente Cancellato</p>
+                            <p class="">{{__('ui.bynull')}}</p>
                         </div>
                     @else 
                         <div class="">
-                            <p class="">Created by: {{$product->user->name}}, il {{$product->created_at->format('d/m/Y')}}</p>
+                            <p class="">{{__('ui.creatoda')}} {{$product->user->name}}, {{__('ui.il')}} {{$product->created_at->format('d/m/Y')}}</p>
                         </div>
                     @endif
                 </div>

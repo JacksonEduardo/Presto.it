@@ -997,16 +997,17 @@ hr{
 .dropdown-menu-lang {
   
   text-align: center;
-  height: 130px!important;
+  height: 180px!important;
   width: 50%!important;
   position: absolute!important;
   top: 60px!important;
   bottom: -50px!important;
-  left: -45px!important;
+  left: -12px!important;
   border-radius: 0%!important;
   border-bottom-left-radius: 17px!important;
   border-bottom-right-radius: 17px!important;
   --bs-dropdown-link-active-bg: none!important;
+  min-width: 90px;
 }
 
 .submenuLang {
@@ -1014,7 +1015,6 @@ hr{
   position:absolute;
   left: 0;
   width: 10px!important;
-  height: 0;
   line-height: 30px;
   box-sizing:border-box;
   transition:height 0.3s ease-in-out;
