@@ -15,7 +15,7 @@
                   </div>
             </div>
 
-            <div class="col-12 col-md-5 border shadow RadiusCustom stickyForm"> 
+            <div class="col-12 col-md-5 border shadow RadiusCustom my-3"> 
                 <form id="contactForm" class="w-100 contactFormAni" method="GET" action="{{route('become.revisor')}}">
                     @csrf
                     

@@ -81,7 +81,7 @@
                                         @if ($item->images)
                                         @foreach ($item->images as $image)
                                         <div class="carousel-item active">
-                                            <img src="{{!$item->images()->get()->isEmpty() ?  $image->first()->getUrl(400,400) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
+                                            <img src="{{!$item->images()->get()->isEmpty() ?  $image->getUrl(400,400) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
                                         </div>
                                         @endforeach
                                         @endif

@@ -1,4 +1,4 @@
-<nav class="navbar bg-light fixed-top NavbarCustom">
+<nav class="navbar bg-light fixed-top NavbarCustom shadow">
   <div class="container-fluid">
     <div class="d-flex mx-auto mx-md-0 ps-4">
       <a class="navbar-brand" href="{{route('homepage')}}">
@@ -71,11 +71,11 @@
       <a href="{{route('user.index', ['userId'=>Auth::user()->id])}}">
         @if(Auth::user()->profilePicture)
                         <img src="{{ Storage::url(Auth::user()->profilePicture) }}" alt="Generic placeholder image"
-                        class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
+                        class="img-fluid img-thumbnail mt-4 mb-2 border-0" style="width: 150px; z-index: 1">
                         
                         @else
                         <img src="/media/guest.png" alt="Generic placeholder image"
-                        class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
+                        class="img-fluid img-thumbnail mt-4 mb-2 border-0" style="width: 150px; z-index: 1">
 
                         @endif
 

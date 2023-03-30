@@ -8,7 +8,7 @@
         </div> 
     </div>
     
-    <div class="card__img" style="background-image: url({{!$product->images()->get()->isEmpty() ? $product->images()->first()->getUrl(600,400) : 'https://picsum.photos/200'}})"></div>
+    <div class="card__img" style="background-image: url({{!$product->images()->get()->isEmpty() ? $product->images()->first()->getUrl(400,400) : 'https://picsum.photos/200'}})"></div>
     <a href="{{route('product.show', compact('product'))}}" class="card_link">
         <div class="card__img--hover" style="background-image: url({{!$product->images()->get()->isEmpty() ? $product->images()->first()->getUrl(600,400) : 'https://picsum.photos/200'}})"></div>
     </a>

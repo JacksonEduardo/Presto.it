@@ -15,7 +15,7 @@
                     @endif
                     
                     @csrf
-                    <h1 class="text-center ">Registrati</h1>
+                    <h1 class="text-center ">{{__('ui.registrati')}}</h1>
                     <div class="social-container d-flex justify-content-center text-center m-0">
                         <a href="#" class="social"><i class="bi bi-google fs-5"></i></a>
                         <a href="#" class="social"><i class="bi bi-facebook fs-5"></i></a>
@@ -61,12 +61,12 @@
                     <div class="overlay-panel overlay-left">
                         <h1>{{__('ui.accediconaccount')}}</h1>
                         <p>{{__('ui.inseriscidati')}}</p>
-                        <button class="ghost btnIntro border" id="signIn">Login</button>
+                        <button class="ghost btnIntro border" id="signIn">{{__('ui.login')}}</button>
                     </div>
                     <div class="overlay-panel overlay-right">
                         <h1>{{__('ui.iscrivitiora')}}</h1>
                         <p>{{__('ui.registratipochi')}}</p>
-                        <button class="ghost btnIntro border" id="signUp">Registrati</button>
+                        <button class="ghost btnIntro border" id="signUp">{{__('ui.registrati')}}</button>
                     </div>
                 </div>
             </div>

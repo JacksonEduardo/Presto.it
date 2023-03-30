@@ -90,6 +90,8 @@ class ProductCreateForm extends Component
 
                                 dispatch(new ResizeImage($newImage->path, 400, 400));
                                 dispatch(new ResizeImage($newImage->path, 600, 400));
+                                dispatch(new ResizeImage($newImage->path, 800, 800));
+                                dispatch(new ResizeImage($newImage->path, 800, 600));
 
                             }
                             File::deleteDirectory(storage_path('/app/livewire-tmp'));

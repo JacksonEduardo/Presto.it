@@ -1107,8 +1107,11 @@ hr{
 .stickyForm{
   position: sticky;
   top: 85px;
-  height: 70vh;
+ 
 }
+
+
+
 
 .prestoBackgroundAnimate{
   background: linear-gradient(-45deg,  var(--a-color), #0b91ba, var(--a-color), #0b91ba);
