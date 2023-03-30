@@ -1,7 +1,7 @@
 <footer>
-    <div id="footer" class="container-fluid ">
+    <div id="footer" class="container-fluid prestoBackgroundAnimate">
         <img class="mt-5 ms-5" id="logoBianco" src="/media/prestowhite.png" alt="Logo"> 
-            <div class="row justify-content-center bg-a">        
+            <div class="row justify-content-center prestoBackgroundAnimate">        
                 <div class="col-6 col-md-3 leftFooter mt-4">
                           <div class="mt-3">
                         <div class="d-flex mb-4 ">

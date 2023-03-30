@@ -82,7 +82,7 @@
                                         @foreach ($item->images as $image)
                                         <div class="carousel-item active">
                                             <img src="{{!$item->images()->get()->isEmpty() ?  $image->getUrl(400,400) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
-                                        </div>
+                                        </div>                              
                                         @endforeach
                                         @endif
                                     </div>
@@ -102,6 +102,26 @@
                                     <p class="px-3 pb-1 lead">{{$item->description}}</p>
                                     <small class="px-3">{{$item->created_at->format('d/m/Y')}}</small>
                                 </div>
+                                <div class="border ">
+                                    <h5 class="tc-accent">Tags</h5>
+                                    <div class="p-2">
+                                        @if ($image->labels)
+                                        @foreach ($image->labels as $label)
+                                        <p class="d-inline">{{$label}}</p>
+                                        @endforeach
+                                        @endif
+                                   </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card-body">
+                                      <h5 class="tc-accent">Revisione immagini</h5>
+                                      <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                                      <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                                      <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                                      <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                                      <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                                    </div>
+                                  </div>
                             </div>
                         </div>
                     </div>

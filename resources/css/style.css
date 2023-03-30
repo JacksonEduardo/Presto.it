@@ -643,7 +643,6 @@ hr{
 }
 
 /*  INIZIO FOOTER */
-
 #logoBianco{
   width: 170px;
 }
@@ -651,42 +650,34 @@ hr{
 #footer{
   height: 325px;
   background-color: #b8b8b8;
-  background: rgb(4,99,128);
   border-top-left-radius: 17px;
   border-top-right-radius: 17px;
   z-index: 0;
 }
 
-.leftFooter{
-  height: px;
-  background-color:rgb(4,99,128);
-}
-
-.centralFooter{
-  height: px;
-  background-color: rgb(4,99,128);
-}
-
-@media screen and (max-width: 600px) {
-  .prova{
-    display: block;
-  }
-}
-
 #rightFooter{
-  height: px;
-  background-color: rgb(4,99,128);
   background: rgb(22,26,29);
   background: linear-gradient(90deg, rgba(22,26,29,1) 0%, rgba(38,53,66,1) 100%);
-  border-radius: 6px;
+  border-radius: 17px;
 }
 
 #rightFooter {
-  transition: transform .3s ease-out;
-  
+  transition: transform 1s ease-out;
 }
 #rightFooter:hover {
-  transform: translate(0, -35px);
+  transform: translate(0, -27px);
+}
+
+@media screen and (max-width: 600px) {
+  #rightFooter {
+    transition: none;
+    transform: none;
+  }
+
+  #rightFooter:hover{
+    transition: none;
+    transform: none;
+  }
 }
 
 /*  ANIMAZIONI */
@@ -1155,4 +1146,8 @@ hr{
 /* .revCarousel{
   width: 100%;
 } */
-
+.fotoprofilo{
+  height: 170px;
+  border-radius: 17px;
+  
+}
