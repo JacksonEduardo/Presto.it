@@ -39,7 +39,8 @@ return [
     'sport'=>'Sports',
     'musica'=>'Music and Film',
     'textWelcome'=>'It\'s time to resonate your passion for music and film, and take your collection to the next level!',
-    
+    'textWelcome2'=> 'Have a look at our catalogue of Vinyl, CDs and DVDs',
+
     // PRODUCT CREATE DI LIVEWIRE
     'nomeProdotto'=>'Name of Product',
     'marchio'=>'Brand',
@@ -70,6 +71,13 @@ return [
      //'sport'=>'Sports',
      'motori'=>'Motors',
      //h1 Cristian
+    'scattafoto'=>'Take beautiful photos',
+    'scattafotodesc' => 'Focus the object well and look for a light surface or background, a good photo attracts many more people',
+    'scegliprezzo' => 'Choose the price',
+    'scegliprezzodesc' => ' If you are undecided about the price, check the similar announcements published in the Announcements section!',
+    'scriviannuncio' => 'Write a clear ad',
+    'scriviannunciodesc' => 'Try to include all the important information without leaving anything out!',
+
 
 
      // DIVENTA REVISORE
@@ -102,6 +110,11 @@ return [
      'inserisciprimoAnn' => 'Place your first annuncement!',
 
      'inserisciAnn' => 'Place your first annuncement!',
+
+     'ruolo' => 'Role',
+     'citta' => 'City',
+     'numerotel' => 'Telephone number',
+     'campoemail' => 'Email',
 
 
 

@@ -33,9 +33,12 @@
                 <div class="h-100 p-5 pb-3 text-white text-shadow-1 prestoBackgroundAnimate RadiusCustom">
                     <img src="/media/prestowhite.png" width="300" alt="">
                     <h3 class="my-5 display-6 lh-1 fw-bold">{{__('ui.seguiconsigli')}}</h3>
-                    <p class="lead">1. Lorem ipsum dolor sit amet</p>
-                    <p class="lead">2. Lorem ipsum dolor sit amet</p>
-                    <p class="lead">3. Lorem ipsum, dolor sit amet</p>
+                    <h4>{{__('ui.scattafoto')}}</h4>
+                    <p class="lead">1. {{__('ui.scattafotodesc')}}</p>
+                    <h4>{{__('ui.scegliprezzo')}}</h4>
+                    <p class="lead">2. {{__('ui.scegliprezzodesc')}}</p>
+                    <h4>{{__('ui.scriviannuncio')}}</h4>
+                    <p class="lead">3. {{__('ui.scriviannunciodesc')}}</p>
                   </div>
             </div>
 

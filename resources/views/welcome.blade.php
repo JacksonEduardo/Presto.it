@@ -133,7 +133,7 @@
             <source src="{{('/media/giradischi.mp4') }}" type="video/mp4">
             </video>
         <h4 class="titleVideo display-1">{{__('ui.musica')}}</h4>
-        <p class="pVideo lead">{{__('ui.textWelcome')}}<br>{{__('ui.textWelcome2')}}</p>
+        <p class="pVideo lead">{{__('ui.textWelcome')}}<br> {{__('ui.textWelcome2')}} </p>
         
         <div class="btnVideo btn btnIntro"><i class="bi bi-arrow-right fs-5"></i></div>
     </div>

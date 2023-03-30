@@ -115,6 +115,14 @@ return [
 'creatoda'=>'Creado por:',
 'il'=>'el',
 
+'scattafoto'=>'Toma hermosas fotos',
+'scattafotodesc' => 'Enfoca bien el objeto y busca una superficie o fondo claro, una buena foto atrae a muchas más personas!',
+'scegliprezzo' => 'Elige el precio',
+'scegliprezzodesc' => ' Si está indeciso sobre el precio, ¡consulte los anuncios similares publicados en la sección Anuncios!',
+'scriviannuncio' => 'Escribe un anuncio claro',
+'scriviannunciodesc' => 'Intenta incluir toda la información importante sin omitir nada!',
+
+
 //FOOTER
 
 'tuttiProdotti'=>'Todos los Productos',
@@ -145,6 +153,10 @@ return [
 'noAnn' => 'Todavía no hay anuncios',
 'inserisciprimoAnn' => '¡Pon tu primer anuncio!',
 'inserisciAnn' => 'Ingresar Anuncio',
+'ruolo' => 'Role',
+'citta' => 'Ciudad',
+ 'numerotel' => 'Número de teléfono',
+ 'campoemail' => 'Email',
 
 // PAGINA REVISORE
 'zonaRev'=> 'Área de revisores

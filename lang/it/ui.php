@@ -22,7 +22,7 @@ return [
     //PAGINA WELCOME
     'titolo1'=>'Compra e vendi con un click',
     'sottotitolo1'=>'Inserisci qui il tuo annuncio',
-    'titolo2'=>'Busca un articolo nuovo?',
+    'titolo2'=>'Cerchi un articolo nuovo?',
     'sottotitolo2'=>'Trovalo tra i nostri annunci certificati',
     'titolo3'=>'Ti serve un articolo usato?',
     'sottotitolo3'=>'Cerca tra le nostre categorie',
@@ -115,6 +115,15 @@ return [
     'bynull'=>'da Utente Cancellato',
     'creatoda'=>'Creato da:',
     'il'=>'il',
+    'scattafoto'=>'Scatta delle belle foto!',
+    'scattafotodesc' => 'Metti bene a fuoco l\'oggetto e cerca una superdicie o uno sfondo chiaro, una bella foto attira molte più persone!',
+    'scegliprezzo' => 'Scegli il prezzo',
+    'scegliprezzodesc' => ' Se sei indeciso sul prezzo, controlla gli annunci simili pubblicati nella sezione Annunci!',
+    'scriviannuncio' => 'Scrivi un annuncio chiaro',
+    'scriviannunciodesc' => 'Cerca di inserire tutte le informazione importanti senza tralasciare niente!',
+
+
+
 
     //FOOTER
     'tuttiProdotti'=>'Tutti i Prodotti',
@@ -146,6 +155,12 @@ return [
      'noAnn' => 'Non sono ancora presenti annunci',
      'inserisciprimoAnn' => 'Inserisci il tuo primo annuncio!',
      'inserisciAnn' => 'Inserisci Annuncio',
+     'ruolo' => 'Ruolo',
+     'citta' => 'Città',
+     'numerotel' => 'Numero telefonico',
+     'campoemail' => 'Email',
+     
+
 
      // PAGINA REVISORE
      'zonaRev'=> 'Zona Revisore',

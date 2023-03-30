@@ -89,22 +89,22 @@
                         <div class="container py-3 tx-m bg-light rounded">
                             <div class="row p-0 w-100 mx-0">
                                 <div class="col-6 col-md-3 p-0 h-50 my-auto mx-auto">
-                                    <p class="lead fw-normal text-center tx-a">Ruolo</p>
+                                    <p class="lead fw-normal text-center tx-a">{{__('ui.ruolo')}}</p>
                                     <p class="font-italic mb-1 text-center mx-3 ">Revisore</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
                                 <div class="col-6 col-md-3 p-0 h-50 my-auto mx-auto">
-                                    <p class="lead fw-normal text-center tx-a">Città</p>
+                                    <p class="lead fw-normal text-center tx-a">{{__('ui.citta')}}</p>
                                     <p class="font-italic mb-1 text-center mx-3 ">Bari</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
                                 <div class="col-6 col-md-3 p-0 h-50 mx-auto my-auto">
-                                    <p class="lead fw-normal text-center tx-a">Numero</p>
+                                    <p class="lead fw-normal text-center tx-a">{{__('ui.numerotel')}}</p>
                                     <p class="font-italic mb-1 text-center mx-3 ">347------2</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
                                 <div class="col-6 col-md-3 p-0 h-50 mx-auto my-auto">
-                                    <p class="lead fw-normal text-center tx-a">Mail</p>
+                                    <p class="lead fw-normal text-center tx-a">{{__('ui.campoemail')}}</p>
                                     <p class="font-italic mb-1 text-center mx-3 ">cristian@presto</p>
                                     <hr class="mt-0 tx-a">
                                 </div>

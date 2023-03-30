@@ -76,12 +76,12 @@
                         </div>
                         <div id="collapseOne_{{$loop->iteration}}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body d-flex">
-                                <div id="carouselExample" class="carousel slide" width=50>
+                                <div id="carouselExample" class="carousel slide">
                                     <div class="carousel-inner">
                                         @if ($item->images)
                                         @foreach ($item->images as $image)
                                         <div class="carousel-item active">
-                                            <img src="{{!$item->images()->get()->isEmpty() ? Storage::url($image->path) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
+                                            <img src="{{!$item->images()->get()->isEmpty() ?  $image->first()->getUrl(400,400) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
                                         </div>
                                         @endforeach
                                         @endif
