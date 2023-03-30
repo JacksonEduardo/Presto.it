@@ -75,7 +75,7 @@
     </x-header>
     
     <div class="container-fluid">
-        <div class="row">
+        <div class="row pb-5">
             @forelse ($products->where('is_accepted', true) as $product)
             <div class="col-12 col-md-3 p-4">
                 <x-cardProduct :Product="$product" />
