@@ -42,10 +42,10 @@ const navbar = document.querySelector('#nav')
 window.addEventListener('scroll', function(e) {
   const lastPosition = window.scrollY
   if (lastPosition > 5 ) {
-    navbar.classList.add('bg-light')
+    // navbar.classList.add('bg-light')
     navbar.classList.remove('bg-transparent')
   } else {
-    navbar.classList.remove('bg-light')
+    // navbar.classList.remove('bg-light')
     navbar.classList.add('bg-transparent')
     // aggiungere la transition
     
@@ -130,15 +130,52 @@ $(document).ready(function(){
 // FINE ICONA CUORI
 
 // LOGIN E REGISTER ANIMATION
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('containerModal');
+// const signUpButton = document.getElementById('signUp');
+// const signInButton = document.getElementById('signIn');
+// const container = document.getElementById('containerModal');
 
-signUpButton.addEventListener('click', () => {
-    container.classList.add("right-panel-active");
-});
+// signUpButton.addEventListener('click', () => {
+//     container.classList.add("right-panel-active");
+// });
 
-signInButton.addEventListener('click', () => {
-    container.classList.remove("right-panel-active");
-});
+// signInButton.addEventListener('click', () => {
+//     container.classList.remove("right-panel-active");
+// });
 // FINE MODALE
+
+
+var galleryThumbs = new Swiper(".gallery-thumbs", {
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  slidesPerView: 3,
+  watchOverflow: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  direction: 'vertical'
+});
+
+var galleryMain = new Swiper(".gallery-main", {
+  watchOverflow: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  preventInteractionOnTransition: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  effect: 'fade',
+    fadeEffect: {
+    crossFade: true
+  },
+  thumbs: {
+    swiper: galleryThumbs
+  }
+});
+
+galleryMain.on('slideChangeTransitionStart', function() {
+  galleryThumbs.slideTo(galleryMain.activeIndex);
+});
+
+galleryThumbs.on('transitionStart', function(){
+  galleryMain.slideTo(galleryThumbs.activeIndex);
+});

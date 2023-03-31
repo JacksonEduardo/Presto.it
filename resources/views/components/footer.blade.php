@@ -5,7 +5,7 @@
                 <div class="col-6 col-md-3 leftFooter mt-4">
                           <div class="mt-3">
                         <div class="d-flex mb-4 ">
-                            <a class="text-decoration-none" href="">
+                            <a class="text-decoration-none" href="{{route('product.index')}}">
                                 <p class="animation text-white fs-5">{{__('ui.tuttiProdotti')}}</p>  
                             </a>                         
                         </div>

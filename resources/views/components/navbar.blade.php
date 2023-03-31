@@ -129,11 +129,11 @@
     </div>
       @else 
     @endif
-    <div class="offcanvas-body categorie py-3">
+    {{-- <div class="offcanvas-body categorie py-3">
       <a class="navbar-brand lead fs-5 d-flex" href="#"><i class="bi bi-envelope fs-3"></i>
         <h5 class="my-auto ms-3">{{__('ui.contattaci')}}</h5>
       </a>
-    </div>
+    </div> --}}
     <div class="offcanvas-body categorie py-3">
       <a class="navbar-brand lead fs-5 d-flex" href="#"><i class="bi bi-question-lg fs-3"></i>
         <h5 class="my-auto ms-3">{{__('ui.siamo')}}</h5>
@@ -176,11 +176,11 @@
       <h5 class="my-auto ms-3">{{__('ui.annunci')}}</h5>
     </a>
   </div>
-  <div class="offcanvas-body categorie">
+  {{-- <div class="offcanvas-body categorie">
     <a class="navbar-brand lead fs-5 d-flex" href="#"><i class="bi bi-envelope fs-3"></i>
       <h5 class="my-auto ms-3">{{__('ui.contattaci')}}</h5>
     </a>
-  </div>
+  </div> --}}
   <div class="offcanvas-body categorie">
     <a class="navbar-brand lead fs-5 d-flex" href="#"><i class="bi bi-question-lg fs-3"></i>
       <h5 class="my-auto ms-3">{{__('ui.siamo')}}</h5>

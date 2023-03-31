@@ -2,11 +2,11 @@
     <x-header/>
     <div class="container my-5">
         <div class="row justify-content-between">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-7 my-md-0">
                 
-                {{-- INIZIO CAROSELLO --}}
+                {{-- INIZIO CAROSELLO ORIZZONTALE--}}
                 
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 RadiusCustom">
+                {{-- <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 RadiusCustom">
                     <div class="swiper-wrapper">
                         @if ($product->images)
                         @foreach ($product->images as $image)
@@ -29,10 +29,94 @@
                         @endforeach
                         @endif
                     </div>
-                </div>
-                {{-- FINE CAROSELLO --}}
+                </div> --}}
+            {{-- FINE CAROSELLO ORIZZONTALE--}}
+
+
+             {{-- INIZIO CAROSELLO VERTICALE--}}
+             
+                <div class="gallery-container h-75">
+                    <div class="swiper-container gallery-main h-100">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="gallery-title">Vertical<br>Swiper</div>
+                          <img class="img-fluid h-100" src="https://picsum.photos/seed/slide1/600/300" alt="Slide 01">
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="gallery-title">Slide 02</div>
+                          <img src="https://picsum.photos/seed/slide2/600/300" alt="Slide 02">
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="gallery-title">Slide 03</div>
+                          <img src="https://picsum.photos/seed/slide3/600/300" alt="Slide 03">
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="gallery-title">Slide 04</div>
+                          <img src="https://picsum.photos/seed/slide4/600/300" alt="Slide 04">
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="gallery-title">Slide 04</div>
+                          <img src="https://picsum.photos/seed/slide5/600/300" alt="Slide 05">
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="gallery-title">Slide 06</div>
+                          <img src="https://picsum.photos/seed/slide6/600/300" alt="Slide 06">
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="gallery-title">Slide 07</div>
+                          <img src="https://picsum.photos/seed/slide7/600/300" alt="Slide 07">
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="gallery-title">Slide 08</div>
+                          <img src="https://picsum.photos/seed/slide8/600/300" alt="Slide 08">
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="gallery-title">Slide 09</div>
+                          <img src="https://picsum.photos/seed/slide9/600/300" alt="Slide 09">
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="gallery-title">Slide 10</div>
+                          <img src="https://picsum.photos/seed/slide10/600/300" alt="Slide 10">
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-container mySwipeCont gallery-thumbs">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="https://picsum.photos/seed/slide1/115/100" alt="Slide 01"></div>
+                        <div class="swiper-slide">
+                          <img src="https://picsum.photos/seed/slide2/115/100" alt="Slide 02"></div>
+                        <div class="swiper-slide">
+                          <img src="https://picsum.photos/seed/slide3/115/100" alt="Slide 03"></div>
+                        <div class="swiper-slide">
+                          <img src="https://picsum.photos/seed/slide4/115/100" alt="Slide 04">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://picsum.photos/seed/slide5/115/100" alt="Slide 05">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://picsum.photos/seed/slide6/115/100" alt="Slide 06">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://picsum.photos/seed/slide7/115/100" alt="Slide 07">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://picsum.photos/seed/slide8/115/100" alt="Slide 08">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://picsum.photos/seed/slide9/115/100" alt="Slide 09">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://picsum.photos/seed/slide10/115/100" alt="Slide 10">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
             </div>
-            
+             {{-- FINE CAROSELLO VERTICALE--}}
             <div class="col-12 col-md-5 px-4">
                 <div>
                     <h4 class="prestoBackgroundAnimate RadiusCustom fw-bold text-center display-4 text-white px-4">{{$product->name}}</h4>
