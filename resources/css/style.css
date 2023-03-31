@@ -74,9 +74,21 @@ a{
   border-radius: 17px;
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:940px){
   .navResponsive{
     display: none;
+  }
+}
+@media screen and (max-width:650px){
+  .iconsNav{
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+@media screen and (max-width:650px){
+  .formSearch{
+    justify-content: space-between;
+    width: 100%;
   }
 }
 

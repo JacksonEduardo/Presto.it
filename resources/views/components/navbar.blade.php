@@ -16,8 +16,8 @@
         </ul>
       </div>
     </div>
-    <div class="d-flex">
-      <form class="d-flex ms-3" role="search" action="{{route('products.search')}}" method="GET">
+    <div class="d-flex iconsNav">
+      <form class="d-flex ms-3 formSearch" role="search" action="{{route('products.search')}}" method="GET">
         <input class="form-control me-2 RadiusCustom" type="search" placeholder="Cerca" aria-label="Search" name="searched">
         <button class="btn categorie RadiusCustom border-0" type="submit">
           <i class="bi bi-search fs-3"></i>

@@ -91,6 +91,7 @@ class ProductCreateForm extends Component
                                 // $this->product->images()->create(['path'=>$image->store('images','public')]);
                                 $newFileName = "products/{$this->product->id}";
                                 $newImage = $this->product->images()->create(['path'=>$image->store($newFileName,'public')]);
+                                
 
                                 RemoveFaces::withChain([
                                     new AddWatermark($newImage->id),

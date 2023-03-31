@@ -11,9 +11,9 @@
     </x-header>
    
     <div class="container-fluid">
-        <div class="row pb-5">
+        <div class="row p-md-5 text-center">
             @forelse ($category->products->where('is_accepted', true) as $product)
-            <div class="col-12 col-md-3 p-4">
+            <div class="col-12 col-md-4 p-4">
                 <x-cardProduct :Product="$product" />
             </div>
             
