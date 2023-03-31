@@ -7,6 +7,7 @@ use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
+use App\Jobs\AddWatermark;
 use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
@@ -92,10 +93,11 @@ class ProductCreateForm extends Component
                                 $newImage = $this->product->images()->create(['path'=>$image->store($newFileName,'public')]);
 
                                 RemoveFaces::withChain([
+                                    new AddWatermark($newImage->id),
                                     new ResizeImage($newImage->path, 400, 400),
                                     new ResizeImage($newImage->path, 600, 400),
                                     new GoogleVisionSafeSearch($newImage->id),
-                                    new GoogleVisionLabelImage($newImage->id)
+                                    new GoogleVisionLabelImage($newImage->id),
                                 ])->dispatch($newImage->id);
                                 //dispatch(new ResizeImage($newImage->path, 800, 800));
                                 //dispatch(new ResizeImage($newImage->path, 800, 600));
