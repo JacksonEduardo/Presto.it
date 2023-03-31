@@ -264,7 +264,7 @@ a{
 }
 
 .overlay-left {
-  transform: translateX(-20%);
+  transform: translateX(0%);
 }
 
 .containerModal.right-panel-active .overlay-left {
@@ -273,7 +273,7 @@ a{
 
 .overlay-right {
   right: 0;
-  transform: translateX(0);
+  transform: translateX(0%);
 }
 
 .containerModal.right-panel-active .overlay-right {
@@ -294,6 +294,7 @@ a{
   height: 40px;
   width: 40px;
 }
+
 /* FINE LOGIN E REGISTER*/
 
 /* PRIMO CAROSELLO */
@@ -382,6 +383,30 @@ a{
   color: rgb(3,99,128);
   border: 2px solid var(--a-color);
 }
+.btnIntro2{
+  font-family: Roboto, sans-serif;
+  font-weight: 0;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgb(3,99,128);
+  padding: 7px 35px;
+  border: 2px solid var(--a-color);
+  box-shadow: rgb(0, 0, 0) 3px 0px 22px -22px;
+  border-radius: 6px;
+  transition : 431ms;
+  transform: translateY(0);
+  cursor: pointer;
+}
+
+.btnIntro2:hover{
+  
+  transition : 431ms;
+  padding: 7px 51px;
+  transform : translateY(-0px);
+  background-color: #fff;
+  color: rgb(3,99,128);
+  border: 2px solid var(--a-color);
+}
 
 .btn3{
   display: block;
@@ -455,6 +480,7 @@ a{
     justify-content: center;
   }
 }
+
 /* CAROSELLO HOMEPAGE */
 
 .parallax-bg1 {

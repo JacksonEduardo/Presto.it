@@ -1,6 +1,6 @@
 <x-layout>
     
-    <div class="container vh-100 d-flex align-items-center">
+    <div class="container vh-100 d-flex align-items-center mt-5">
         <div class="containerModal h-75 w-100" id="containerModal">
             <div class="form-container sign-up-container">
                 <form class="formModal" method="POST" action="{{route('register')}}">
@@ -41,7 +41,7 @@
                     </div>
                     @endif
                     @csrf
-                    <h1>Login</h1>
+                    <h1>{{__('ui.login')}}</h1>
                     <div class="social-container d-flex">
                         <a href="#" class="social"><i class="bi bi-google fs-5"></i></a>
                         <a href="#" class="social"><i class="bi bi-facebook fs-5"></i></a>
@@ -61,12 +61,12 @@
                     <div class="overlay-panel overlay-left">
                         <h1>{{__('ui.accediconaccount')}}</h1>
                         <p>{{__('ui.inseriscidati')}}</p>
-                        <button class="ghost btnIntro border" id="signIn">{{__('ui.login')}}</button>
+                        <button class="ghost border btnIntro2" id="signIn">{{__('ui.login')}}</button>
                     </div>
                     <div class="overlay-panel overlay-right">
                         <h1>{{__('ui.iscrivitiora')}}</h1>
                         <p>{{__('ui.registratipochi')}}</p>
-                        <button class="ghost btnIntro border" id="signUp">{{__('ui.registrati')}}</button>
+                        <button class="ghost border btnIntro2" id="signUp">{{__('ui.registrati')}}</button>
                     </div>
                 </div>
             </div>
