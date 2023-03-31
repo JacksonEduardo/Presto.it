@@ -46,8 +46,8 @@
                             <h1 class="tx-a fw-bold display-2">Presto.it</h1>
                             <p class="fs-4 ">{{__('ui.titolo1')}}</p>
                             <h1>{{__('ui.sottotitolo1')}}</h1>
-                            <div class="align-items-center">
-                                <a href="{{route('product.create')}}"><button class="btnIntro">{{__('ui.tasto1')}}</button></a>
+                            <div class="containerBtn3 fw-semibold">
+                                <a class="btn3" href="{{route('product.create')}}"><span>{{__('ui.tasto1')}}</span></a>
                             </div>
                         </div>
                     </div>
@@ -55,9 +55,9 @@
                         <div class="parallax-bg2"></div>
                         <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center marginWelcome">
                             <p class="fs-4 text-light">{{__('ui.titolo2')}}</p>
-                            <h1 class="text-light">{{__('ui.sottotitolo2')}}</h1>
-                            <div class="align-items-center">
-                                <a href="{{route('product.index')}}"><button class="btnIntro">{{__('ui.tasto2')}}</button></a>
+                            <h1 class="text-light text-start">{{__('ui.sottotitolo2')}}</h1>
+                            <div class="containerBtn3 fw-semibold">
+                                <a class="btn3" href="{{route('product.index')}}"><span>{{__('ui.tasto2')}}</span></a>
                             </div>
                         </div>
                     </div>
@@ -66,8 +66,8 @@
                         <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center marginWelcome">
                             <p class="fs-4 text-light">{{__('ui.titolo3')}}</p>
                             <h1 class="text-light">{{__('ui.sottotitolo3')}}</h1>
-                            <div class="align-items-center">
-                                <a href="{{route('product.index')}}"><button class="btnIntro">{{__('ui.tasto3')}}</button></a>
+                            <div class="containerBtn3 fw-semibold">
+                                <a class="btn3" href="{{route('product.index')}}"><span class="p-3">{{__('ui.tasto3')}}</span></a>
                             </div>
                         </div>
                     </div>
@@ -94,8 +94,8 @@
         </div>
         
         <div class="row">
-            <div class="d-flex justify-content-center my-5">
-                <div class="btn btnIntro">{{__('ui.annunci')}}</div>
+            <div class="d-flex justify-content-center my-5 containerBtn3 fw-bold">
+                <a class="btn3" href="{{route('product.index')}}"><span>{{__('ui.annunci')}}</span></a>
             </div>
         </div>   
         
@@ -135,7 +135,11 @@
         <h4 class="titleVideo display-1">{{__('ui.musica')}}</h4>
         <p class="pVideo lead">{{__('ui.textWelcome')}}<br> {{__('ui.textWelcome2')}} </p>
         
-        <div class="btnVideo btn btnIntro"><i class="bi bi-arrow-right fs-5"></i></div>
+        <div class="btnVideo">
+            <div class="containerBtn3 fw-bold">
+                <a class="btn3" href="{{route('product.index')}}"><span><i class="bi bi-arrow-right fw-bold fs-2"></i></span></a>
+            </div>
+        </div>
     </div>
         
     </x-layout>

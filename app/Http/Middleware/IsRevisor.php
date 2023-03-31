@@ -19,6 +19,6 @@ class IsRevisor
         if (Auth::check() && Auth::user()->is_revisor){
             return $next($request);
         }
-        return redirect('/')->with('accessDenied', 'Attenzione! Solo i revisori pososno accere a questa area');
+        return redirect('/')->with('accessDenied', 'Attenzione! Solo i revisori possono accedere a questa area');
     }
 }

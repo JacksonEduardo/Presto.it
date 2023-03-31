@@ -383,6 +383,53 @@ a{
   border: 2px solid var(--a-color);
 }
 
+.btn3{
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  border-radius: 6px;
+  background-color: #ffffff8a;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.btn3 span{
+  position: relative;
+  z-index: 2;
+}
+
+.btn3:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(3,99,128);
+  transition: all .35s;
+}
+
+.btn3:hover{
+  color: #fff;
+  border-radius: 7px;
+}
+
+.btn3:hover:after{
+  width: 100%;
+  border-radius: 6px;
+}
+
+
+
 .marginWelcome{
   margin-bottom: 50px;
   margin-right: 600px;
@@ -396,6 +443,16 @@ a{
   .btnIntro{
     width: 60%;
     
+  }
+
+  .btn3{
+    background: rgb(3,99,128);
+    color: #fff;
+    border-color: rgb(3,99,128);
+  }
+  .containerBtn3{
+    display: flex;
+    justify-content: center;
   }
 }
 /* CAROSELLO HOMEPAGE */
@@ -414,7 +471,7 @@ a{
 
 .parallax-bg2 {
   position: absolute;
-  background-image: url(/public/media/sneaker.jpg);
+  background-image: url(/public/media/vestiti.jpg);
   left: 0;
   top: 0;
   width: 120%;
