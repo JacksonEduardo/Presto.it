@@ -23,7 +23,7 @@ let swiper3 = new Swiper(".mySwiper3", {
   effect: "fade",
   centeredSlides: true,
   autoplay: {
-    delay: 6000,
+    delay: 4800,
     disableOnInteraction: false,
   },
   pagination: {

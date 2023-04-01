@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="d-flex mx-auto mx-md-0 ps-4">
       <a class="navbar-brand" href="{{route('homepage')}}">
-        <img data-aos="zoom-in" src="/media/presto.png" width="150px" alt="Logo">
+        <img data-aos="zoom-in" src="/media/presto.png" class="logoHover" alt="Logo">
       </a>
       <a class="navbar-brand navResponsive categorie lead ms-4" href="{{route('product.index')}}">{{__('ui.annunci')}}</a>
       <a class="navbar-brand navResponsive dropdown-toggle categorie lead ms-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -10,8 +10,18 @@
       </a>
       <div class="container d-flex justify-content-center p-0">
         <ul id="dropdownShow" class="dropdown-menu dropdown-menu-category submenu m-0 border-0 bg-light">
+
           @foreach ($categories as $category)
-          <li class="dropItem"><a class="dropdown-item bg-transparent tx-m m-0 lead" href="{{route('category.show', compact('category'))}}">{{$category->type}}</a></li>
+          @switch(App::getLocale())
+              @case('es')
+                <li class="dropItem"><a class="dropdown-item bg-transparent tx-m m-0 lead" href="{{route('category.show', compact('category'))}}">{{$category->esp}}</a></li>
+              @break
+              @case('en')
+                <li class="dropItem"><a class="dropdown-item bg-transparent tx-m m-0 lead" href="{{route('category.show', compact('category'))}}">{{$category->eng}}</a></li>
+              @break
+              @default
+                <li class="dropItem"><a class="dropdown-item bg-transparent tx-m m-0 lead" href="{{route('category.show', compact('category'))}}">{{$category->type}}</a></li>   
+          @endswitch
           @endforeach
         </ul>
       </div>
@@ -71,8 +81,8 @@
       <a href="{{route('user.index', ['userId'=>Auth::user()->id])}}">
         @if(Auth::user()->profilePicture)
                         <img src="{{ Storage::url(Auth::user()->profilePicture) }}" alt="Generic placeholder image"
-                        class="img-fluid img-thumbnail mt-4 mb-2 border-0" style="width: 150px; z-index: 1">
-                        
+                        class="img-fluid mt-4 border-0 shadow" style="width: 180px; height: 180px; z-index: 1; border-radius: 100%;">                        
+                       
                         @else
                         <img src="/media/guest.png" alt="Generic placeholder image"
                         class="img-fluid img-thumbnail mt-4 mb-2 border-0" style="width: 150px; z-index: 1">

@@ -18,21 +18,24 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $categories = [
-            ["Motori"],
-            ["Informatica"],
-            ["Console e videogiochi"],
-            ["Fotografia"],
-            ["Telefonia"],
-            ["Elettrodomestici"],
-            ["Abbigliamento e accessori"],
-            ["Musica e Film"],
-            ["Sports"],
-            ["Giardino e Fai da te"],
+            ["Motori","Motors","Motores"],
+            ["Informatica","Computer Science","Informática"],
+            ["Console e videogiochi","Consoles and Video Games","Consolas y videojuegos"],
+            ["Fotografia","Photography","Fotografía"],
+            ["Telefonia","Telephony","Telefonía"],
+            ["Elettrodomestici","Household Appliances","Electrodomésticos"],
+            ["Abbigliamento e accessori","Clothing and Accessories","Ropa y accesorios"],
+            ["Musica e Film","Music and Movies","Música y Películas"],
+            ["Sports","Sports","Deportes"],
+            ["Giardino e Fai da te","Garden and DIY","Jardín y bricolaje"],
         ];
+
 
         foreach ($categories as $category){
             DB::table('categories')->insert([
-                "type" => $category[0]
+                "type" => $category[0],
+                "eng" => $category[1],
+                "esp" => $category[2]
             ]);
         }
 

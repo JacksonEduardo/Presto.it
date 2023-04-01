@@ -94,7 +94,7 @@ class ProductCreateForm extends Component
                                 
 
                                 RemoveFaces::withChain([
-                                    new AddWatermark($newImage->id),
+                                    // new AddWatermark($newImage->id), job non più usato ma messo nel Resize
                                     new ResizeImage($newImage->path, 400, 400),
                                     new ResizeImage($newImage->path, 600, 400),
                                     new GoogleVisionSafeSearch($newImage->id),

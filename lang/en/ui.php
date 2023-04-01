@@ -200,4 +200,14 @@ return [
     // 'contattaci'=>'Contact Us', già presente in navbar
     'ilTeam'=>'The Presto.it Team',
 
+
+     //  FORM LAVORA CON NOI
+     'titolo1formRev' => 'Articles Revision',
+     'titolo2formRev' => 'Providing Feedback',
+     'titolo3formRev' => 'Collaboration with the Team',
+     'desc1formRev' => 'The reviewer will be responsible for reviewing the site\'s articles, ensuring they are grammatically correct, consistent, and follow the site\'s editorial guidelines.',
+     'desc2formRev' => 'The reviewer will provide constructive feedback to the article authors, suggesting ways to improve content and structure to make articles even more engaging for the site\'s audience.',
+     'desc3formRev' => 'The reviewer will collaborate with the site\'s team, participating in editorial meetings and contributing to decisions regarding the site\'s content strategy.',
+
+    //  'categoria' => "{{$product->category->eng}}",
 ];

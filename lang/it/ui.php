@@ -173,6 +173,14 @@ return [
      'precedente'=> 'Precedente',
      'successivo'=> 'Successivo',
      
+          //  FORM LAVORA CON NOI
+    'titolo1formRev' => 'Revisione degli articoli',
+    'titolo2formRev' => 'Fornire Feedback',
+    'titolo3formRev' => 'Collaborazione con il team',
+    'desc1formRev' => 'Il revisore sarà responsabile di rivedere gli articoli del sito, assicurandosi che siano grammaticalmente corretti, coerenti e rispettino le linee guida editoriali del sito.',
+    'desc2formRev' => 'Il revisore fornirà feedback costruttivo agli autori degli articoli, suggerendo come migliorare il contenuto e la struttura per rendere gli articoli ancora più interessanti per il pubblico del sito.',
+    'desc3formRev' => 'Il revisore collaborerà con il team del sito, partecipando alle riunioni editoriali e contribuendo alle decisioni riguardanti la strategia di contenuto del sito.',
+
      
 
 ];

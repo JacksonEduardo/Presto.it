@@ -19,23 +19,23 @@
         
         <div>
             <label for="name" class="form-label lead my-1">{{__('ui.nomeProdotto')}}</label>
-            <input wire:model="name" type="text" class="form-control @error('name') is-invalid @enderror" id="name" >
+            <input wire:model.lazy="name" type="text" class="form-control @error('name') is-invalid @enderror" id="name" >
             @error('name') <span class="error">{{ $message }}</span> @enderror
         </div>
         <div>
             <label for="brand" class="form-label lead my-1">{{__('ui.marchio')}}</label>
-            <input wire:model="brand" type="text" class="form-control @error('brand') is-invalid @enderror" id="brand">
+            <input wire:model.lazy="brand" type="text" class="form-control @error('brand') is-invalid @enderror" id="brand">
             @error('brand') <span class="error">{{ $message }}</span> @enderror
         </div>
         <div>
             <label for="description" class="form-label lead my-1">{{__('ui.descrizione')}}</label>
-            <textarea wire:model="description" id="description" cols="30" rows="7" class="form-control @error('description') is-invalid @enderror"></textarea>
+            <textarea wire:model.lazy="description" id="description" cols="30" rows="7" class="form-control @error('description') is-invalid @enderror"></textarea>
             @error('description') <span class="error">{{ $message }}</span> @enderror
         </div>
         
         <div>
             <label for="price" class="form-label lead my-1">{{__('ui.prezzo')}}</label>
-            <input wire:model="price" type="double" class="form-control @error('price') is-invalid @enderror" id="price">
+            <input wire:model.lazy="price" type="double" class="form-control @error('price') is-invalid @enderror" id="price">
             @error('price') <span class="error">{{ $message }}</span> @enderror
         </div>
         
@@ -92,7 +92,16 @@
                 <option class="lead my-1">{{__('ui.scegliCategoria')}}</option>
                 @error('category') <span class="error">{{ $message }}</span> @enderror
                 @foreach($categories as $category)
-                <option value="{{$category->id}}">{{$category->type}}</option>
+                @switch(App::getLocale())
+                    @case('es')
+                        <option value="{{$category->id}}">{{$category->esp}}</option>
+                    @break
+                    @case('en')
+                        <option value="{{$category->id}}">{{$category->eng}}</option>
+                    @break
+                    @default
+                        <option value="{{$category->id}}">{{$category->type}}</option>
+                    @endswitch
                 @endforeach
             </select>
         </div>

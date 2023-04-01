@@ -15,9 +15,9 @@
                 <div class="h-100 p-5 pb-3 text-white text-shadow-1 prestoBackgroundAnimate RadiusCustom">
                     <img src="/media/prestowhite.png" width="300" alt="">
                     <h3 class="my-5 display-6 lh-1 fw-bold">{{__('ui.titolocard')}}</h3>
-                    <p class="my-5">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel facilis omnis ratione iste hic possimus dicta minus eum fugit voluptatum, culpa esse rerum aut corporis, temporibus sint magni tempora vero.</p>
-                    <p class="my-5">2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quam commodi provident ipsa perferendis asperiores rem rerum, at corporis impedit pariatur cumque nobis similique. Repudiandae suscipit quas nesciunt sunt exercitationem?</p>
-                    <p class="my-5">3. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet incidunt cumque nulla, id voluptatum rem nostrum, labore mollitia excepturi asperiores et accusantium sequi eius modi ipsa quaerat omnis amet reprehenderit.</p>
+                    <p class="my-5"><strong>1. {{__('ui.titolo1formRev')}} </strong> - {{__('ui.desc1formRev')}}</p>
+                    <p class="my-5"><strong>2. {{__('ui.titolo2formRev')}} </strong> - {{__('ui.desc2formRev')}} </p>
+                    <p class="my-5"><strong>3. {{__('ui.titolo3formRev')}} </strong> - {{__('ui.desc3formRev')}} </p>
                   </div>
             </div>
 
@@ -43,6 +43,15 @@
                         <label class="form-label lead" for="message">{{__('ui.parlacidite')}}</label>
                         <textarea class="form-control  @error('message') is-invalid @enderror" id="message" name="message" type="text" style="height: 10rem;" data-sb-validations="required" value="{{ old('message') }}"></textarea>
                         <div class="invalid-feedback bg-alert" data-sb-feedback="message:required">{{__('uierroreparlaci.')}}</div>
+                    </div>
+                    {{-- PHP INLINE PER RICEZIONE MESSAGGIO --}}
+                    <div>
+                        @if (isset ($_GET[ 'message']))
+                            @php
+                                $reason = $_GET['message'];
+                                echo "<p>$reason</p>";
+                            @endphp
+                        @endif
                     </div>
                     
                     <div>

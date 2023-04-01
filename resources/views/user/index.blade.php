@@ -13,11 +13,11 @@
         <div class="col-12 col-md-10">
             <div class="border-0 m-0">
                 <div class="text-white d-flex flex-row topCardProfile prestoBackgroundAnimate RadiusCustom">
-                    <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                    <div class="ms-4 me-5 mt-4 d-flex flex-column" style="width: 150px;">
                         
                         @if($user->profilePicture)
-                        <img src="{{ Storage::url($user->profilePicture) }}"  class="fotoprofilo" alt="Generic placeholder image"
-                        class="img-fluid img-thumbnail mt-4 mb-1" style="width: 150px; z-index: 1">
+                        <img src="{{ Storage::url($user->profilePicture) }}"  class="fotoprofilo shadow" alt="Generic placeholder image"
+                        class="img-fluid img-thumbnail" style="width: 200px; height: 200px; z-index: 1">
                         @else
                         <img src="\media\guest.png" alt=""
                         class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
@@ -129,35 +129,12 @@
                         <div class="container">
                             <div class="row">
                                 @forelse ($products as $product)
-                                <div class="col-12 col-lg-4">
-                                    <div class="px-3 mb-3">
-                                        <article class="card card--1 m-0">
-                                            <div class="card__info-hover">
-                                                <i class="bi bi-bag-plus fs-5"></i>
-                                                <i class="bi bi-heart fs-5 ms-3"></i>
-                                                <div class="card__clock-info">
-                                                    <i class="bi bi-stopwatch fs-5"></i>
-                                                    <small>{{$product->created_at->format('d/m/Y')}}</small>
-                                                </div> 
-                                            </div>
-                                            
-                                            <div class="card__img" style="background-image: url('https://picsum.photos/200')"></div>
-                                            <a href="{{route('product.show', compact('product'))}}" class="card_link">
-                                                <div class="card__img--hover" style="background-image: url('https://picsum.photos/200')"></div>
-                                            </a>
-                                            <div class="card__info">
-                                                <span class="">{{$product->category->type}}</span>
-                                                <h3 class="">{{$product->name}}</h3>
-                                                <h2 class="">€{{$product->price}}</h2>
-                                                <span class="">by <a href="{{route('user.index')}}" class="card__author" title="author">{{$product->user->name}}</a></span>
-                                            </div>
-                                        </article>
+                                <div class="col-12 col-lg-4 my-3">
+                                    <div class="slide fs-5">
+                                        <x-cardProduct :Product="$product" />
                                     </div>
-                                    
                                 </div>
-                                
                                 @empty
-                                
                                 <div class="col-12">
                                     <h1>{{__('ui.noAnn')}}</h1>
                                     
@@ -169,6 +146,9 @@
                                     @endif
                                 </div>
                                 @endforelse
+                                <div class="d-flex justify-content-center">
+                                    {{$products->links()}}
+                                </div>
                             </div>
                         </div>
                         

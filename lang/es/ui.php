@@ -35,7 +35,7 @@ return [
     // CAROSELLO CATEGORIE
     'informatica'=>'Informatica',
     'console'=>'Consols y Videojuegos',
-    'fotografia'=>'Fotografia',
+    'fotografia'=>'Fotografía',
     'sport'=>'Desportes',
     'musica'=>'Musica y Peliculas',
     'textWelcome'=>'Es tiempo de hacer sonar tu pasiòn por la musica y el cine y sube tu colecciòn a nivel superior!',
@@ -63,9 +63,9 @@ return [
      //'informatica'=>'Informatica',
      //'console'=>'Console e Videogiochi',
      //'fotografia'=>'Fotografia',
-     'telefonia'=>'Telefonia',
-     'informatica'=>'Informatica',
-     'musica'=>'Musica',
+     'telefonia'=>'Telefonía',
+     'informatica'=>'Informática',
+     'musica'=>'Música y Películas',
      'giardino'=>'Articulos para el Jardìn',
      'elettrodomestici'=>'Electrodomesticos',
      //'sport'=>'Sports',
@@ -170,5 +170,12 @@ return [
 'precedente'=> 'Anterior',
 'successivo'=> 'Próximo',
 
+//  FORM LAVORA CON NOI
+'titolo1formRev' => 'Revisión de Artículos',
+'titolo2formRev' => 'Proporcionar Retroalimentación',
+'titolo3formRev' => 'Colaboración con el Equipo',
+'desc1formRev' => 'El revisor será responsable de revisar los artículos del sitio, asegurándose de que sean gramaticalmente correctos, coherentes y cumplan con las pautas editoriales del sitio.',
+'desc2formRev' => 'El revisor proporcionará retroalimentación constructiva a los autores de los artículos, sugiriendo formas de mejorar el contenido y la estructura para hacer que los artículos sean aún más atractivos para la audiencia del sitio.',
+'desc3formRev' => 'El revisor colaborará con el equipo del sitio, participando en reuniones editoriales y contribuyendo a las decisiones sobre la estrategia de contenido del sitio.',
 
 ];

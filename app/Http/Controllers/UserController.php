@@ -35,7 +35,8 @@ public function requestRevisor(){
 {
 
     $user = User::findOrFail($userId);
-    $products = Product::where('user_id', $user->id)->get();
+     // $products = Product::where('user_id', $user->id)->get();
+     $products = Product::where('user_id', $user->id)->orderBy('created_at', 'DESC')->paginate(12);
 
     // if(Auth::user()){
     //     if (Auth::user()->id && $userId) {
