@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="d-flex mx-auto mx-md-0 ps-4">
       <a class="navbar-brand" href="{{route('homepage')}}">
-        <img src="/media/presto.png" width="150px" alt="Logo">
+        <img data-aos="zoom-in" src="/media/presto.png" width="150px" alt="Logo">
       </a>
       <a class="navbar-brand navResponsive categorie lead ms-4" href="{{route('product.index')}}">{{__('ui.annunci')}}</a>
       <a class="navbar-brand navResponsive dropdown-toggle categorie lead ms-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -163,14 +163,14 @@
 <div>
   <div class="offcanvas-body categorie">
     <a class="navbar-brand lead fs-5 d-flex" href="{{route('login')}}"><i class="bi bi-person fs-3"></i>
-      <h5 class="my-auto ms-3">{{__('ui.login')}} | {{__('ui.registrati')}}</h5>
+      <h5 class="my-auto ms-3">{{__('ui.login')}}</h5>
     </a>
   </div>
-  {{-- <div class="offcanvas-body categorie">
+  <div class="offcanvas-body categorie">
     <a class="navbar-brand lead fs-5 d-flex" href="{{route('register')}}"><i class="bi bi-box-arrow-in-right fs-3"></i>
       <h5 class="my-auto ms-3">{{__('ui.registrati')}}</h5>
     </a>
-  </div> --}}
+  </div>
   <div class="offcanvas-body categorie">
     <a class="navbar-brand lead fs-5 d-flex" href="{{route('product.index')}}"><i class="bi bi-collection fs-3"></i>
       <h5 class="my-auto ms-3">{{__('ui.annunci')}}</h5>

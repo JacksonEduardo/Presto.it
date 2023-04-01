@@ -43,7 +43,7 @@
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg1"></div>
                         <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center marginWelcome">
-                            <h1 class="tx-a fw-bold display-2">Presto.it</h1>
+                            <h1 data-aos="zoom-in-right" data-aos-duration="1100" class="tx-a fw-bold display-2">Presto.it</h1>
                             <p class="fs-4 ">{{__('ui.titolo1')}}</p>
                             <h1>{{__('ui.sottotitolo1')}}</h1>
                             <div class="containerBtn3 fw-semibold">
@@ -79,7 +79,7 @@
     {{-- FINE CAROSELLO --}}
     
     <div class="container d-flex justify-content-center">
-        <h3 class="my-5 display-5">{{__('ui.ultimi')}}</h3>
+        <h3 data-aos="zoom-in" class="my-5 display-5">{{__('ui.ultimi')}}</h3>
     </div>
     
     <div class="container-fluid">
@@ -103,28 +103,36 @@
     
     <div class="flex-container mt-5">
         <div class="flex-slide home">
-            <div class="flex-title fw-bold fs-5">{{__('ui.informatica')}}</div>
-            <button class="ms-4 btn-category">
-                <i class="fw-bold bi bi-chevron-right text-white"></i>
-            </button>
+            <a href="{{ route('category.show', $categories->firstWhere('id', 2)->id) }}">
+                <div class="flex-title fw-bold fs-5">{{__('ui.informatica')}}</div>
+                <button class="ms-4 btn-category">
+                    <i class="fw-bold bi bi-chevron-right text-white"></i>
+                </button>
+            </a>
         </div>
         <div class="flex-slide about">
-            <div class="flex-title fw-bold fs-5">{{__('ui.console')}}</div>
-            <button class="ms-4 btn-category">
-                <i class="fw-bold bi bi-chevron-right text-white"></i>
-            </button>
+            <a href="{{ route('category.show', $categories->firstWhere('id', 3)->id) }}">
+                <div class="flex-title fw-bold fs-5">{{__('ui.console')}}</div>
+                <button class="ms-4 btn-category">
+                    <i class="fw-bold bi bi-chevron-right text-white"></i>
+                </button>
+            </a>
         </div>
         <div class="flex-slide work">
-            <div class="flex-title fw-bold fs-5">{{__('ui.fotografia')}}</div>
-            <button class="ms-4 btn-category">
-                <i class="fw-bold bi bi-chevron-right text-white"></i>
-            </button>
+            <a href="{{ route('category.show', $categories->firstWhere('id', 4)->id) }}">
+                <div class="flex-title fw-bold fs-5">{{__('ui.fotografia')}}</div>
+                <button class="ms-4 btn-category">
+                    <i class="fw-bold bi bi-chevron-right text-white"></i>
+                </button>
+            </a>
         </div>
         <div class="flex-slide bamba">
-            <div class="flex-title fw-bold fs-5">{{__('ui.sport')}}</div>
-            <button class="ms-4 btn-category">
-                <i class="fw-bold bi bi-chevron-right text-white"></i>
-            </button>
+            <a href="{{ route('category.show', $categories->firstWhere('id', 9)->id) }}">
+                <div class="flex-title fw-bold fs-5">{{__('ui.sport')}}</div>
+                <button class="ms-4 btn-category">
+                    <i class="fw-bold bi bi-chevron-right text-white"></i>
+                </button>
+            </a>
         </div>
     </div>    
     
@@ -132,14 +140,14 @@
         <video class="videoCustom" autoplay muted loop>
             <source src="{{('/media/giradischi.mp4') }}" type="video/mp4">
             </video>
-        <h4 class="titleVideo display-1">{{__('ui.musica')}}</h4>
-        <p class="pVideo lead">{{__('ui.textWelcome')}}<br> {{__('ui.textWelcome2')}} </p>
-        
-        <div class="btnVideo">
-            <div class="containerBtn3 fw-bold">
-                <a class="btn3" href="{{route('product.index')}}"><span><i class="bi bi-arrow-right fw-bold fs-2"></i></span></a>
+            <h4 class="titleVideo display-1">{{__('ui.musica')}}</h4>
+            <p class="pVideo lead">{{__('ui.textWelcome')}}<br> {{__('ui.textWelcome2')}} </p>
+            
+            <div class="btnVideo">
+                <div class="containerBtn3 fw-bold">
+                    <a class="btn3" href="{{ route('category.show', $categories->firstWhere('id', 8)->id) }}"><span><i class="bi bi-arrow-right fw-bold fs-2"></i></span></a>
+                </div>
             </div>
         </div>
-    </div>
         
     </x-layout>

@@ -76,12 +76,14 @@
                         </div>
                         <div id="collapseOne_{{$loop->iteration}}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body d-flex">
+                                <div class="row">
+                                <div class="col-12 col-md-3">
                                 <div id="carouselExample" class="carousel slide">
-                                    <div class="carousel-inner">
+                                    <div class="carousel-inner RevisorCarousel">
                                         @if ($item->images)
                                         @foreach ($item->images as $image)
                                         <div class="carousel-item active">
-                                            <img src="{{!$item->images()->get()->isEmpty() ?  $image->getUrl(400,400) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
+                                            <img src="{{!$item->images()->get()->isEmpty() ?  $image->getUrl(400,400) : "https//picsum.photos/200"}}" class="img-fluid" alt="">
                                         </div>                              
                                         @endforeach
                                         @endif
@@ -95,33 +97,32 @@
                                         <span class="visually-hidden">{{__('ui.successivo')}}</span>
                                     </button>
                                 </div>
-                                <div class="d-block">
-                                    <h4 class="px-3 pb-1">{{$item->user->name}}</h4>
-                                    <h5 class="px-3 pb-1">€{{$item->price}}</h5>
-                                    <h5 class="ps-3 px3 pb-1 fw-light">{{$item->category->type}}</h5>
-                                    <p class="px-3 pb-1 lead">{{$item->description}}</p>
-                                    <small class="px-3">{{$item->created_at->format('d/m/Y')}}</small>
                                 </div>
-                                <div class="border ">
-                                    <h5 class="tc-accent">Tags</h5>
-                                    <div class="p-2">
-                                        @if ($image->labels)
-                                        @foreach ($image->labels as $label)
-                                        <p class="d-inline">{{$label}}</p>
-                                        @endforeach
-                                        @endif
-                                   </div>
+                                <div class="col-12 col-md-3 col-md-6 d-block">
+                                    <h5 class="ps-3 fs-3 fw-bold">{{$item->user->name}}</h5>
+                                    <h5 class="ps-3 fs-4">€{{$item->price}}</h5>
+                                    <h5 class="ps-3 fs-4 fw-light">{{$item->category->type}}</h5>
+                                    <p class="ps-3 lead">{{$item->description}}</p>
+                                    <h5 class="ps-3">Tags:</h5>
+                                    @if ($image->labels)
+                                    @foreach ($image->labels as $label)
+                                    <span class="ps-3">
+                                        <p class="d-inline">#{{$label}}</p>
+                                    </span>
+                                    @endforeach
+                                    @endif
+                                    <p class="ps-3 mt-3 lead">{{$item->created_at->format('d/m/Y')}}</p>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-12 col-md-3">
                                     <div class="card-body">
-                                      <h5 class="tc-accent">Revisione immagini</h5>
-                                      <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                                      <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                                      <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                                      <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                                      <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                                        <h5 class="ps-3 pb-2">Revisione immagini:</h5>
+                                        <p class="lead ps-3">Adulti: <span class="{{$image->adult}}"></span></p>
+                                        <p class="lead ps-3">Satira: <span class="{{$image->spoof}}"></span></p>
+                                        <p class="lead ps-3">Medicina: <span class="{{$image->medical}}"></span></p>
+                                        <p class="lead ps-3">Violenza: <span class="{{$image->violence}}"></span></p>
+                                        <p class="lead ps-3">Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
                                     </div>
-                                  </div>
+                                </div>
                             </div>
                         </div>
                     </div>

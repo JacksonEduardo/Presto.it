@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row justify-content-center mt-5">
                 <div class="col-12 col-md-8 mt-5">
-                    <h1 class="prestoBackgroundAnimate RadiusCustom fw-bold display-4 text-white">{{$category->type}}</h1>
+                    <h1 data-aos="zoom-out" data-aos-duration="700"  class="prestoBackgroundAnimate RadiusCustom fw-bold display-4 text-white">{{$category->type}}</h1>
                 </div>
             </div>
         </div>

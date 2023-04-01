@@ -21,7 +21,7 @@
         <div class="container">
             <div class="row justify-content-center mt-5">
                 <div class="col-12 col-md-8 mt-5">
-                    <h1 class="RadiusCustom fw-bold display-4 tx-a">{{__('ui.inserisciCreate')}}</h1>
+                    <h1 data-aos="zoom-out" data-aos-duration="700" class="RadiusCustom fw-bold display-4 tx-a">{{__('ui.inserisciCreate')}}</h1>
                 </div>
             </div>
         </div>

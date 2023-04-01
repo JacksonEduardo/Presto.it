@@ -130,27 +130,36 @@ $(document).ready(function(){
 // FINE ICONA CUORI
 
 // LOGIN E REGISTER ANIMATION
-
 document.addEventListener("DOMContentLoaded", function() {
   const signUpButton = document.getElementById('signUp');
-  const signInButton = document.getElementById('signIn');
-  const container = document.getElementById('containerModal');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('containerModal');
 
-  signUpButton.addEventListener('click', () => {
-      container.classList.add("right-panel-active");
-  });
+    // Mostra il pannello di registrazione quando la vista di registrazione viene caricata
+    if (window.location.href.indexOf('register') > -1) {
+        container.classList.add("right-panel-active");
+    }
 
-  signInButton.addEventListener('click', () => {
-      container.classList.remove("right-panel-active");
-  });
+    signUpButton.addEventListener('click', () =>
+        container.classList.add('right-panel-active')
+    );
+
+    signInButton.addEventListener('click', () =>
+        container.classList.remove('right-panel-active')
+    );
 });
 // FINE MODALE
-
 
 var galleryThumbs = new Swiper(".gallery-thumbs", {
   centeredSlides: true,
   centeredSlidesBounds: true,
   slidesPerView: 3,
+//   responsive: [{
+//     breakpoint: 768,
+//     settings: {
+//       slidesToShow: 5
+//   }
+// }],
   watchOverflow: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
