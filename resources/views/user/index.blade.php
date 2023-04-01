@@ -14,9 +14,11 @@
             <div class="border-0 m-0">
                 <div class="text-white d-flex flex-row topCardProfile prestoBackgroundAnimate RadiusCustom">
                     <div class="ms-4 me-5 mt-4 d-flex flex-column" style="width: 150px;">
+
+                        
                         
                         @if($user->profilePicture)
-                        <img src="{{ Storage::url($user->profilePicture) }}"  class="fotoprofilo shadow" alt="Generic placeholder image"
+                        <img src="{{ Storage::url($user->profilePicture) }}"  class="fotoprofilo shadow" alt="Error: Please ensure that the uploaded file is a photo and that it does not exceed 1024kb"
                         class="img-fluid img-thumbnail" style="width: 200px; height: 200px; z-index: 1">
                         @else
                         <img src="\media\guest.png" alt=""
@@ -53,8 +55,18 @@
                                         enctype="multipart/form-data">
                                         @csrf
                                         @method('put')
+                                        {{-- ERRORI FORM --}}
+                                        @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                        @endif
                                         
-                                        <input type="file" name="profilePicture" class="my-2 d-block">
+                                        <input  type="file" name="profilePicture" class="my-2 d-block">
                                         <button type="submit" class="btn btnIntro" data-mdb-ripple-color="dark"
                                         style="z-index: 1;">
                                         {{__('ui.modificaFoto')}}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Http\Requests\AvatarRequest;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
@@ -53,7 +54,11 @@ public function requestRevisor(){
 }
     
      // GESTISCI IL REQUIRED DEL CAMPO UPDATE NEL FORMA DENTRO L'index.blade
-     public function changeAvatar(User $user, Request $request){
+     public function changeAvatar(User $user, AvatarRequest $request){
+        // $validated = $request->validate([
+        //     'profilePicture' => 'required|image|max:1024',
+        // ]);
+    
         $user->update([
             'profilePicture' => $request->file('profilePicture')->store('public/avatar')
         ]);
