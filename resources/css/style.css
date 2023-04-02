@@ -1190,6 +1190,15 @@ hr{
   border-color: aliceblue;
   background-color: hsla(0,0%,100%,0);
 }
+.btn-annunci {
+  width: 36px;
+  height: 36px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 100%;
+  border-color: black;
+  background-color: hsla(0,0%,100%,0);
+}
 
 .img-preview{
   width: 200px;
@@ -1252,8 +1261,23 @@ hr{
 /* .revCarousel{
   width: 100%;
 } */
+
 .fotoprofilo{
   border-radius: 17px;
+}
+
+@media screen and (max-width:800px){
+  .fotoprofilo{
+    border-radius: 17px;
+    height: 15vmax !important;
+    width: 15vmax !important;
+  }
+
+  .divPfp{
+    margin-right: 0px !important;
+    width: 15vmax !important; 
+    height: 15vmax !important;
+  }
 }
 
 

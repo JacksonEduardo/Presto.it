@@ -13,18 +13,19 @@
         <div class="col-12 col-md-10">
             <div class="border-0 m-0">
                 <div class="text-white d-flex flex-row topCardProfile prestoBackgroundAnimate RadiusCustom">
-                    <div class="ms-4 me-5 mt-4 d-flex flex-column" style="width: 150px;">
+                    <div class="ms-4 me-5 mt-4 d-flex flex-column divPfp" style="width: 200px; height: 200px; ">
 
-                        
-                        
+
+
                         @if($user->profilePicture)
-                        <img src="{{ Storage::url($user->profilePicture) }}"  class="fotoprofilo shadow" alt="Error: Please ensure that the uploaded file is a photo and that it does not exceed 1024kb"
-                        class="img-fluid img-thumbnail" style="width: 200px; height: 200px; z-index: 1">
+                        <img   class="fotoprofilo shadow" 
+                        class="img-fluid" style="background-image: url({{ Storage::url($user->profilePicture) }}); width: 200px; height: 200px; background-position: center;  background-size: cover;
+                        ">
                         @else
                         <img src="\media\guest.png" alt=""
-                        class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px; z-index: 1">
+                        class="img-fluid  mt-4 mb-2" style="width: 150px; z-index: 1">
                         @endif
-                        
+
                     </div>
                     
                     <div class="ms-4" style="margin-top: 130px;">

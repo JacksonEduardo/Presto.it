@@ -25,7 +25,14 @@
         @endswitch
         <h3 class="overflowCardCustom">{{$product->name}}</h3>
         <h2 class="fw-bold">€ {{$product->price}}</h2>
+        <div class="d-flex justify-content-between">
         <span class="">by <a href="{{route('user.index', ['userId'=>$product->user->id])}}" class="card__author" title="author">{{$product->user->name}}</a></span>
+            <a href="{{route('product.show', compact('product'))}}">
+              <button class="ms-4 btn-annunci">
+                <i class="fw-bold bi bi-chevron-right tx-m"></i>
+              </button>
+            </a>
+        </div>
     </div>
 </article>
 

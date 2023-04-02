@@ -76,7 +76,7 @@
 {{-- SIDERBAR --}}
 <div class="offcanvas offcanvas-end RadiusCustom overflow-auto" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   @auth
-  <div class="offcanvas-header d-flex position-relative">
+  <div class="offcanvas-header flex-column position-relative">
     <div class="mx-auto">
       <a href="{{route('user.index', ['userId'=>Auth::user()->id])}}">
         @if(Auth::user()->profilePicture)
@@ -91,9 +91,11 @@
 
         {{-- <img class="img-fluid rounded-pill" src="{{Storage::url(Auth::user()->profilePicture)}}" width="100" alt="">    --}}
       </a>
-      <a class="text-decoration-none" href="{{route('user.index', ['userId'=>Auth::user()->id])}}">
-      <h5 class="lead pt-2 fw-bold text-center">{{Auth::user()->name}}</h5>
-      </a>
+    </div>
+    <div>
+    <a class="text-decoration-none" href="{{route('user.index', ['userId'=>Auth::user()->id])}}">
+    <h5 class="lead pt-2 fw-bold text-center">{{Auth::user()->name}}</h5>
+    </a>
     </div>
     <button type="button" class="btn-close btnSideBarCustom" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>

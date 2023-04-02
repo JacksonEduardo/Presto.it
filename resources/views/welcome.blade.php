@@ -43,9 +43,9 @@
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg1"></div>
                         <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center marginWelcome">
-                            <h1 data-aos="zoom-in-right" data-aos-duration="1100" class="tx-a fw-bold display-2">Presto.it</h1>
-                            <p class="fs-4 ">{{__('ui.titolo1')}}</p>
-                            <h1>{{__('ui.sottotitolo1')}}</h1>
+                            <h1 data-aos="zoom-in-right" data-aos-duration="1100" class="tx-a fw-bold display-2 text-start">Presto.it</h1>
+                            <p class="fs-4 text-start">{{__('ui.titolo1')}}</p>
+                            <h1 class="text-start">{{__('ui.sottotitolo1')}}</h1>
                             <div class="containerBtn3 fw-semibold">
                                 <a class="btn3" href="{{route('product.create')}}"><span>{{__('ui.tasto1')}}</span></a>
                             </div>

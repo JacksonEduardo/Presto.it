@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -30,12 +31,13 @@ class DatabaseSeeder extends Seeder
             ["Giardino e Fai da te","Garden and DIY","Jardín y bricolaje"],
         ];
 
-
+        // $existingCategories = Category::all();
+        
         foreach ($categories as $category){
             DB::table('categories')->insert([
                 "type" => $category[0],
                 "eng" => $category[1],
-                "esp" => $category[2]
+                "esp" => $category[2],
             ]);
         }
 
