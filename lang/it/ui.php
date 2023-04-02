@@ -181,6 +181,7 @@ return [
     'desc2formRev' => 'Il revisore fornirà feedback costruttivo agli autori degli articoli, suggerendo come migliorare il contenuto e la struttura per rendere gli articoli ancora più interessanti per il pubblico del sito.',
     'desc3formRev' => 'Il revisore collaborerà con il team del sito, partecipando alle riunioni editoriali e contribuendo alle decisioni riguardanti la strategia di contenuto del sito.',
 
-     
+     //OUR TEAM
+     'ourTeam' => 'Il nostro Team'
 
 ];

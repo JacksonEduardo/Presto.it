@@ -103,7 +103,7 @@
                                     <div class="col-12 col-md-3 text-center">
                                         <img src="{{!$item->images()->get()->isEmpty() ?  $image->getUrl(400,400) : "https//picsum.photos/200"}}" class="img-fluid my-3 " width="80%" alt="">
                                     </div>
-                                    <div class="col-12 col-md-3 col-md-6 d-block">
+                                    <div class="col-12 col-md-3 col-md-6 d-block mt-3">
                                         
                                         <h5 class="ps-3">Tags:</h5>
                                         @if ($image->labels)

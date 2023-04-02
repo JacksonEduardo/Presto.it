@@ -209,4 +209,9 @@ return [
      'desc3formRev' => 'The reviewer will collaborate with the site\'s team, participating in editorial meetings and contributing to decisions regarding the site\'s content strategy.',
 
     //  'categoria' => "{{$product->category->eng}}",
+
+    //OUR TEAM
+    'ourTeam' => 'Our Team'
+
+
 ];

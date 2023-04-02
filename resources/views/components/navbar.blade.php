@@ -112,7 +112,7 @@
       </a>
       @endif
     </div>
-    @if (Auth::user()->is_admin)
+    {{-- @if (Auth::user()->is_admin)
     <div class="offcanvas-body  categorie py-3">
       <a href="{{route('admin.index')}}" class="navbar-brand lead fs-5 position-relative d-flex" aria-current="page">
         <i class="bi bi-gear fs-3"></i>
@@ -120,7 +120,7 @@
       </a> 
     </div>
       @else 
-    @endif
+    @endif --}}
     {{-- <div class="offcanvas-body categorie py-3">
       <a class="navbar-brand lead fs-5 d-flex" href="#"><i class="bi bi-envelope fs-3"></i>
         <h5 class="my-auto ms-3">{{__('ui.contattaci')}}</h5>
