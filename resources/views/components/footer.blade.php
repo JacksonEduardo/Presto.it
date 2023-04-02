@@ -25,7 +25,7 @@
                 <div class="col-6 col-md-3  centralFooter mt-4">
                     <div class="mt-3">
                         <div class="d-flex mb-4 ">
-                            <a class="text-decoration-none" href="">
+                            <a class="text-decoration-none" href="{{route('ourTeam')}}">
                                 <p class="animation text-white fs-5">{{__('ui.suDiNoi')}}</p>
                             </a>                           
                         </div>  

@@ -44,26 +44,6 @@
             <li><a class="dropdown-item" href="#"></a><x-_locale lang='es'/></li>
           </ul>
         </div>
-        {{-- ICONE LANGUAGE DA INSERIRE SOPRA --}}
-        {{-- <button class="btn btn-transparent dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          
-        </button>
-        <ul class="dropdown-menu dropLang bg-light border-0 m-0">
-          <li class="dropLanguage">
-            <span class="d-flex categorie">
-              <x-_locale lang='it'/>
-              <p class="mt-1 lead">Italiano</p>
-            </span>
-            <span class="d-flex categorie">
-              <x-_locale lang='en'/>
-              <p class="mt-1 lead">English</p>
-            </span>
-            <span class="d-flex categorie">
-              <x-_locale lang='es'/>
-              <p class="mt-1 lead">Español</p>
-            </span>
-          </li>
-        </ul> --}}
       </div>
       
       <button class="navbar-toggler border-0 ms-2 categorie" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
@@ -147,7 +127,7 @@
       </a>
     </div> --}}
     <div class="offcanvas-body categorie py-3">
-      <a class="navbar-brand lead fs-5 d-flex" href="#"><i class="bi bi-question-lg fs-3"></i>
+      <a class="navbar-brand lead fs-5 d-flex" href="{{route('ourTeam')}}"><i class="bi bi-question-lg fs-3"></i>
         <h5 class="my-auto ms-3">{{__('ui.siamo')}}</h5>
       </a>
     </div>

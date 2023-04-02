@@ -58,4 +58,7 @@ Route::get('user/diventaRevisore', [UserController::class, 'requestRevisor'])->n
 //ROTTE PER FLAG
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('set_language_locale');
 
+//ROTTA OUR TEAM
+Route::get('/ourTeam', [PublicController::class, 'ourTeam'])->name('ourTeam');
+
 
