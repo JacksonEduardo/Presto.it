@@ -66,11 +66,11 @@
            {{-- FINE CAROSELLO VERTICALE--}}
           <div class="col-12 col-md-5 px-4">
               <div>
-                  <h4 class="prestoBackgroundAnimate RadiusCustom fw-bold text-center display-4 text-white px-4">{{$product->name}}</h4>
-                  <h2 class="fw-bold ps-2 tx-a">{{$product->brand}}</h2>
-                  <span class="d-flex ps-2">
-                      <p class="display-5 text-center">{{__('ui.prezzo')}} </p>
-                      <p class="display-5 fw-bold ms-3">€ {{$product->price}}</p>
+                  <h4 class="RadiusCustom fw-bold fs-3 display-4 tx-a">{{$product->name}}</h4>
+                  <h3 class="fw-bold text-muted">{{$product->brand}}</h3>
+                  <span class="d-flex">
+                      <p class="fs-3 text-center">{{__('ui.prezzo')}} </p>
+                      <p class="fs-3 fw-bold">€ {{$product->price}}</p>
                   </span>
                   {{-- <div class="d-flex align-items-center mt-1">
                       <i class="bi bi-heart fs-2 text-danger mt-3" id="addFavourite"></i>
@@ -85,8 +85,20 @@
               
               <div class="d-flex align-items-center justify-content-between pt-4">
                   <div class="ms-5">
-                      <h4 class="fw-bold">{{__('ui.categoriaprod')}} </h4>
-                      <p class="lead">{{$product->category->type}}</p>
+                    @switch(App::getLocale())
+                    @case('es')
+                    <h4 class="fw-bold">{{__('ui.categoriaprod')}} </h4>
+                    <p class="lead">{{$product->category->esp}}</p>
+                    @break
+                    @case('en')
+                    <h4 class="fw-bold">{{__('ui.categoriaprod')}} </h4>
+                    <p class="lead">{{$product->category->eng}}</p>
+                    @break
+                    @default
+                    <h4 class="fw-bold">{{__('ui.categoriaprod')}} </h4>
+                    <p class="lead">{{$product->category->type}}</p>
+                    @endswitch
+                      
                   </div>
                   <div class="me-5">
                       <h4 class="fw-bold">{{__('ui.condizioneprod')}}</h4>

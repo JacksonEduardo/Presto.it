@@ -15,18 +15,18 @@
     <div class="card__info text-start">
         @switch(App::getLocale())
               @case('es')
-                <span class="lead">{{$product->category->esp}}</span>
+                <span class="lead overflowCardCustom">{{$product->category->esp}}</span>
               @break
               @case('en')
-                <span class="lead">{{$product->category->eng}}</span>
+                <span class="lead overflowCardCustom">{{$product->category->eng}}</span>
               @break
               @default
-                <span class="lead">{{$product->category->type}}</span>
+                <span class="lead overflowCardCustom">{{$product->category->type}}</span>
         @endswitch
         <h3 class="overflowCardCustom">{{$product->name}}</h3>
         <h2 class="fw-bold">€ {{$product->price}}</h2>
         <div class="d-flex justify-content-between">
-        <span class="">by <a href="{{route('user.index', ['userId'=>$product->user->id])}}" class="card__author" title="author">{{$product->user->name}}</a></span>
+        <span class="overflowCardCustom">by <a href="{{route('user.index', ['userId'=>$product->user->id])}}" class="card__author" title="author">{{$product->user->name}}</a></span>
             <a href="{{route('product.show', compact('product'))}}">
               <button class="ms-4 btn-annunci">
                 <i class="fw-bold bi bi-chevron-right tx-m"></i>

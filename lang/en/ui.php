@@ -79,7 +79,6 @@ return [
     'scriviannunciodesc' => 'Try to include all the important information without leaving anything out!',
 
 
-
      // DIVENTA REVISORE
 
      'Diventa Revisore' => 'Become an auditor',

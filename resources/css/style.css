@@ -1303,3 +1303,9 @@ hr{
 .logoHover:hover {
   transform: scale(1.2);
 }
+
+@media screen and (max-width: 768px) {
+  .h1Custom{
+    font-size: x-large;
+  }
+}
