@@ -495,6 +495,20 @@ a{
   z-index: -1;
 }
 
+@media screen and (max-width: 600px){
+  .parallax-bg1 {
+    position: absolute;
+    background-image: url(/public/media/cuffie.jpg);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+}
+
 .parallax-bg2 {
   position: absolute;
   background-image: url(/public/media/vestiti.jpg);
@@ -520,7 +534,7 @@ a{
 }
 
 .slideCustom{
-  width: 50vw;
+  width: 40vw;
   height: 100%;
 }
 
@@ -975,31 +989,32 @@ hr{
 }
 
 .home {
-  background-image: url(/public/media/test2.jpg);
+  background-image: url(/public/media/inf4.jpg);
   background-size: cover;
-  background-position: center center;
+  background-position: left;
   background-attachment: fixed;
 }
 
 .about {
   background: url(/public/media/console.jpg);
-  background-size: cover;
-  background-position: center center;
+  background-size: contain;
+  background-position: left;
   background-attachment: fixed;
 }
 
 .work {
-  background: url(/public/media/test.jpg);
-  background-size: cover;
-  background-position: center center;
+  background: url(/public/media/fotografia2.jpg);
+  background-size: contain;
+  background-position: right;
   background-attachment: fixed;
 }
 
 .bamba {
-  background: url(/public/media/sports.jpg);
+  background: url(/public/media/sports3.jpg);
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .dropdown-menu-category {

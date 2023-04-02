@@ -22,14 +22,14 @@ return [
 
     //WELCOME PAGE
     'titolo1'=>'Buy and sell with one click',
-    'sottotitolo1'=>'Insert here your announcements',
-    'titolo2'=>'Are you looking for new item?',
-    'sottotitolo2'=>'Find it in our certificated announcements  ',
-    'titolo3'=>'Are you lookin for a usade item?',
-    'sottotitolo3'=>'Seach in our categories',
-    'tasto1'=>'Go!',
-    'tasto2'=>'Find!',
-    'tasto3'=>'Search!',
+    'sottotitolo1'=>'Buying online has never been so quick and easy!',
+    'titolo2'=>'Give new life to your things',
+    'sottotitolo2'=>'Thousands of users have already chosen to sell on our platform',
+    'titolo3'=>'A world of opportunities just a click away',
+    'sottotitolo3'=>'Find what you need, at the right price.',
+    'tasto1'=>'Buy now!',
+    'tasto2'=>'Insert Announcement',
+    'tasto3'=>'Find now!',
     'ultimi'=>'Latest ads posted',
 
     // CAROSELLO CATEGORIE

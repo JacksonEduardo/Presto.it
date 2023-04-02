@@ -20,16 +20,16 @@ return [
 
 
     //PAGINA WELCOME
-    'titolo1'=>'Compra e vendi con un click',
-    'sottotitolo1'=>'Inserisci qui il tuo annuncio',
-    'titolo2'=>'Cerchi un articolo nuovo?',
-    'sottotitolo2'=>'Trovalo tra i nostri annunci certificati',
-    'titolo3'=>'Ti serve un articolo usato?',
-    'sottotitolo3'=>'Cerca tra le nostre categorie',
-    'tasto1'=>'Vai!',
-    'tasto2'=>'Trova!',
-    'tasto3'=>'Cerca!',
-    'ultimi'=>'Ultimi Annunci',
+    'titolo1'=>'Compra e vendi in un click',
+    'sottotitolo1'=>'Acquistare online non è mai stato così semplice e veloce!',
+    'titolo2'=>'Dai nuova vita alle tue cose',
+    'sottotitolo2'=>'Migliaia di utenti hanno già scelto di vendere sulla nostra piattaforma',
+    'titolo3'=>'Un mondo di opportunità a portata di click',
+    'sottotitolo3'=>'Trova ciò che ti serve, al prezzo giusto.',
+    'tasto1'=>'Compra ora!',
+    'tasto2'=>'Inserisci Annuncio',
+    'tasto3'=>'Trova ora!',
+    'ultimi'=>'Ultimi Annunci Inseriti...',
 
 
     //CATEGORIE CAROSELLO

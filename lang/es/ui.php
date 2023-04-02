@@ -20,15 +20,15 @@ return [
 
     // WELCOME
     'titolo1'=>'Compra y vende con un click',
-    'sottotitolo1'=>'Introduce aqui tu anuncio',
-    'titolo2'=>'Buscas un articulo nuevo?',
-    'sottotitolo2'=>'Encuentralo en nuestro anuncios certificados',
-    'titolo3'=>'Te sirve un articulo usado?',
-    'sottotitolo3'=>'Busca un nustras categorias',
-    'tasto1'=>'Dale!',
-    'tasto2'=>'Encuentra!',
-    'tasto3'=>'Busca!',
-    'ultimi'=>'Ultimos Anuncios',
+    'sottotitolo1'=>'¡Comprar en línea nunca ha sido tan rápido y fácil!',
+    'titolo2'=>'Dale nueva vida a tus cosas',
+    'sottotitolo2'=>'Miles de usuarios ya han optado por vender en nuestra plataforma',
+    'titolo3'=>'Un mundo de oportunidades a un clic de distancia',
+    'sottotitolo3'=>'Encuentra lo que necesitas, al precio justo.',
+    'tasto1'=>'Comprar ahora!',
+    'tasto2'=>'Ingresar Anuncio',
+    'tasto3'=>'¡Encuentra ahora!',
+    'ultimi'=>'Ultimos Anuncios Publicados',
 
 
 

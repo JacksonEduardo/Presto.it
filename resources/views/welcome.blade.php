@@ -42,20 +42,21 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg1"></div>
-                        <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center marginWelcome">
-                            <h1 data-aos="zoom-in-right" data-aos-duration="1100" class="tx-a fw-bold display-2 text-start">Presto.it</h1>
-                            <p class="fs-4 text-start">{{__('ui.titolo1')}}</p>
-                            <h1 class="text-start">{{__('ui.sottotitolo1')}}</h1>
+                        <div class="slideCustom mt-md-5 pt-md-5 d-flex flex-column align-items-md-start justify-content-center marginWelcome">
+                            <h1 data-aos="zoom-in-right" data-aos-duration="1100" class="tx-a fw-bold display-1 text-md-start text-center mb-0">Presto.it</h1>
+                            <p class="text-start display-6 text-md-start text-center">{{__('ui.titolo1')}}</p>
+                            <h5 class="text-start mb-2 display-6 text-md-start text-center">{{__('ui.sottotitolo1')}}</h5>
                             <div class="containerBtn3 fw-semibold">
-                                <a class="btn3" href="{{route('product.create')}}"><span>{{__('ui.tasto1')}}</span></a>
+                                <a class="btn3" href="{{route('product.index')}}"><span>{{__('ui.tasto1')}}</span></a>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg2"></div>
-                        <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center marginWelcome">
-                            <p class="fs-4 text-light">{{__('ui.titolo2')}}</p>
-                            <h1 class="text-light text-start">{{__('ui.sottotitolo2')}}</h1>
+                        <div class="slideCustom mt-md-5 pt-md-5 d-flex flex-column align-items-md-start justify-content-center marginWelcome">
+                            <h1 data-aos="zoom-in-right" data-aos-duration="1100" class="tx-a fw-bold display-1 text-md-start text-center mb-0">Non lo usi più?</h1>
+                            <p class="text-start display-6 text-md-start text-center text-light">{{__('ui.titolo2')}}</p>
+                            <h5 class="text-start mb-2 display-6 text-md-start text-center text-light">{{__('ui.sottotitolo2')}}</h5>
                             <div class="containerBtn3 fw-semibold">
                                 <a class="btn3" href="{{route('product.index')}}"><span>{{__('ui.tasto2')}}</span></a>
                             </div>
@@ -63,9 +64,10 @@
                     </div>
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg3"></div>
-                        <div class="slideCustom d-flex flex-column align-items-md-start justify-content-center marginWelcome">
-                            <p class="fs-4 text-light">{{__('ui.titolo3')}}</p>
-                            <h1 class="text-light">{{__('ui.sottotitolo3')}}</h1>
+                        <div class="slideCustom mt-md-5 pt-md-5 d-flex flex-column align-items-md-start justify-content-center marginWelcome">
+                            <h1 data-aos="zoom-in-right" data-aos-duration="1100" class="tx-a fw-bold display-1 text-md-start text-center mb-0">Scopri il Catalogo</h1>
+                            <p class="text-start display-6 text-md-start text-center text-light">{{__('ui.titolo3')}}</p>
+                            <h5 class="text-start mb-2 display-6 text-md-start text-center text-light">{{__('ui.sottotitolo3')}}</h5>
                             <div class="containerBtn3 fw-semibold">
                                 <a class="btn3" href="{{route('product.index')}}"><span class="p-3">{{__('ui.tasto3')}}</span></a>
                             </div>
