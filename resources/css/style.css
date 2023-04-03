@@ -757,8 +757,13 @@ hr{
 
 /* PROFILE */
 .topCardProfile {
-  background-color: var(--a-color);
   height:200px;
+}
+
+@media screen and (max-width: 600px) {
+  .topCardProfile {
+    height: 180px;
+  }
 }
 
 /*  INIZIO FOOTER */
@@ -1288,10 +1293,17 @@ hr{
     width: 15vmax !important;
   }
 
+  .nomeprofilo{
+    margin-right: 0px !important;
+    margin-top: 55px !important;
+  }
+
   .divPfp{
     margin-right: 0px !important;
+    margin-top: 100px !important;
     width: 15vmax !important; 
     height: 15vmax !important;
+    
   }
 }
 
