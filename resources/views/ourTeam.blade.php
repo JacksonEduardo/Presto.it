@@ -82,11 +82,11 @@
                             <div class="social-link text-light">
                                 <a href="" target="_blank"><i class="fab fa-instagram text-light"></i></a>
                                 <a href="" target="_blank"><i class="fab fa-github text-light"></i></a>
-                                <a href="" target="_blank"><i class="fab fa-linkedin-in text-light"></i></a>
+                                <a href="https://www.linkedin.com/in/cristian-filograno-941b7022b/" target="_blank"><i class="fab fa-linkedin-in text-light"></i></a>
                               </div>
                         </div>
                         <div class="member-image member-image2 position-relative order-first">
-                          <img src="https://fadzrinmadu.github.io/hosted-assets/team-section-design-using-html-and-css/4.png">
+                          <img src="/media/dmks.jpg">
                         </div>
                     </li>
                 </ul>

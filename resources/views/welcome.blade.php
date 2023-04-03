@@ -44,8 +44,8 @@
                         <div class="parallax-bg1"></div>
                         <div class="slideCustom mt-md-5 pt-md-5 d-flex flex-column align-items-md-start justify-content-center marginWelcome">
                             <h1 data-aos="zoom-in-right" data-aos-duration="1100" class="tx-a fw-bold display-2 text-md-start text-center mb-0">Presto.it</h1>
-                            <p class="text-start display-6 text-md-start text-center hidden-left">{{('ui.titolo1')}}</p>
-                            <h5 class="text-start mb-2 display-6 text-md-start text-center hidden-left">{{('ui.sottotitolo1')}}</h5>
+                            <p class="text-start display-6 text-md-start text-center hidden-left">{{__('ui.titolo1')}}</p>
+                            <h5 class="text-start mb-2 display-6 text-md-start text-center hidden-left">{{__('ui.sottotitolo1')}}</h5>
                             <div class="containerBtn3 fw-semibold hidden-top">
                                 <a class="btn3" href="{{route('product.index')}}"><span>{{__('ui.tasto1')}}</span></a>
                             </div>
@@ -55,8 +55,8 @@
                         <div class="parallax-bg2"></div>
                         <div class="slideCustom mt-md-5 pt-md-5 d-flex flex-column align-items-md-start justify-content-center marginWelcome">
                             <h1 data-aos="zoom-in-right" data-aos-duration="1100" class="tx-a fw-bold display-3 text-md-start text-center mb-0">{{__('ui.titolo')}}</h1>
-                            <p class="text-start display-6 text-md-start text-center text-light hidden-left">{{('ui.titolo2')}}</p>
-                            <h5 class="text-start mb-2 display-6 text-md-start text-center text-light hidden-left">{{('ui.sottotitolo2')}}</h5>
+                            <p class="text-start display-6 text-md-start text-center text-light hidden-left">{{__('ui.titolo2')}}</p>
+                            <h5 class="text-start mb-2 display-6 text-md-start text-center text-light hidden-left">{{__('ui.sottotitolo2')}}</h5>
                             <div class="containerBtn3 fw-semibold hidden-top">
                                 @if(Auth::user())
                                 <a class="btn3" href="{{route('product.create')}}"><span>{{__('ui.tasto2')}}</span></a>
@@ -70,8 +70,8 @@
                         <div class="parallax-bg3"></div>
                         <div class="slideCustom mt-md-5 pt-md-5 d-flex flex-column align-items-md-start justify-content-center marginWelcome">
                             <h1 data-aos="zoom-in-right" data-aos-duration="1100" class="tx-a fw-bold display-3 text-md-start text-center mb-0">{{__('ui.title')}}</h1>
-                            <p class="text-start display-6 text-md-start text-center text-light hidden-left">{{('ui.titolo3')}}</p>
-                            <h5 class="text-start mb-2 display-6 text-md-start text-center text-light hidden-left">{{('ui.sottotitolo3')}}</h5>
+                            <p class="text-start display-6 text-md-start text-center text-light hidden-left">{{__('ui.titolo3')}}</p>
+                            <h5 class="text-start mb-2 display-6 text-md-start text-center text-light hidden-left">{{__('ui.sottotitolo3')}}</h5>
                             <div class="containerBtn3 fw-semibold hidden-top">
                                 <a class="btn3" href="{{route('product.index')}}"><span class="p-3">{{__('ui.tasto3')}}</span></a>
                             </div>
