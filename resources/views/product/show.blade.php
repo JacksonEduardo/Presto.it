@@ -87,7 +87,9 @@
               @else 
               <div>
                 
+                <a href="{{route('user.index', ['userId'=>$product->user->id])}}" class="card__author" title="author">
                   <p class="lead">{{__('ui.creatoda')}} {{$product->user->name}}, {{__('ui.il')}} {{$product->created_at->format('d/m/Y')}}</p>
+                </a>
                   <div class="d-flex justify-content-between">
                     <a href="{{route('product.index')}}" class="btn btn-dark text-light lead">{{__('ui.tornaindietro')}}</a>
                     @if (Auth::user() && Auth::user()->id == $product->user_id)

@@ -16,7 +16,7 @@ class RevisorController extends Controller
     
     public function index(){
       
-        $product_to_check = Product::where('is_accepted', null)->get();
+        $product_to_check = Product::where('is_accepted', null)->orderBy('created_at', 'DESC')->get();
    
         return view('revisor.index', compact('product_to_check'));
     }

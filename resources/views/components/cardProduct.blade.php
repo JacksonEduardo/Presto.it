@@ -1,4 +1,4 @@
-<article class="card card--1 m-0 hidden-top">
+<article class="card card--1 m-0 hidden">
       <div class="card__info-hover">
         {{-- <i class="bi bi-bag-plus fs-3"></i>
         <i class="bi bi-heart fs-3 ms-3"></i> --}}
