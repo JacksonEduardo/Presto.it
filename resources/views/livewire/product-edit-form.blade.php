@@ -40,12 +40,8 @@
             @error('price') <span class="error">{{ $message }}</span> @enderror
         </div>
         
-        <div>
-            <label for="temporary_images" class="form-label lead my-1">{{__('ui.inserisciImmagine')}}</label>
-            <input name="images"  wire:model="temporary_images" type="file" multiple class="form-control @error('temporary_images') is-invalid @enderror" id="temporary_images">
-            @error('temporary_images') <span class="error">{{ $message }}</span> @enderror
-        </div>
-        
+       
+        {{-- CONTROLLA --}}
         @if (!empty($images))
         <div class="row">
             

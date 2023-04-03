@@ -154,14 +154,14 @@ return [
      'campoFoto' => 'Inserisci la tua foto profilo',
      'modificaFoto' => 'Modifica Foto',
      'info' => 'Informazioni',
-     'imieiannunci' => 'I miei Annunci inseriti',
+     'fraseMotivazionale' => 'Cosa penso:',
      'annuncidi' => 'Annunci di',
      'noAnn' => 'Non sono ancora presenti annunci',
      'inserisciprimoAnn' => 'Inserisci il tuo primo annuncio!',
      'inserisciAnn' => 'Inserisci Annuncio',
-     'ruolo' => 'Ruolo',
+     'eta' => 'Età',
      'citta' => 'Città',
-     'numerotel' => 'Numero telefonico',
+     'numerotel' => 'Telefono',
      'campoemail' => 'Email',
      
 
@@ -186,6 +186,6 @@ return [
     'desc3formRev' => 'Il revisore collaborerà con il team del sito, partecipando alle riunioni editoriali e contribuendo alle decisioni riguardanti la strategia di contenuto del sito.',
 
      //OUR TEAM
-     'ourTeam' => 'Il nostro Team'
+     'ourTeam' => 'Il Team di Sviluppo'
 
 ];

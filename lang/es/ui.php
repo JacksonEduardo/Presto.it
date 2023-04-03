@@ -154,14 +154,14 @@ return [
 'campoFoto' => 'Introduce tu foto de perfil',
 'modificaFoto' => 'Editar fotos',
 'info' => 'Información',
-'imieiannunci' => 'Mis anuncios publicados',
+'fraseMotivazionale' => 'Lo que pienso:',
 'annuncidi' => 'Mis anuncios publicados',
 'noAnn' => 'Todavía no hay anuncios',
 'inserisciprimoAnn' => '¡Pon tu primer anuncio!',
 'inserisciAnn' => 'Ingresar Anuncio',
-'ruolo' => 'Role',
+'eta' => 'Edad',
 'citta' => 'Ciudad',
- 'numerotel' => 'Número de teléfono',
+ 'numerotel' => 'Telefono',
  'campoemail' => 'Email',
 
 // PAGINA REVISORE
@@ -186,6 +186,9 @@ return [
 
 
  //OUR TEAM
- 'ourTeam' => 'Nuestro equipo'
+ 'ourTeam' => 'Nuestro equipo',
+
+ 'diventa'=>'Trabaja como Revisor',
+
 
 ];

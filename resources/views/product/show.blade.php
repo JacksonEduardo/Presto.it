@@ -4,34 +4,6 @@
       <div class="row justify-content-between">
           <div class="col-12 col-md-7 my-md-0">
             
-              {{-- INIZIO CAROSELLO ORIZZONTALE--}}
-              
-              {{-- <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 RadiusCustom">
-                  <div class="swiper-wrapper">
-                      @if ($product->images)
-                      @foreach ($product->images as $image)
-                      <div class="swiper-slide">
-                          <img class="RadiusCustom" src="{{!$product->images()->get()->isEmpty() ? $image->getUrl(400,400) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
-                      </div>
-                      @endforeach
-                      @endif
-                  </div>
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
-              </div>
-              <div thumbsSlider="" class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                      @if ($product->images)
-                      @foreach ($product->images as $image)
-                      <div class="swiper-slide">
-                          <img class="RadiusCustom" src="{{!$product->images()->get()->isEmpty() ? $image->getUrl(400,400) : "https//picsum.photos/200"}}" class="card-img-top p-3 rounded" alt="">
-                      </div>
-                      @endforeach
-                      @endif
-                  </div>
-              </div> --}}
-            {{-- FINE CAROSELLO ORIZZONTALE--}}
-
 
             {{-- INIZIO CAROSELLO VERTICALE--}}
            
@@ -84,7 +56,7 @@
               <p class="showDescription lead">{{$product->description}}</p>
               
               <div class="d-flex align-items-center justify-content-between pt-4">
-                  <div class="ms-5">
+                  <div class="ms-3">
                     @switch(App::getLocale())
                     @case('es')
                     <h4 class="fw-bold">{{__('ui.categoriaprod')}} </h4>
@@ -100,7 +72,7 @@
                     @endswitch
                       
                   </div>
-                  <div class="me-5">
+                  <div class="me-3">
                       <h4 class="fw-bold">{{__('ui.condizioneprod')}}</h4>
                       <p class="lead">{{$product->usage}}</p>
                   </div>

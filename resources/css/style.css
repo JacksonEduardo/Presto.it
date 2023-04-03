@@ -454,32 +454,29 @@ a{
 }
 
 
-
-.marginWelcome{
-  margin-bottom: 50px;
-  margin-right: 600px;
-}
-
 @media screen and (max-width: 600px) {
   .marginWelcome{
+    margin-top: 100px;
     margin-bottom: 0px;
     margin-right: 0px;
   }
   .btnIntro{
     width: 60%;
-    
+
   }
 
   .btn3{
     background: rgb(3,99,128);
     color: #fff;
     border-color: rgb(3,99,128);
+    height: 100%;
   }
   .containerBtn3{
     display: flex;
     justify-content: center;
   }
 }
+
 
 /* CAROSELLO HOMEPAGE */
 
@@ -1002,15 +999,15 @@ hr{
 
 .about {
   background: url(/public/media/console.jpg);
-  background-size: contain;
-  background-position: left;
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
 .work {
   background: url(/public/media/fotografia2.jpg);
-  background-size: contain;
-  background-position: right;
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -1504,4 +1501,84 @@ li {
     right: auto;
     transform: translateY(-50%) rotateZ(180deg);
   }
+}
+
+/* ANIMATION CSS PER FUNZIONI JS */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(0);
+  transition: all 1.5s;
+}
+
+.hidden-left {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+.hidden-right {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1.5s;
+}
+
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+
+}
+
+.hidden-top {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 1.5s;
+
+}
+
+.hidden-top.show {
+opacity: 1;
+filter: blur(0);
+transform: translateY(0);
+
+}
+
+.hidden-down {
+opacity: 0;
+filter: blur(5px);
+transform: translateY(-100%);
+transition: all 1.5s;
+
+}
+.hidden-down.show {
+opacity: 1;
+filter: blur(0);
+transform: translateY(0);
+
+}
+
+.popoutin {
+font-size: 2rem;
+font-weight: bold;
+color: #FFF;
+text-shadow: 1px 1px 0px #000;
+transition: all 0.5s ease-out;
+transform: scale(0.8);
+opacity: 0;
+animation: popoutin;
+animation-duration: 3s;
+}
+
+.popoutin.show {
+transform: scale(1);
+opacity: 1;
+}
+
+.margineTop{
+  border-top: 5px solid var(--a-color);
 }

@@ -1,19 +1,20 @@
 <footer>
-    <div id="footer" class="container-fluid prestoBackgroundAnimate">
-        <img class="mt-5 ms-5 logoHover" id="logoBianco" src="/media/prestowhite.png" alt="Logo"> 
+    <div id="footer" class="container-fluid prestoBackgroundAnimate hidden">
+        <div class="row">
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+                <a href="#">
+                <img class="mt-5 logoHover" id="logoBianco" src="/media/prestowhite.png" alt="Logo"></a> 
+            </div>
+        </div>
             <div class="row justify-content-center prestoBackgroundAnimate">        
                 <div class="col-6 col-md-3 leftFooter mt-4">
-                          <div class="mt-3">
-                        <div class="d-flex mb-4 ">
+                    <div class="mt-3">
+                        <div class="d-flex mb-4">
                             <a class="text-decoration-none" href="{{route('product.index')}}">
                                 <p class="animation text-white fs-5">{{__('ui.tuttiProdotti')}}</p>  
                             </a>                         
                         </div>
-                        <div class="d-flex mb-4 ">
-                            <a class="text-decoration-none" href="">
-                                <p class="animation text-white fs-5">{{__('ui.lavoraConNoi')}}</p>
-                            </a>                               
-                        </div>
+                        
                         <div class="d-flex mb-4 ">
                             <a class="text-decoration-none" href="{{route('user.diventaRevisore')}}">
                                 <p class="animation text-white fs-5">{{__('ui.diventa')}}</p>
@@ -21,24 +22,22 @@
                         </div>              
                     </div>         
                 </div>
-    
-                <div class="col-6 col-md-3  centralFooter mt-4">
+                <div class="col-6 col-md-3 leftFooter mt-4">
                     <div class="mt-3">
-                        <div class="d-flex mb-4 ">
+                        <div class="d-flex mb-4">
                             <a class="text-decoration-none" href="{{route('ourTeam')}}">
-                                <p class="animation text-white fs-5">{{__('ui.suDiNoi')}}</p>
-                            </a>                           
-                        </div>  
+                                <p class="animation text-white fs-5">{{__('ui.ourTeam')}}</p>  
+                            </a>                         
+                        </div>
+                        
                         <div class="d-flex mb-4 ">
-                            <a class="text-decoration-none" href="">
-                                <p class="animation text-white fs-5">{{__('ui.contattaci')}}</p>
-                            </a>                           
-                        </div> 
-                        <div class="d-flex mb-4 ">     
-                            <p class="text-white ps-2 fs-5 pt-2">©2023, Presto.it</p>                          
-                        </div>         
-                    </div>
+                            <a class="text-decoration-none" href="#">
+                                <p class="animation text-white fs-5 mt-3 mt-md-0">@2023 Presto.it</p>
+                            </a>                          
+                        </div>              
+                    </div>         
                 </div>
+                
     
                 <div id="rightFooter" class="col-12 col-md-5 mb-lg-4">
                         <p class="team text-center text-white mt-2 fs-5">{{__('ui.ilTeam')}}</p>
@@ -48,7 +47,7 @@
                                 <a class="text-decoration-none" target="_black" href="https://www.linkedin.com/in/antoniogiannino-webdeveloper/">
                                     <i class="bi bi-linkedin text-white mx-1 fs-3"></i>   
                                 </a>
-                                <a href="">
+                                <a href="https://github.com/AntonioGiannino?tab=repositories">
                                     <i class="bi bi-github text-white mx-1 fs-3"></i>
                                 </a>
                             </div>
@@ -68,7 +67,7 @@
                                 <a class="text-decoration-none" target="_black"  href="https://www.linkedin.com/in/jackson-zabala-web-developer/">
                                     <i class="bi bi-linkedin text-white mx-1 fs-3"></i>
                                 </a>
-                                <a href="">
+                                <a href="https://github.com/JacksonEduardo">
                                     <i class="bi bi-github text-white mx-1 fs-3"></i>
                                 </a>
                             </div>
@@ -79,7 +78,7 @@
                                 <a class="text-decoration-none" target="_black" href="https://www.linkedin.com/in/roberto-acerbo-dev/">
                                     <i class="bi bi-linkedin text-white mx-1 fs-3"></i> 
                                 </a>
-                                <a href="">
+                                <a href="https://github.com/robacerbo">
                                     <i class="bi bi-github text-white mx-1 fs-3"></i>
                                 </a>  
                             </div>

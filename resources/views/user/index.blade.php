@@ -46,7 +46,6 @@
                 @endif
                 
                 <div class="card-body pt-4 px-4 text-black">
-                    <a  class=" text-danger" href="{{route('user.update', compact('user'))}}">Aggiorna profilo</a>
                     <h3 class="fw-light mt-2 ms-2 mb-1"> {{__('ui.areaPersonale')}}</h3>
                     <div class="mb-2 bg-light RadiusCustom">
                         <div class="container p-4 text-black">
@@ -105,39 +104,41 @@
                 @endif
                 {{-- COMUNE A TUTTI --}}
                 
+                @foreach($user->infos as $info)
                 
-                
+
                 <div class="card-body pt-1 px-4 text-black">
                     <div>
                         <h3 class="fw-light my-4 ms-2 mb-1"> {{__('ui.info')}} </h3>
+                        <a href="{{route('user.update', compact('user'))}}" class="btn btn-warning">aggiorna bio</a>
                         <div class="container py-3 tx-m bg-light RadiusCustom">
-                            <div class="row p-0 w-100 mx-0">
-                                <div class="col-6 col-md-3 p-0 h-50 my-auto mx-auto">
-                                    <p class="lead tx-a fs-4 text-center">{{__('ui.ruolo')}}</p>
-                                    <p class="lead text-center fs-5">Revisore</p>
+                            <div class="row p-0 w-100 mx-0 margineTop">
+                                <div class="col-6 mt-3 col-md-3 p-0 h-50 my-auto mx-auto">
+                                    <p class="lead fw-bold tx-a fs-4 text-center">{{__('ui.eta')}}</p>
+                                    <p class="lead text-center fs-5">{{$info->birthDate}}</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
-                                <div class="col-6 col-md-3 p-0 h-50 my-auto mx-auto">
-                                    <p class="lead tx-a fs-4 text-center">{{__('ui.citta')}}</p>
-                                    <p class="lead text-center fs-5">Bari</p>
+                                <div class="col-6 mt-3 col-md-3 p-0 h-50 my-auto mx-auto">
+                                    <p class="lead fw-bold tx-a fs-4 text-center">{{__('ui.citta')}}</p>
+                                    <p class="lead text-center fs-5">{{$info->city}}</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
-                                <div class="col-6 col-md-3 p-0 h-50 mx-auto my-auto">
-                                    <p class="lead tx-a fs-4 text-center">{{__('ui.numerotel')}}</p>
-                                    <p class="lead text-center fs-5">3331000123</p>
+                                <div class="col-6 mt-3 col-md-3 p-0 h-50 mx-auto my-auto">
+                                    <p class="lead fw-bold tx-a fs-4 text-center">{{__('ui.numerotel')}}</p>
+                                    <p class="lead text-center fs-5">{{$info->telNumber}}</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
-                                <div class="col-6 col-md-3 p-0 h-50 mx-auto my-auto">
-                                    <p class="lead tx-a fs-4 text-center">{{__('ui.campoemail')}}</p>
-                                    <p class="lead text-center fs-5">admin@presto.it</p>
+                                <div class="col-6 mt-3 col-md-3 p-0 h-50 mx-auto my-auto">
+                                    <p class="lead fw-bold tx-a fs-4 text-center">{{__('ui.campoemail')}}</p>
+                                    <p class="lead text-center fs-5">{{$user->email}}</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
                             </div>
                         </div>
                         {{-- SE SONO SUL MIO PROFILO --}}
                         @if(Auth::user() && Auth::user()->id == $user->id)
-                        <div class="d-flex justify-content-between align-items-center my-5 RadiusCustom prestoBackgroundAnimate">
-                            <h3 class="fw-light py-2 mt-1 ms-4 text-white">{{__('ui.imieiannunci')}}</h3>
+                        <div class="d-flex justify-content-between align-items-center mb-5 mt-2 RadiusCustom prestoBackgroundAnimate">
+                            <h3 class="fw-light py-2 mt-1 ms-4 text-white">{{__('ui.fraseMotivazionale')}} {{$info->motto}}</h3>
                         </div>
                         {{-- SE NON SONO SUL MIO PROFILO --}}
                         @else
@@ -176,7 +177,8 @@
                     </div>
                     
                     
-                </div> 
+                </div>
+                @endforeach 
                 {{-- chiusura riga 83--}}
             </div> {{-- chiusura riga 38--}}
         </div> {{-- chiusura riga 37--}}

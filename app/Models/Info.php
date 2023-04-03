@@ -10,7 +10,7 @@ class Info extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    public $fillable = [
         'user_id',
         'city',
         'telNumber',

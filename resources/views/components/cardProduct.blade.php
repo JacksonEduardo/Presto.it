@@ -1,5 +1,5 @@
-<article class="card card--1 m-0">
-    <div class="card__info-hover">
+<article class="card card--1 m-0 hidden-top">
+      <div class="card__info-hover">
         {{-- <i class="bi bi-bag-plus fs-3"></i>
         <i class="bi bi-heart fs-3 ms-3"></i> --}}
         <div class="card__clock-info text-end">

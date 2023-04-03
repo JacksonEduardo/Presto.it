@@ -191,3 +191,32 @@ galleryMain.on('slideChangeTransitionStart', function() {
 galleryThumbs.on('transitionStart', function(){
   galleryMain.slideTo(galleryThumbs.activeIndex);
 });
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+      } else {
+          entry.target.classList.remove('show');
+      }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+const hiddenLeftElements = document.querySelectorAll('.hidden-left');
+hiddenLeftElements.forEach((el) => observer.observe(el));
+
+const hiddenRightElements = document.querySelectorAll('.hidden-right');
+hiddenRightElements.forEach((el) => observer.observe(el));
+
+const hiddenTop = document.querySelectorAll('.hidden-top');
+hiddenTop.forEach((el) => observer.observe(el));
+
+const hiddenDown = document.querySelectorAll('.hidden-down');
+hiddenDown.forEach((el) => observer.observe(el));
+
+const popoutIn = document.querySelectorAll('.popoutin');
+popoutIn.forEach((el) => observer.observe(el));

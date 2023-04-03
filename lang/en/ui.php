@@ -104,7 +104,7 @@ return [
 
      'info' => 'Information',
 
-     'imieiannunci' => 'My announcements posted',
+     'fraseMotivazionale' => 'My thoughts:',
 
      'annuncidi' => 'Announcement of',
 
@@ -114,9 +114,9 @@ return [
 
      'inserisciAnn' => 'Place your first annuncement!',
 
-     'ruolo' => 'Role',
+     'eta' => 'Age',
      'citta' => 'City',
-     'numerotel' => 'Telephone number',
+     'numerotel' => 'Tel. number',
      'campoemail' => 'Email',
 
 
@@ -218,7 +218,7 @@ return [
     //  'categoria' => "{{$product->category->eng}}",
 
     //OUR TEAM
-    'ourTeam' => 'Our Team'
+    'ourTeam' => 'Our Developers Team'
 
 
 ];

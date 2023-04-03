@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row justify-content-center mt-5">
                 <div class="col-12 col-md-8 mt-5">
-                    <h1 class="mt-5 tx-a fw-bold display-4">{{__('ui.Diventa Revisore')}}</h1>
+                    <h1 class="mt-5 tx-a fw-bold display-4 hidden">{{__('ui.Diventa Revisore')}}</h1>
                 </div>
             </div>
         </div>
@@ -11,7 +11,7 @@
 
     <div class="container-fluid">
         <div class="row justify-content-center mb-5">
-            <div class="col-12 col-md-5 order-last order-md-first">
+            <div class="col-12 col-md-5 order-last order-md-first hidden-left">
                 <div class="h-100 p-5 pb-3 text-white text-shadow-1 prestoBackgroundAnimate RadiusCustom">
                     <img src="/media/prestowhite.png" width="300" alt="">
                     <h3 class="my-5 display-6 lh-1 fw-bold">{{__('ui.titolocard')}}</h3>
@@ -21,7 +21,7 @@
                   </div>
             </div>
 
-            <div class="col-12 col-md-5 border shadow RadiusCustom stickyForm2"> 
+            <div class="col-12 col-md-5 border shadow RadiusCustom stickyForm2 hidden-right">
                 <form id="contactForm" class="w-100 contactFormAni" method="GET" action="{{route('become.revisor')}}">
                     @csrf
                     
