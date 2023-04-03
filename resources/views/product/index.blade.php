@@ -11,7 +11,7 @@
         <div class="container-fluid">
             <h3 class="py-4 display-5">{{__('ui.categorie')}}</h3>
         </div>
-        <section class="customer-logos slider">
+        <section class="customer-logos slider hidden">
             <div class="slide fs-5">
                 <a href="{{ route('category.show', $categories->firstWhere('id', 2)->id) }}">
                     <i class="bi bi-pc-display display-4 d-block"></i>

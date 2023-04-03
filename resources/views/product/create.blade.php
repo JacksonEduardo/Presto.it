@@ -27,9 +27,9 @@
         </div>
     </x-header>
 
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="row justify-content-center mb-5">
-            <div class="col-12 col-md-5 order-last order-md-first stickyForm">
+            <div class="col-12 col-md-5 order-last order-md-first stickyForm hidden-left">
                 <div class="h-100 p-5 pb-3 text-white text-shadow-1 prestoBackgroundAnimate RadiusCustom">
                     <img src="/media/prestowhite.png" width="300" alt="">
                     <h3 class="my-5 display-6 lh-1 fw-bold">{{__('ui.seguiconsigli')}}</h3>
@@ -42,7 +42,7 @@
                   </div>
             </div>
 
-            <div class="col-12 col-md-5 border shadow p-3 RadiusCustom"> 
+            <div class="col-12 col-md-5 border shadow p-3 RadiusCustom hidden-right"> 
                 @livewire('product-create-form')
             </div>
         </div>
