@@ -453,6 +453,10 @@ a{
   border-radius: 6px;
 }
 
+.marginWelcome{
+  margin-bottom: 50px;
+  margin-right: 600px;
+}
 
 @media screen and (max-width: 600px) {
   .marginWelcome{

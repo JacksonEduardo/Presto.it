@@ -30,6 +30,8 @@ return [
     'tasto2'=>'Inserisci Annuncio',
     'tasto3'=>'Trova ora!',
     'ultimi'=>'Ultimi annunci inseriti',
+    'titolo' =>'Non lo usi più?',
+    'title' => 'Scopri il nostro catalogo',
     
 
 

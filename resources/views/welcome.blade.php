@@ -43,7 +43,7 @@
                     <div class="swiper-slide vh-100">
                         <div class="parallax-bg1"></div>
                         <div class="slideCustom mt-md-5 pt-md-5 d-flex flex-column align-items-md-start justify-content-center marginWelcome">
-                            <h1 data-aos="zoom-in-right" data-aos-duration="1100" class="tx-a fw-bold display-2 text-md-start text-center mb-0">Presto.it</h1>
+                            <h1 data-aos="zoom-in-right" data-aos-duration="1100" class="tx-a fw-bold display-2 text-md-start text-center text-md-start mb-0">Presto.it</h1>
                             <p class="text-start display-6 text-md-start text-center hidden-left">{{__('ui.titolo1')}}</p>
                             <h5 class="text-start mb-2 display-6 text-md-start text-center hidden-left">{{__('ui.sottotitolo1')}}</h5>
                             <div class="containerBtn3 fw-semibold hidden-top">
