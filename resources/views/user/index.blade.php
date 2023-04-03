@@ -7,6 +7,8 @@
             </div>
         </div>
     </x-header>
+
+    
     
     {{-- COMUNE A TUTTI --}}
     <div class="row d-flex justify-content-center align-items-center mb-5 m-0">
@@ -18,7 +20,7 @@
 
 
                         @if($user->profilePicture)
-                        <img  class="fotoprofilo shadow" 
+                        <img   class="fotoprofilo shadow" 
                         class="img-fluid" style="background-image: url({{ Storage::url($user->profilePicture) }}); width: 200px; height: 200px; background-position: center;  background-size: cover;
                         ">
                         @else
@@ -28,7 +30,7 @@
 
                     </div>
                     
-                    <div class="ms-4 nomeprofilo" style="margin-top: 130px;">
+                    <div class="ms-4" style="margin-top: 130px;">
                         <h1>{{ $user->name }}</h1>
                     </div>
                     
@@ -43,7 +45,8 @@
                 </div>
                 @endif
                 
-                <div class="card-body pt-5 px-4 text-black">
+                <div class="card-body pt-4 px-4 text-black">
+                    <a  class=" text-danger" href="{{route('user.update', compact('user'))}}">Aggiorna profilo</a>
                     <h3 class="fw-light mt-2 ms-2 mb-1"> {{__('ui.areaPersonale')}}</h3>
                     <div class="mb-2 bg-light RadiusCustom">
                         <div class="container p-4 text-black">
@@ -68,7 +71,7 @@
                                         @endif
                                         
                                         <input  type="file" name="profilePicture" class="my-2 d-block">
-                                        <button type="submit" class="btn btnIntro px-2" data-mdb-ripple-color="dark"
+                                        <button type="submit" class="btn btnIntro" data-mdb-ripple-color="dark"
                                         style="z-index: 1;">
                                         {{__('ui.modificaFoto')}}
                                     </button>
@@ -95,38 +98,36 @@
                 
                 @endif
                 
+                @if (session('infoCreated'))
+                    <div class="alert alert-success">
+                        {{ session('infoCreated') }}
+                    </div>
+                @endif
                 {{-- COMUNE A TUTTI --}}
                 
                 
                 
                 <div class="card-body pt-1 px-4 text-black">
                     <div>
-                        <div class="d-flex">
                         <h3 class="fw-light my-4 ms-2 mb-1"> {{__('ui.info')}} </h3>
-                        @if (Auth::user())
-                        <button class="btn bg-transparent fs-4 pt-4 categorie">
-                            <i class="bi bi-gear"></i>
-                        </button>
-                        @endif
-                        </div>
                         <div class="container py-3 tx-m bg-light RadiusCustom">
                             <div class="row p-0 w-100 mx-0">
-                                <div class="col-12 col-md-3 p-0 h-50 my-auto mx-auto">
+                                <div class="col-6 col-md-3 p-0 h-50 my-auto mx-auto">
                                     <p class="lead tx-a fs-4 text-center">{{__('ui.ruolo')}}</p>
                                     <p class="lead text-center fs-5">Revisore</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
-                                <div class="col-12 col-md-3 p-0 h-50 my-auto mx-auto">
+                                <div class="col-6 col-md-3 p-0 h-50 my-auto mx-auto">
                                     <p class="lead tx-a fs-4 text-center">{{__('ui.citta')}}</p>
                                     <p class="lead text-center fs-5">Bari</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
-                                <div class="col-12 col-md-3 p-0 h-50 mx-auto my-auto">
+                                <div class="col-6 col-md-3 p-0 h-50 mx-auto my-auto">
                                     <p class="lead tx-a fs-4 text-center">{{__('ui.numerotel')}}</p>
                                     <p class="lead text-center fs-5">3331000123</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
-                                <div class="col-12 col-md-3 p-0 h-50 mx-auto my-auto">
+                                <div class="col-6 col-md-3 p-0 h-50 mx-auto my-auto">
                                     <p class="lead tx-a fs-4 text-center">{{__('ui.campoemail')}}</p>
                                     <p class="lead text-center fs-5">admin@presto.it</p>
                                     <hr class="mt-0 tx-a">

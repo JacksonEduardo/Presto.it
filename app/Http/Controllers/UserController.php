@@ -64,5 +64,11 @@ public function requestRevisor(){
         ]);
         return redirect()->back()->with('avatarUpdated', 'Complimenti hai aggiornato il tuo avatar');
     }
+    
+    public function updateInfo()
+    {
+        return view('user.update');
+
+    }
 }
 

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Info;
 use App\Models\Product;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -48,5 +49,9 @@ class User extends Authenticatable
 
     public function products(){
         return $this->hasMany(Product::class);
+    }
+
+    public function infos(){
+        return $this->hasMany(Info::class);
     }
 }

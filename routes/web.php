@@ -55,6 +55,7 @@ Route::get('/admin/index', [AdminController::class, 'index'])->name('admin.index
 Route::get('/user/profile/{userId?}', [UserController::class, 'showProfile'])->name('user.index');
 Route::put('/user/avatar/{user}', [UserController::class, 'changeAvatar'])->name('user.avatar');
 Route::get('user/diventaRevisore', [UserController::class, 'requestRevisor'])->name('user.diventaRevisore');
+Route::get('/user/update/{user}', [UserController::class, 'updateInfo'])->name('user.update');
 
 //ROTTE PER FLAG
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('set_language_locale');
