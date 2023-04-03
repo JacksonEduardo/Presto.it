@@ -30,7 +30,7 @@
 
                     </div>
                     
-                    <div class="ms-4" style="margin-top: 130px;">
+                    <div class="ms-4 ms-md-0 nomeprofilo" style="margin-top: 130px;">
                         <h1>{{ $user->name }}</h1>
                     </div>
                     
@@ -45,7 +45,7 @@
                 </div>
                 @endif
                 
-                <div class="card-body pt-4 px-4 text-black">
+                <div class="card-body pt-5 px-4 text-black">
                     <h3 class="fw-light mt-2 ms-2 mb-1"> {{__('ui.areaPersonale')}}</h3>
                     <div class="mb-2 bg-light RadiusCustom">
                         <div class="container p-4 text-black">
@@ -70,7 +70,7 @@
                                         @endif
                                         
                                         <input  type="file" name="profilePicture" class="my-2 d-block">
-                                        <button type="submit" class="btn btnIntro" data-mdb-ripple-color="dark"
+                                        <button type="submit" class="btn btnIntro px-2" data-mdb-ripple-color="dark"
                                         style="z-index: 1;">
                                         {{__('ui.modificaFoto')}}
                                     </button>

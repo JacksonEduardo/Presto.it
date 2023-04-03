@@ -763,7 +763,7 @@ hr{
 
 @media screen and (max-width: 600px) {
   .topCardProfile {
-    height: 180px;
+    height: 110px;
   }
 }
 
@@ -1160,7 +1160,7 @@ hr{
 
 .btnVideo{
   position: absolute;
-  top: 320px;
+  top: 350px;
   left: 150px;
   color: white;
 }
@@ -1296,12 +1296,12 @@ hr{
 
   .nomeprofilo{
     margin-right: 0px !important;
-    margin-top: 55px !important;
+    margin-top: 69px !important;
   }
 
   .divPfp{
     margin-right: 0px !important;
-    margin-top: 100px !important;
+    margin-top: 40px !important;
     width: 15vmax !important; 
     height: 15vmax !important;
     

@@ -1,12 +1,12 @@
 <footer>
-    <div id="footer" class="container-fluid prestoBackgroundAnimate hidden">
+    <div id="footer" class="container-fluid hidden prestoBackgroundAnimate">
         <div class="row">
             <div class="col-12 col-md-6 d-flex justify-content-center">
                 <a href="#">
                 <img class="mt-5 logoHover" id="logoBianco" src="/media/prestowhite.png" alt="Logo"></a> 
             </div>
         </div>
-            <div class="row justify-content-center prestoBackgroundAnimate">        
+            <div class="row justify-content-center">        
                 <div class="col-6 col-md-3 leftFooter mt-4">
                     <div class="mt-3">
                         <div class="d-flex mb-4">
@@ -32,7 +32,7 @@
                         
                         <div class="d-flex mb-4 ">
                             <a class="text-decoration-none" href="#">
-                                <p class="animation text-white fs-5 mt-3 mt-md-0">@2023 Presto.it</p>
+                                <p class="animation text-white fs-5 mt-3 mt-md-0">©2023, Presto.it</p>
                             </a>                          
                         </div>              
                     </div>         
