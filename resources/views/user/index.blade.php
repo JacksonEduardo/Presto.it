@@ -35,15 +35,15 @@
                     </div>
                     
                 </div>
-                {{-- SE SONO SUL MIO PROFILO --}}
+                {{-- SE SONO SUL MIO PROFILO - PERSONAL AREA --}}
                 @if (Auth::user() && Auth::user()->id == $user->id)
                 
                 
-                @if (session('avatarUpdated'))
-                <div class="alert alert-success marginAlert">
-                    {{ session('avatarUpdated') }}
-                </div>
-                @endif
+                            @if (session('avatarUpdated'))
+                            <div class="alert alert-success marginAlert">
+                                {{ session('avatarUpdated') }}
+                            </div>
+                            @endif
                 
                 <div class="card-body pt-5 px-4 text-black">
                     <h3 class="fw-light mt-2 ms-2 mb-1"> {{__('ui.areaPersonale')}}</h3>
@@ -54,42 +54,32 @@
                                     <p class="lead tx-a fs-4">
                                         {{__('ui.campoFoto')}}
                                     </p>
+
                                     <form action="{{ route('user.avatar', ['user' => Auth::user()]) }}" method="POST"
                                         enctype="multipart/form-data">
                                         @csrf
                                         @method('put')
                                         {{-- ERRORI FORM --}}
-                                        @if ($errors->any())
-                                        <div class="alert alert-danger">
-                                            <ul>
-                                                @foreach ($errors->all() as $error)
-                                                    <li>{{ $error }}</li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                        @endif
+                                            @if ($errors->any())
+                                            <div class="alert alert-danger">
+                                                <ul>
+                                                    @foreach ($errors->all() as $error)
+                                                        <li>{{ $error }}</li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                            @endif
                                         
                                         <input  type="file" name="profilePicture" class="my-2 d-block">
                                         <button type="submit" class="btn btnIntro px-2" data-mdb-ripple-color="dark"
                                         style="z-index: 1;">
                                         {{__('ui.modificaFoto')}}
-                                    </button>
-                                </form>
+                                        </button>
+                                    </form>
                                 
+                                </div>
                             </div>
-                            
                         </div>
-                    </div>
-                    {{-- @if(Auth::user() && Auth::user()->is_revisor)
-                        
-                        <div>
-                            <a class="" href="{{route('revisor.index')}}"><button class="mt-3 me-3btn btn-warning">Zona revisore</button></a>
-                            
-                            
-                        </div>
-                        
-                        @endif --}}
-                        
                     </div>
                 </div>
                 @else
@@ -97,88 +87,121 @@
                 
                 @endif
                 
-                @if (session('infoCreated'))
-                    <div class="alert alert-success">
-                        {{ session('infoCreated') }}
-                    </div>
-                @endif
-                {{-- COMUNE A TUTTI --}}
-                
-                @foreach($user->infos as $info)
+                        @if (session('infoCreated'))
+                            <div class="alert alert-success">
+                                {{ session('infoCreated') }}
+                            </div>
+                        @endif
+                    {{-- COMUNE A TUTTI --}}
+                    
+                @forelse($user->infos as $info)
                 
 
+                    <div class="card-body pt-1 px-4 text-black">
+                        <div>
+                            <h3 class="fw-light my-4 ms-2 mb-1"> {{__('ui.info')}} </h3>
+                            <a href="{{route('user.update', compact('user'))}}" class="btn btn-warning">aggiorna bio</a>
+                            <div class="container py-3 tx-m bg-light RadiusCustom">
+                                <div class="row p-0 w-100 mx-0 margineTop">
+                                    <div class="col-6 mt-3 col-md-3 p-0 h-50 my-auto mx-auto">
+                                        <p class="lead fw-bold tx-a fs-4 text-center">{{__('ui.eta')}}</p>
+                                        <p class="lead text-center fs-5">{{$info->birthDate}}</p>
+                                        <hr class="mt-0 tx-a">
+                                    </div>
+                                    <div class="col-6 mt-3 col-md-3 p-0 h-50 my-auto mx-auto">
+                                        <p class="lead fw-bold tx-a fs-4 text-center">{{__('ui.citta')}}</p>
+                                        <p class="lead text-center fs-5">{{$info->city}}</p>
+                                        <hr class="mt-0 tx-a">
+                                    </div>
+                                    <div class="col-6 mt-3 col-md-3 p-0 h-50 mx-auto my-auto">
+                                        <p class="lead fw-bold tx-a fs-4 text-center">{{__('ui.numerotel')}}</p>
+                                        <p class="lead text-center fs-5">{{$info->telNumber}}</p>
+                                        <hr class="mt-0 tx-a">
+                                    </div>
+                                    <div class="col-6 mt-3 col-md-3 p-0 h-50 mx-auto my-auto">
+                                        <p class="lead fw-bold tx-a fs-4 text-center">{{__('ui.campoemail')}}</p>
+                                        <p class="lead text-center fs-5">{{$user->email}}</p>
+                                        <hr class="mt-0 tx-a">
+                                    </div>
+                                </div>
+                            </div>
+                        {{-- SE SONO SUL MIO PROFILO --}}
+                            <div class="d-flex justify-content-between align-items-center mb-5 mt-2 RadiusCustom prestoBackgroundAnimate">
+                                <h3 class="fw-light py-2 mt-1 ms-4 text-white">{{__('ui.fraseMotivazionale')}} {{$info->motto}}</h3>
+                            </div>
+                @empty
                 <div class="card-body pt-1 px-4 text-black">
                     <div>
                         <h3 class="fw-light my-4 ms-2 mb-1"> {{__('ui.info')}} </h3>
-                        <a href="{{route('user.update', compact('user'))}}" class="btn btn-warning">aggiorna bio</a>
+                        <a href="{{route('user.update', compact('user'))}}" class="btn btn-warning">Aggiorna Bio</a>
                         <div class="container py-3 tx-m bg-light RadiusCustom">
                             <div class="row p-0 w-100 mx-0 margineTop">
                                 <div class="col-6 mt-3 col-md-3 p-0 h-50 my-auto mx-auto">
                                     <p class="lead fw-bold tx-a fs-4 text-center">{{__('ui.eta')}}</p>
-                                    <p class="lead text-center fs-5">{{$info->birthDate}}</p>
+                                    <p class="lead text-center fs-5">/</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
                                 <div class="col-6 mt-3 col-md-3 p-0 h-50 my-auto mx-auto">
                                     <p class="lead fw-bold tx-a fs-4 text-center">{{__('ui.citta')}}</p>
-                                    <p class="lead text-center fs-5">{{$info->city}}</p>
+                                    <p class="lead text-center fs-5">/</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
                                 <div class="col-6 mt-3 col-md-3 p-0 h-50 mx-auto my-auto">
                                     <p class="lead fw-bold tx-a fs-4 text-center">{{__('ui.numerotel')}}</p>
-                                    <p class="lead text-center fs-5">{{$info->telNumber}}</p>
+                                    <p class="lead text-center fs-5">/</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
                                 <div class="col-6 mt-3 col-md-3 p-0 h-50 mx-auto my-auto">
                                     <p class="lead fw-bold tx-a fs-4 text-center">{{__('ui.campoemail')}}</p>
-                                    <p class="lead text-center fs-5">{{$user->email}}</p>
+                                    <p class="lead text-center fs-5">/</p>
                                     <hr class="mt-0 tx-a">
                                 </div>
                             </div>
                         </div>
-                        {{-- SE SONO SUL MIO PROFILO --}}
-                        @if(Auth::user() && Auth::user()->id == $user->id)
+                    {{-- SE SONO SUL MIO PROFILO --}}
                         <div class="d-flex justify-content-between align-items-center mb-5 mt-2 RadiusCustom prestoBackgroundAnimate">
-                            <h3 class="fw-light py-2 mt-1 ms-4 text-white">{{__('ui.fraseMotivazionale')}} {{$info->motto}}</h3>
+                            <h3 class="fw-light py-2 mt-1 ms-4 text-white">{{__('ui.fraseMotivazionale')}}: /</h3>
                         </div>
-                        {{-- SE NON SONO SUL MIO PROFILO --}}
-                        @else
-                        <div class="d-flex justify-content-between align-items-center my-5 RadiusCustom prestoBackgroundAnimate">
-                            <h3 class="fw-light py-2 mt-1 ms-4 text-white">{{__('ui.annuncidi')}} {{$user->name}}</h3>
-                        </div>
-                        @endif
+                 @endforelse
+                           
+                            {{-- SE NON SONO SUL MIO PROFILO --}}
+                            <div class="d-flex justify-content-between align-items-center my-5 RadiusCustom prestoBackgroundAnimate">
+                                <h3 class="fw-light py-2 mt-1 ms-4 text-white">{{__('ui.annuncidi')}} {{$user->name}}</h3>
+                            </div>
+                           
                         
-                        {{-- COMUNE A TUTTI MA RIVEDI L'HOVER DELLE CARD --}}
-                        <div class="container">
-                            <div class="row">
-                                @forelse ($products as $product)
-                                <div class="col-12 col-lg-4 my-3">
-                                    <div class="slide fs-5">
-                                        <x-cardProduct :Product="$product" />
+                            {{-- COMUNE A TUTTI MA RIVEDI L'HOVER DELLE CARD --}}
+                            <div class="container">
+                                <div class="row">
+                                    @forelse ($products as $product)
+                                    <div class="col-12 col-lg-4 my-3">
+                                        <div class="slide fs-5">
+                                            <x-cardProduct :Product="$product" />
+                                        </div>
+                                    </div>
+                                    @empty
+                                    <div class="col-12">
+                                        <h1>{{__('ui.noAnn')}}</h1>
+                                        
+                                        {{-- SE SONO SUL MIO PROFILO, ma controlla --}} 
+                                        @if (Auth::user()->id == $user->id)
+                                        
+                                        <p> {{__('ui.inserisciprimoAnn')}} </p>
+                                        <a href="{{ route('product.create') }}" class="btn btn-dark">{{__('ui.inserisciAnn')}}</a>
+                                        @endif
+                                    </div>
+                                    @endforelse
+                                    <div class="d-flex justify-content-center">
+                                        {{$products->links()}}
                                     </div>
                                 </div>
-                                @empty
-                                <div class="col-12">
-                                    <h1>{{__('ui.noAnn')}}</h1>
-                                    
-                                    {{-- SE SONO SUL MIO PROFILO, ma controlla --}} 
-                                    @if (Auth::user()->id == $user->id)
-                                    
-                                    <p> {{__('ui.inserisciprimoAnn')}} </p>
-                                    <a href="{{ route('product.create') }}" class="btn btn-dark">{{__('ui.inserisciAnn')}}</a>
-                                    @endif
-                                </div>
-                                @endforelse
-                                <div class="d-flex justify-content-center">
-                                    {{$products->links()}}
-                                </div>
                             </div>
-                        </div>
                         
                     </div>
                     
                     
                 </div>
-                @endforeach 
+                 
                 {{-- chiusura riga 83--}}
             </div> {{-- chiusura riga 38--}}
         </div> {{-- chiusura riga 37--}}

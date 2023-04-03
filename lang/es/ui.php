@@ -154,7 +154,7 @@ return [
 'campoFoto' => 'Introduce tu foto de perfil',
 'modificaFoto' => 'Editar fotos',
 'info' => 'Información',
-'fraseMotivazionale' => 'Lo que pienso:',
+'fraseMotivazionale' => 'Lo que pienso',
 'annuncidi' => 'Mis anuncios publicados',
 'noAnn' => 'Todavía no hay anuncios',
 'inserisciprimoAnn' => '¡Pon tu primer anuncio!',
@@ -190,5 +190,10 @@ return [
 
  'diventa'=>'Trabaja como Revisor',
 
+
+ // MODIFICA ANNUNCIO
+ 'modificaAnnuncio' => 'Modificar Anuncio',
+ 'attenzionefoto'=> 'Las fotos no pueden ser modificadas',
+ 'attenzionefotodesc' => 'No es posible modificar las fotos respecto al articulo original.',
 
 ];

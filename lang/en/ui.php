@@ -104,7 +104,7 @@ return [
 
      'info' => 'Information',
 
-     'fraseMotivazionale' => 'My thoughts:',
+     'fraseMotivazionale' => 'My thoughts',
 
      'annuncidi' => 'Announcement of',
 
@@ -218,7 +218,12 @@ return [
     //  'categoria' => "{{$product->category->eng}}",
 
     //OUR TEAM
-    'ourTeam' => 'Our Developers Team'
+    'ourTeam' => 'Our Developers Team',
 
+
+    // MODIFICA ANNUNCIO
+    'modificaAnnuncio' => 'Edit post',
+    'attenzionefoto'=> 'Photos cannot be edited',
+    'attenzionefotodesc' => 'It is not possible to modify the photos respect to the original article',
 
 ];

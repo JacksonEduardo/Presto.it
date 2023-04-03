@@ -156,7 +156,7 @@ return [
      'campoFoto' => 'Inserisci la tua foto profilo',
      'modificaFoto' => 'Modifica Foto',
      'info' => 'Informazioni',
-     'fraseMotivazionale' => 'Cosa penso:',
+     'fraseMotivazionale' => 'Cosa penso',
      'annuncidi' => 'Annunci di',
      'noAnn' => 'Non sono ancora presenti annunci',
      'inserisciprimoAnn' => 'Inserisci il tuo primo annuncio!',
@@ -188,6 +188,13 @@ return [
     'desc3formRev' => 'Il revisore collaborerà con il team del sito, partecipando alle riunioni editoriali e contribuendo alle decisioni riguardanti la strategia di contenuto del sito.',
 
      //OUR TEAM
-     'ourTeam' => 'Il Team di Sviluppo'
+     'ourTeam' => 'Il Team di Sviluppo',
+
+     // MODIFICA ANNUNCIO
+     'modificaAnnuncio' => 'Modifica Annuncio',
+    'attenzionefoto'=> 'Le foto non possono essere modificate',
+    'attenzionefotodesc' => 'Non è possibile modificare le foto rispetto l\'articolo originale',
+
+
 
 ];
