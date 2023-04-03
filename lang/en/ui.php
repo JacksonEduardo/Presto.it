@@ -16,6 +16,7 @@ return [
     'guest'=>'Guest',
     'login'=>'Login',
     'registrati'=>'Register',
+    'cerca' => 'Search',
 
 
 
@@ -31,6 +32,9 @@ return [
     'tasto2'=>'Insert Announcement',
     'tasto3'=>'Find now!',
     'ultimi'=>'Latest ads posted',
+    'titolo' =>'Are you still using it?',
+    'title' => 'Discover our catalogue',
+    
 
     // CAROSELLO CATEGORIE
     'informatica'=>'Informatics',
@@ -190,9 +194,12 @@ return [
     'bynull'=>'by Deleted User',
     'creatoda'=>'Created by:',
     'il'=>'on',
+    'tornaindietro' => 'Go Back',
+    'modificaannuncio' => 'Edit Ad',
+    'eliminaannuncio' => 'Delete Ad',
 
     //FOOTER
-    'tuttiProdotti'=>'All products',
+    'tuttiProdotti'=>'All announcements',
     'lavoraConNoi'=>'Work with Us',
     'diventa'=>'Become an Auditor',
     'suDiNoi'=>'About Us',

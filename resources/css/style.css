@@ -1154,7 +1154,7 @@ hr{
 
 .btnVideo{
   position: absolute;
-  top: 370px;
+  top: 320px;
   left: 150px;
   color: white;
 }
@@ -1164,14 +1164,14 @@ hr{
     width: 100%;
     height: 600px;
   }
-  
+
   .titleVideo{
     position: absolute;
     top: 100px;
     left: 79px;
     color: white;
   }
-  
+
   .pVideo{
     position: absolute;
     width: 60%;
@@ -1179,10 +1179,10 @@ hr{
     left: 79px;
     color: white;
   }
-  
+
   .btnVideo{
     position: absolute;
-    top: 450px;
+    top: 390px;
     left: 79px;
     color: white;
   }

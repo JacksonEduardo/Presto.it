@@ -67,7 +67,7 @@
                                         </div>
                                         @endif
                                         
-                                        <input  type="file" name="profilePicture" class="my-2 d-block">
+                                        <input  type="file" name="profilePicture" class="my-2 d-block w-100">
                                         <button type="submit" class="btn btnIntro" data-mdb-ripple-color="dark"
                                         style="z-index: 1;">
                                         {{__('ui.modificaFoto')}}

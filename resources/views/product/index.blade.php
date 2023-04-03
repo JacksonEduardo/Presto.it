@@ -73,11 +73,7 @@
                 </a>
             </div>
         </section>
-        @if (session('productUpdate'))
-                <div class="alert alert-success">
-                    {{ session('productUpdate') }}
-                </div>
-        @endif
+        
         @if (session('productDeleted'))
                 <div class="alert alert-danger">
                     {{ session('productDeleted') }}

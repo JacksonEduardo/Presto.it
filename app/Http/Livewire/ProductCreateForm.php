@@ -118,7 +118,7 @@ class ProductCreateForm extends Component
                             //     'user_id' => Auth::user()->id,
                             // ]);
                             
-                            session()->flash('productCreated', 'Il tuo prodotto è stato inserito correttamente');
+                            session()->flash('productCreated', 'Il tuo annuncio è stato inserito correttamente, sarà cura nostri revisori controllarlo prima di essere pubblicato');
                             $this->reset();
                             
                         }

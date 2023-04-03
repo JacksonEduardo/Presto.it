@@ -16,6 +16,7 @@ return [
     'guest'=>'Guest',
     'login'=>'Login',
     'registrati'=>'Registrate',
+    'cerca' => 'Buscar',
 
 
     // WELCOME
@@ -28,7 +29,9 @@ return [
     'tasto1'=>'Comprar ahora!',
     'tasto2'=>'Ingresar Anuncio',
     'tasto3'=>'¡Encuentra ahora!',
-    'ultimi'=>'Ultimos Anuncios Publicados',
+    'ultimi'=>'Ultimos anuncios publicados',
+    'titolo' =>'¿Ya no lo usas?',
+    'title' => 'Descubre el catálogo',
 
 
 
@@ -121,11 +124,14 @@ return [
 'scegliprezzodesc' => ' Si está indeciso sobre el precio, ¡consulte los anuncios similares publicados en la sección Anuncios!',
 'scriviannuncio' => 'Escribe un anuncio claro',
 'scriviannunciodesc' => 'Intenta incluir toda la información importante sin omitir nada!',
+'tornaindietro' => 'Regresar',
+'modificaannuncio' => 'Editar Anuncio',
+'eliminaannuncio' => 'Eliminar Anuncio',
 
 
 //FOOTER
 
-'tuttiProdotti'=>'Todos los Productos',
+'tuttiProdotti'=>'Todos los anuncios',
 'lavoraConNoi'=>'Trabaja con nosostros',
 'diventa'=>'Trabaja como Revisor Presto.it',
 'suDiNoi'=>'Sobre nosotros',

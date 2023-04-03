@@ -2,11 +2,11 @@
     @csrf
 
     
-    {{-- @if (session('productUpdate'))
-    <div class="alert alert-success">
-        {{ session('productUpdate') }}
-    </div>
-    @endif --}}
+    @if (session('productUpdate'))
+            <div class="alert alert-success">
+                {{ session('productUpdate') }}
+            </div>
+            @endif
     
     {{-- @if ($errors->any())
         <div class="alert alert-danger">
@@ -83,7 +83,7 @@
         
         <div>
             <select wire:model.defer="category" id="category" class="form-control @error('category') is-invalid @enderror">
-                <option class="lead my-1">{{__('ui.scegliCategoria')}}</option>
+                <option class="lead my-1" hidden>{{__('ui.scegliCategoria')}}</option>
                 @error('category') <span class="error">{{ $message }}</span> @enderror
                 @foreach($categories as $category)
                 @switch(App::getLocale())
@@ -100,10 +100,13 @@
             </select>
         </div>
         
-        
-        <a href="{{route('product.create')}}">
-            <button type="submit" class="btn bg-warning mt-3 text-dark lead">Modifica Annuncio</button>
-        </a>
-        <button class="btn btn-danger mt-3" wire:click="destroy({{$product}})">Elimina Annuncio</button>
-        
+        <div class="d-md-flex justify-content-md-around text-center">
+            <a href="{{route('product.show', compact('product'))}}" class="btn bg-dark mt-3 text-white lead">
+                {{__('ui.tornaindietro')}}
+            </a>
+            <a href="{{route('product.create')}}">
+                <button type="submit" class="btn bg-warning mt-3 text-dark lead">{{__('ui.modificaannuncio')}}</button>
+            </a>
+            <button class="btn btn-danger mt-3" wire:click="destroy({{$product}})">{{__('ui.eliminaannuncio')}}</button>
+        </div>
     </form>

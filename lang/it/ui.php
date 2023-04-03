@@ -16,7 +16,7 @@ return [
     'guest'=>'Guest',
     'login'=>'Login',
     'registrati'=>'Registrati',
-
+     'cerca' => 'Cerca',
 
 
     //PAGINA WELCOME
@@ -29,7 +29,8 @@ return [
     'tasto1'=>'Compra ora!',
     'tasto2'=>'Inserisci Annuncio',
     'tasto3'=>'Trova ora!',
-    'ultimi'=>'Ultimi Annunci Inseriti...',
+    'ultimi'=>'Ultimi annunci inseriti',
+    
 
 
     //CATEGORIE CAROSELLO
@@ -121,12 +122,15 @@ return [
     'scegliprezzodesc' => ' Se sei indeciso sul prezzo, controlla gli annunci simili pubblicati nella sezione Annunci!',
     'scriviannuncio' => 'Scrivi un annuncio chiaro',
     'scriviannunciodesc' => 'Cerca di inserire tutte le informazione importanti senza tralasciare niente!',
+    'tornaindietro' => 'Torna Indietro',
+    'modificaannuncio' => 'Modifica Annuncio',
+    'eliminaannuncio' => 'Elimina Annuncio',
 
 
 
 
     //FOOTER
-    'tuttiProdotti'=>'Tutti i Prodotti',
+    'tuttiProdotti'=>'Tutti gli Annunci',
     'lavoraConNoi'=>'Lavora con noi',
     'diventa'=>'Diventa Revisore',
     'suDiNoi'=>'Su di noi',

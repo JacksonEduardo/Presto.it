@@ -8,35 +8,18 @@
             </div>
         </div>
     </x-header>
-
     <div class="container-fluid">
         <div class="row justify-content-center mb-5">
-            <div class="col-12 col-md-5 order-last order-md-first">
-                <div class="h-100 p-5 pb-3 text-white text-shadow-1 border border-primary RadiusCustom">
-                    <p class="tx-m">Le Foto Attuali</p>
-                    
-                       {{--  @foreach ($product->images as $key => $image) --}}
-                       
-                        
-                       
-                       <div class="col-12 col-md-3 my-3 ">
-                                @foreach ($product->images as $key => $image)
-                                <div class="img-preview mx-auto img-fluid border d-flex">
-                                    <img src="/storage/{{$image['path']}}" width="200" height="200" alt="">
-                                </div>
-                                
-                                @endforeach
-                            </div>
-                        {{-- @endforeach --}}
-
-                    {{-- <img src="/media/prestowhite.png" width="300" alt="">
+            <div class="col-12 col-md-5 order-last order-md-first stickyForm">
+                <div class="h-100 p-5 pb-3 text-white text-shadow-1 prestoBackgroundAnimate RadiusCustom">
+                    <img src="/media/prestowhite.png" width="300" alt="">
                     <h3 class="my-5 display-6 lh-1 fw-bold">{{__('ui.seguiconsigli')}}</h3>
                     <h4>{{__('ui.scattafoto')}}</h4>
                     <p class="lead">1. {{__('ui.scattafotodesc')}}</p>
                     <h4>{{__('ui.scegliprezzo')}}</h4>
                     <p class="lead">2. {{__('ui.scegliprezzodesc')}}</p>
                     <h4>{{__('ui.scriviannuncio')}}</h4>
-                    <p class="lead">3. {{__('ui.scriviannunciodesc')}}</p> --}}
+                    <p class="lead">3. {{__('ui.scriviannunciodesc')}}</p>
                   </div>
             </div>
 
@@ -45,4 +28,5 @@
             </div>
         </div>
     </div>
+       
 </x-layout>

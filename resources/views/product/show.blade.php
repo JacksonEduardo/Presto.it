@@ -3,7 +3,7 @@
     <div class="container my-5">
       <div class="row justify-content-between">
           <div class="col-12 col-md-7 my-md-0">
-              
+            
               {{-- INIZIO CAROSELLO ORIZZONTALE--}}
               
               {{-- <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 RadiusCustom">
@@ -113,8 +113,15 @@
                   <p class="lead">{{__('ui.bynull')}}</p>
               </div>
               @else 
-              <div class="">
+              <div>
+                
                   <p class="lead">{{__('ui.creatoda')}} {{$product->user->name}}, {{__('ui.il')}} {{$product->created_at->format('d/m/Y')}}</p>
+                  <div class="d-flex justify-content-between">
+                    <a href="{{route('product.index')}}" class="btn btn-dark text-light lead">{{__('ui.tornaindietro')}}</a>
+                    @if (Auth::user() && Auth::user()->id == $product->user_id)
+                    <a href="{{route('product.edit', compact('product'))}}"><button type="submit" class="btn btn-warning text-dark lead ">{{__('ui.modificaannuncio')}}</button></a>
+                    @endif
+                </div>
               </div>
               @endif
           </div>
