@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -16,7 +17,7 @@ class ProductController extends Controller
      */
     public function index()
     {     
-        $products = Product::where('is_accepted', true)->orderBy('created_at', 'DESC')->paginate(8);
+        $products = Product::where('is_accepted', true)->orderBy('created_at', 'DESC')->paginate(9);
         return view('product.index' , compact('products'));
     }
 
@@ -41,7 +42,10 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        if($product->user_id != Auth::id()){
+            return redirect(route('course.index'))->with('accessDenied', 'Non sei autorizzato ad eseguire questa operazione');
+        }
+        return view('product.edit', compact('product'));
     }
 
     /**

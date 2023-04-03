@@ -73,6 +73,11 @@
                 </a>
             </div>
         </section>
+        @if (session('productUpdate'))
+                <div class="alert alert-success">
+                    {{ session('productUpdate') }}
+                </div>
+        @endif
     </x-header>
     
     <div class="container-fluid">
@@ -81,6 +86,7 @@
             <div class="col-12 col-md-4 p-4">
                 <x-cardProduct :Product="$product" />
             </div>
+            
             
             @empty
             <h1 class="py-5">{{__('ui.prodottinontrovati')}}</h1>

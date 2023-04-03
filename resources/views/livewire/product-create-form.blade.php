@@ -52,6 +52,7 @@
                 <p class="lead pt-5 fs-3">{{__('ui.anteprima')}}</p>
                 <div class="row">
                     @foreach($images as $key => $image)
+                    
                     <div class="col my-3">
                         <div class="img-preview mx-auto img-fluid" style="background-image: url({{$image->temporaryUrl()}});"></div>
                         <button type="button" class="btn bg-a d-block text-white text-center mx-auto rounded-pill mt-3" wire:click="removeImage({{$key}})"><i class="bi bi-x"></i></button>

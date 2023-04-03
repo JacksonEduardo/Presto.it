@@ -28,10 +28,10 @@
                     </li>
                     <li class="member">
                       <div class="member-image">
-                        <img src="https://fadzrinmadu.github.io/hosted-assets/team-section-design-using-html-and-css/2.png">
+                        <img src="/media/flavio.png">
                       </div>
                       <div class="member-info">
-                        <h3 class="text-light">Roberto Acerbo</h3>
+                        <h3 class="text-light">Flavio Laterza</h3>
                         <p class="text-light">Junior Full Stack Web Developer</p>
                         <div class="social-link text-light">
                             <i class="fab fa-facebook-f text-light"></i>
@@ -42,10 +42,10 @@
                     </li>
                     <li class="member">
                       <div class="member-image">
-                        <img src="https://fadzrinmadu.github.io/hosted-assets/team-section-design-using-html-and-css/3.png">
+                        <img src="/media/antonio.png">
                       </div>
                       <div class="member-info">
-                        <h3 class="text-light">Roberto Acerbo</h3>
+                        <h3 class="text-light">Antonio Giannino</h3>
                         <p class="text-light">Junior Full Stack Web Developer</p>
                         <div class="social-link text-light">
                             <i class="fab fa-facebook-f text-light"></i>
@@ -56,7 +56,7 @@
                     </li>
                     <li class="member">
                       <div class="member-image">
-                        <img src="https://fadzrinmadu.github.io/hosted-assets/team-section-design-using-html-and-css/4.png">
+                        <img src="storage/products/18/crop_600x400_T2G8xmIYffc0tg62u7jpRwXBjAUrZvxehKqOBbiT.jpg">
                       </div>
                       <div class="member-info">
                         <h3 class="text-light">Roberto Acerbo</h3>

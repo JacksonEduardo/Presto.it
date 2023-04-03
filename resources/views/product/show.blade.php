@@ -115,6 +115,8 @@
               @else 
               <div class="">
                   <p class="lead">{{__('ui.creatoda')}} {{$product->user->name}}, {{__('ui.il')}} {{$product->created_at->format('d/m/Y')}}</p>
+                  <a href="{{route('product.edit', compact('product'))}}"><button class="btn btn-warning">Modifica Annuncio</button></a>
+                  <a href="#"><button class="btn btn-danger">Elimina Annuncio</button></a>
               </div>
               @endif
           </div>
