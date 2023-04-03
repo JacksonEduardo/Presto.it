@@ -90,7 +90,7 @@
         
         <div>
             <select wire:model.defer="category" id="category" class="form-control @error('category') is-invalid @enderror">
-                <option disabled class="lead my-1" hidden>{{__('ui.scegliCategoria')}}</option>
+                <option disabled class="lead my-1">{{__('ui.scegliCategoria')}}</option>
                 @error('category') <span class="error">{{ $message }}</span> @enderror
                 @foreach($categories as $category)
                 @switch(App::getLocale())
