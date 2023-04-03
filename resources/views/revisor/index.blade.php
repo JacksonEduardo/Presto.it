@@ -10,12 +10,12 @@
     </x-header>
     
     @if (session('productAccepted'))
-    <div class="alert alert-dark d-flex align-items-center">
+    <div class="alert alert-success d-flex align-items-center">
         {{ session('productAccepted') }}
     </div>
     @endif
     @if (session('productRejected'))
-    <div class="alert alert-dark d-flex align-items-center">
+    <div class="alert alert-danger d-flex align-items-center">
         {{ session('productRejected') }}
     </div>
     @endif
@@ -35,7 +35,7 @@
         <div class="row justify-content-center">
             <div class="col-10 mb-5">
                 <div class="mb-4 mx-auto">
-                    <h2 class="text-center ps-3">{{__('ui.Operazioni')}}</h2>
+                    <h2 class="text-center">{{__('ui.Operazioni')}}</h2>
                     <form class="text-center" action="{{route('revisor.undo_product')}}" method="POST">
                         @csrf
                         @method('PATCH')
@@ -64,18 +64,18 @@
                                 <form action="{{route('revisor.accept_product' , ['product'=>$item])}}" method="POST">
                                     @csrf
                                     @method('PATCH')
-                                    <button type="submit" class="btn bg-a m-2 py-2 px-3 text-white">
+                                    <button type="submit" class="btn bg-a m-1 p-3 text-white">
                                         <i class="fs-5 bi bi-check-lg"></i>
                                     </button>
                                 </form>
                                 <form action="{{route('revisor.reject_product' , ['product'=>$item])}}" method="POST">
                                     @csrf
                                     @method('PATCH')
-                                    <button type="submit" class="btn bg-dark m-2 py-2 px-3 text-white">
+                                    <button type="submit" class="btn bg-dark m-1 p-3 text-white">
                                         <i class="fs-5 bi bi-x-lg"></i>
                                     </button>
                                 </form>
-                                <h2 class="fw-light">{{__('ui.annuncio')}} | {{$item->name}}</h2>
+                                <h2 class="fw-light ms-3">{{__('ui.annuncio')}} | {{$item->name}}</h2>
                             </div>
                         </div>
                         {{-- acc aperto --}}
@@ -84,13 +84,14 @@
                                 <div id="" class="row">
                                     <div class="d-flex flex-column flex-md-row ">
                                         <div class="col-12 col-md-4 text-center text-md-start">
-                                            <p class="ps-3  fs-4 fw-bold"><strong class="fs-3 tx-a">{{__('ui.namelabel')}}</strong>: {{$item->user->name}}</p>
-                                            <p class="ps-3  fs-4 fw-bold"><strong class="fs-3 tx-a">{{__('ui.prezzo')}}</strong> €{{$item->price}}</p>
-                                            <p class="ps-3  fs-4 fw-bold"><strong class="fs-3 tx-a">{{__('ui.categoriaprod')}}</strong> {{$item->category->type}}</p>
+                                            <p class="ps-3 fs-4 lead"><strong class="fs-4 tx-a">{{__('ui.namelabel')}}</strong>: {{$item->user->name}}</p>
+                                            <p class="ps-3 fs-4 lead"><strong class="fs-4 tx-a">{{__('ui.prezzo')}}</strong> €{{$item->price}}</p>
+                                            <p class="ps-3 fs-4 lead"><strong class="fs-4 tx-a">{{__('ui.categoriaprod')}}</strong> {{$item->category->type}}</p>
+                                            <p class="ps-3 fs-4 lead"><strong class="fs-4 tx-a">Creato:</strong> {{$item->created_at->format('d/m/Y')}}</p>
                                         </div>
                                         <div class="col-12 col-md-8 fs-3 text-center text-md-start text-justify">
-                                            <p class="mt-3 mt-md-0 mb-0" ><strong class="tx-a">{{__('ui.descrizione')}}</strong></p>
-                                            <p class=" fs-4 fw-bold">{{$item->description}}</p>
+                                            <p class="mt-3 mt-md-0 mb-0 fs-4 lead" ><strong class="fs-4 tx-a fw-light">{{__('ui.descrizione')}}</strong></p>
+                                            <p class=" fs-5 lead">{{$item->description}}</p>
                                         </div>
 
                                         {{-- <h5 class="ps-3 fs-3 fw-bold">{{$item->user->name}}</h5>
@@ -101,21 +102,20 @@
                                     @if ($item->images)
                                     @foreach ($item->images as $image)
                                     <div class="col-12 col-md-3 text-center">
-                                        <img src="{{!$item->images()->get()->isEmpty() ?  $image->getUrl(400,400) : "https//picsum.photos/200"}}" class="img-fluid my-3 " width="80%" alt="">
+                                        <img src="{{!$item->images()->get()->isEmpty() ?  $image->getUrl(400,400) : "https//picsum.photos/200"}}" class="img-fluid RadiusCustom my-3 " width="80%" alt="">
                                     </div>
                                     <div class="col-12 col-md-3 col-md-6 d-block mt-3">
                                         
                                         <h5 class="ps-3">Tags:</h5>
                                         @if ($image->labels)
-                                        <div class="ps-3">
+                                        <div class="ps-3 mb-3 mb-md-0">
                                         @foreach ($image->labels as $label)
-                                        <span class="">
+                                        <span>
                                             <p class="d-inline me-2 text-start">#{{$label}}</p>
                                         </span>
                                         @endforeach
                                         </div>
                                         @endif
-                                        <p class="ps-3 mt-3 lead">{{$item->created_at->format('d/m/Y')}}</p>
                                     </div>
                                     <div class="col-12 col-md-3">
                                         <div class="card-body">
@@ -125,6 +125,7 @@
                                             <p class="lead ps-3">Medicina: <span class="{{$image->medical}}"></span></p>
                                             <p class="lead ps-3">Violenza: <span class="{{$image->violence}}"></span></p>
                                             <p class="lead ps-3">Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                                            <hr>
                                         </div>
                                     </div> 
                                     @endforeach

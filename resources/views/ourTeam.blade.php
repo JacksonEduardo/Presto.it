@@ -9,6 +9,13 @@
         </div>
     </x-header>
     <div class="container">
+      <div class="row justify-content-center mt-5">
+          <div class="col-12 col-md-8 mt-5">
+              <h2 data-aos="zoom-out" data-aos-duration="700"  class="fw-bold display-4 text-dark h1Custom">Una nostra descrizione del sito</h2>
+          </div>
+      </div>
+  </div>
+    <div class="container">
         <div class="row mt-5">
             <div class="col-12 col-md-8 w-100 d-flex justify-content-center     align-items-center">
                 <ul class="list-members p-0 d-flex justify-content-center">

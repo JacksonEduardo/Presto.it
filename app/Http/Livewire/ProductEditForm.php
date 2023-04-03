@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Product;
 use Livewire\Component;
 
 class ProductEditForm extends Component
@@ -57,11 +58,9 @@ class ProductEditForm extends Component
 
     }
 
+   
 
-
-
-
-
+    
     public function mount(){
         $existingImages = $this->product->images; // Assume che il campo "images" sia un array di URL di immagini esistenti
         $this->images = [];
@@ -84,7 +83,10 @@ class ProductEditForm extends Component
     
     }
 
-
+    public function destroy(Product $product){
+        $product->delete();
+        return redirect(route('product.index'))->with('productDeleted', 'Hai eliminato l\'annuncio');
+    }
 
 
     public function render()

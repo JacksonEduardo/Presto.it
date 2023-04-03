@@ -104,5 +104,6 @@
         <a href="{{route('product.create')}}">
             <button type="submit" class="btn bg-warning mt-3 text-dark lead">Modifica Annuncio</button>
         </a>
+        <button class="btn btn-danger mt-3" wire:click="destroy({{$product}})">Elimina Annuncio</button>
         
     </form>

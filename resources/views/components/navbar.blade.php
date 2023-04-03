@@ -174,7 +174,7 @@
     </a>
   </div> --}}
   <div class="offcanvas-body categorie">
-    <a class="navbar-brand lead fs-5 d-flex" href="#"><i class="bi bi-question-lg fs-3"></i>
+    <a class="navbar-brand lead fs-5 d-flex" href="{{route('ourTeam')}}"><i class="bi bi-question-lg fs-3"></i>
       <h5 class="my-auto ms-3">{{__('ui.siamo')}}</h5>
     </a>
   </div>

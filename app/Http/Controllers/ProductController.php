@@ -26,7 +26,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('product.create');         
+            return view('product.create');
+              
     }   
 
     /**
@@ -43,7 +44,7 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         if($product->user_id != Auth::id()){
-            return redirect(route('course.index'))->with('accessDenied', 'Non sei autorizzato ad eseguire questa operazione');
+            return redirect(route('product.index'))->with('accessDenied', 'Non sei autorizzato ad eseguire questa operazione');
         }
         return view('product.edit', compact('product'));
     }

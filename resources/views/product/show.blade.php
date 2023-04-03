@@ -66,11 +66,11 @@
            {{-- FINE CAROSELLO VERTICALE--}}
           <div class="col-12 col-md-5 px-4">
               <div>
-                  <h4 class="RadiusCustom fw-bold fs-3 display-4 tx-a">{{$product->name}}</h4>
-                  <h3 class="fw-bold text-muted">{{$product->brand}}</h3>
+                  <h1 class="RadiusCustom fw-bold display-4 tx-a">{{$product->name}}</h1>
+                  <h3 class="display-6 fw-bold text-muted">{{$product->brand}}</h3>
                   <span class="d-flex">
-                      <p class="fs-3 text-center">{{__('ui.prezzo')}} </p>
-                      <p class="fs-3 fw-bold">€ {{$product->price}}</p>
+                      <p class="display-6">{{__('ui.prezzo')}}</p>
+                      <p class="display-6 fw-bold">€ {{$product->price}}</p>
                   </span>
                   {{-- <div class="d-flex align-items-center mt-1">
                       <i class="bi bi-heart fs-2 text-danger mt-3" id="addFavourite"></i>
@@ -115,8 +115,6 @@
               @else 
               <div class="">
                   <p class="lead">{{__('ui.creatoda')}} {{$product->user->name}}, {{__('ui.il')}} {{$product->created_at->format('d/m/Y')}}</p>
-                  <a href="{{route('product.edit', compact('product'))}}"><button class="btn btn-warning">Modifica Annuncio</button></a>
-                  <a href="#"><button class="btn btn-danger">Elimina Annuncio</button></a>
               </div>
               @endif
           </div>

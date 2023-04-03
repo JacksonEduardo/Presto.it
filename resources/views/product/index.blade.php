@@ -78,6 +78,11 @@
                     {{ session('productUpdate') }}
                 </div>
         @endif
+        @if (session('productDeleted'))
+                <div class="alert alert-danger">
+                    {{ session('productDeleted') }}
+                </div>
+        @endif
     </x-header>
     
     <div class="container-fluid">
