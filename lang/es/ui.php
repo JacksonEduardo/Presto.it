@@ -196,4 +196,20 @@ return [
  'attenzionefoto'=> 'Las fotos no pueden ser modificadas',
  'attenzionefotodesc' => 'No es posible modificar las fotos respecto al articulo original.',
 
+ //AGGIORNA PROFILO
+ 'Primopar' =>'Completa tu perfil y hazte notar!',
+ 'Punto1' =>'Ingresa tus datos personales y completa el formulario!',
+ 'Punto2' =>'Agrega tu número de teléfono para recibir notificaciones sobre productos que puedan ser de tu interés',
+ 'punto3' =>' Inserta una biografía o lema que te refleje',
+ 'Sotto1' =>'Asegúrese de que cada campo esté lleno',
+ 'Sotto2' =>'Añadiendo un número de teléfono podemos contactar contigo para promociones interesantes',
+ 'Sotto3' =>'Siéntase libre de expresarse y agregar un lema, una biografía para contarles a todos los demás usuarios sobre usted!',
+ 'Città' =>'Ciudad',
+'datanascita' =>'Fecha de nacimiento',
+'nuemrotelefono' =>'Número de teléfono',
+'sesso' =>'Sexo',
+'maschio' =>'Masculino',
+'femmina' =>'Femenino',
+'esprimiti' =>'Exprésate libremente',
+
 ];

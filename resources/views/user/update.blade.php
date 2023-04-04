@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row justify-content-center mt-5">
                 <div class="col-12 col-md-8 mt-5">
-                    <h1 data-aos="zoom-out" data-aos-duration="700" class="RadiusCustom fw-bold display-4 tx-a">Aggiorna il profilo</h1>
+                    <h1 data-aos="zoom-out" data-aos-duration="700" class="RadiusCustom fw-bold display-4 tx-a">{{__('ui.')}}</h1>
                 </div>
             </div>
         </div>
@@ -14,13 +14,13 @@
             <div class="col-12 col-md-5 order-last order-md-first stickyForm">
                 <div class="h-100 p-5 pb-3 text-white text-shadow-1 prestoBackgroundAnimate RadiusCustom">
                     <img src="/media/prestowhite.png" width="300" alt="">
-                    <h3 class="my-5 display-6 lh-1 fw-bold">{{__('ui.seguiconsigli')}}</h3>
-                    <h4>{{__('ui.scattafoto')}}</h4>
-                    <p class="lead">1. {{__('ui.scattafotodesc')}}</p>
-                    <h4>{{__('ui.scegliprezzo')}}</h4>
-                    <p class="lead">2. {{__('ui.scegliprezzodesc')}}</p>
-                    <h4>{{__('ui.scriviannuncio')}}</h4>
-                    <p class="lead">3. {{__('ui.scriviannunciodesc')}}</p>
+                    <h3 class="my-5 display-6 lh-1 fw-bold">{{__('ui.Primopar')}}</h3>
+                    <h4>{{__('ui.Punto1')}}</h4>
+                    <p class="lead">1. {{__('ui.Sotto1')}}</p>
+                    <h4>{{__('ui.Punto2')}}</h4>
+                    <p class="lead">2. {{__('ui.Sotto2')}}</p>
+                    <h4>{{__('ui.punto3')}}</h4>
+                    <p class="lead">3. {{__('ui.Sotto3')}}</p>
                   </div>
             </div>
 

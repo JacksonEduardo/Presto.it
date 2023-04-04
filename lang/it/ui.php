@@ -196,5 +196,26 @@ return [
     'attenzionefotodesc' => 'Non è possibile modificare le foto rispetto l\'articolo originale',
 
 
+    //AGGIORNA PROFILO
+    'Primopar' =>'Completa il tuo profilo e fatti notare!',
+    'Punto1' =>'Inserisci i tuoi dati personali e completa il form!',
+    'Punto2' =>'Aggiungi il tuo numero di telefono per ricevere notifiche su prodotti che potrebbero interessarti',
+    'punto3' =>'Inserisci una biografia o un motto che ti rispecchia',
+    'Sotto1' =>'Assicurati che ogni campo sia compilato',
+    'Sotto2' =>'Aggiungendo un numero di telefono potremo contattarti per interessanti promozioni',
+    'Sotto3' =>'Sentiti libero di esprimerti e aggiungi un motto,biografia per raccontarti a tutti gli altri utenti!',
+    'Città' =>'Città',
+    'datanascita' =>'Data di nascita',
+    'nuemrotelefono' =>'Numero di telefono',
+    'sesso' =>'Sesso',
+    'maschio' =>'Maschio',
+    'femmina' =>'Femmina',
+    'esprimiti' =>'Esprimti liberamente',
+
+
+
+
+
+
 
 ];

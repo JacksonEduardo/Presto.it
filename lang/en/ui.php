@@ -133,34 +133,6 @@ return [
      'successivo'=> 'Next',
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // ADMIN INDEX
     'titolo_ad'=>'Welcome {{Auth::user()->name}}',
     // implementare vista
@@ -225,5 +197,20 @@ return [
     'modificaAnnuncio' => 'Edit post',
     'attenzionefoto'=> 'Photos cannot be edited',
     'attenzionefotodesc' => 'It is not possible to modify the photos respect to the original article',
-
+    
+    //AGGIORNA PROFILO
+    'Primopar' =>'Complete your profile and get noticed!',
+    'Punto1' =>'Enter your personal data and complete the form!',
+    'Punto2' =>'Add your phone number to receive notifications about products that may be of interest to you',
+    'punto3' =>'Insert a biography or motto that reflects you',
+    'Sotto1' =>'Make sure each field is filled in',
+    'Sotto2' =>'By adding a telephone number we can contact you for interesting promotions',
+    'Sotto3' =>'Feel free to express yourself and add a motto, biography to tell all the other users about yourself!',
+    'Città' =>'City',
+    'datanascita' =>'Date of birth',
+    'nuemrotelefono' =>'Telephone number',
+    'sesso' =>'Sex',
+    'maschio' =>'Male',
+    'femmina' =>'Female',
+    'esprimiti' =>'Express yourself freely',
 ];
