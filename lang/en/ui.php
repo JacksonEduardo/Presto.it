@@ -199,6 +199,7 @@ return [
     'attenzionefotodesc' => 'It is not possible to modify the photos respect to the original article',
     
     //AGGIORNA PROFILO
+    'modificaprofilo' => 'Edit profile',
     'Primopar' =>'Complete your profile and get noticed!',
     'Punto1' =>'Enter your personal data and complete the form!',
     'Punto2' =>'Add your phone number to receive notifications about products that may be of interest to you',

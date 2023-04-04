@@ -197,6 +197,7 @@ return [
  'attenzionefotodesc' => 'No es posible modificar las fotos respecto al articulo original.',
 
  //AGGIORNA PROFILO
+ 'modificaprofilo' => 'Editar perfil',
  'Primopar' =>'Completa tu perfil y hazte notar!',
  'Punto1' =>'Ingresa tus datos personales y completa el formulario!',
  'Punto2' =>'Agrega tu número de teléfono para recibir notificaciones sobre productos que puedan ser de tu interés',

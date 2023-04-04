@@ -197,6 +197,7 @@ return [
 
 
     //AGGIORNA PROFILO
+    'modificaprofilo' => 'Modifica Profilo',
     'Primopar' =>'Completa il tuo profilo e fatti notare!',
     'Punto1' =>'Inserisci i tuoi dati personali e completa il form!',
     'Punto2' =>'Aggiungi il tuo numero di telefono per ricevere notifiche su prodotti che potrebbero interessarti',
